@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
-    "start": "webpack serve --open --mode development --config webpack.config.js",
+    "start": "webpack serve --mode development --config webpack.config.js",
     "watch": "webpack --watch --config webpack.config.js"
   },
   "keywords": [],
@@ -23,21 +23,19 @@
     "@tailwindcss/typography": "^0.5.7",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
-    "html-webpack-plugin": "^5.5.0",
-    "html-webpack-pug-plugin": "^4.0.0",
     "json5": "^2.2.1",
     "postcss": "^8.4.16",
     "postcss-loader": "^7.0.1",
     "postcss-preset-env": "^7.8.1",
-    "pug": "^3.0.2",
-    "pug-html-loader": "^1.0.0",
     "pug-plugin": "^4.3.2",
     "sass": "^1.54.9",
     "sass-loader": "^13.0.2",
-    "style-loader": "^3.3.1",
     "tailwindcss": "^3.1.8",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.0"
+  },
+  "dependencies": {
+    "start": "^5.1.0"
   }
 }
