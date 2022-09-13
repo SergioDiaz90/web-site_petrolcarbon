@@ -1,0 +1,28 @@
+.header-wrapper {
+    @apply grid grid-cols-3 content-center bg-white;
+    width: 90%;
+    height: 170px;
+    margin: 0 auto;
+
+    &--brand{
+        @apply col-span-1;
+        background-image: url('../assets/logo_petrolcarbon.png');
+        width: 305px;
+        height: 60px;
+    }
+
+    .navigation-bar {
+        @apply grid content-center h-full col-start-2 col-end-4 gap-3;
+        &--list {
+            @apply flex justify-between;
+
+            &-item {
+                @apply text-gray;
+
+                &:hover{
+                    @apply text-green-quarter cursor-pointer;
+                }
+            }
+        }
+    }
+}

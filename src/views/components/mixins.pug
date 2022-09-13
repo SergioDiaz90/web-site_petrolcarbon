@@ -1,0 +1,9 @@
+mixin header (items)
+    nav(class="navigation-bar")
+        ul(class="navigation-bar--list")
+            each val in items
+                li(class="navigation-bar--list-item")
+                    a(href=val.link)=val.item
+
+mixin image(url, alt)
+    img(src=url alt=alt)
