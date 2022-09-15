@@ -1,0 +1,60 @@
+.slider {
+    @apply w-full relative overflow-hidden;
+    @include slider(2);
+    height: 600px;
+    margin: 0 0 213px 0;
+
+    .slider-content {
+        @apply w-full h-full relative;
+        white-space: nowrap;
+        transition: all 0.3s;
+        font-size:0px;
+
+        .slider-content--overlay {
+            @apply w-full h-full bg-black absolute;
+            top:0;
+            opacity: 0.3;
+        }
+
+        &--0, &--1, &--2 {
+            @apply w-full h-full inline-block;
+            white-space: nowrap;
+            aspect-ratio: 16/9;
+            .slider-content--phrase-0, .slider-content--phrase-1, .slider-content--phrase-2{
+                @apply h-1/4 text-right relative;
+                width: 90%;
+                margin: 0 auto;
+                margin-top: 23%;
+                z-index: 5;
+    
+                h1 {
+                    @apply text-2xl font-bold text-white;
+                }
+            }
+        }
+
+    }
+
+    .slider-content-controls {
+        @apply w-full p-0 text-center absolute;
+        bottom: 1em;
+        margin: 0px;
+        z-index: 5;
+
+        &--list {
+            @apply bg-green-principal;
+            list-style-type: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+            margin-right: 5px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        &--list.active {
+            background-color: whitesmoke;
+        }
+    }
+}

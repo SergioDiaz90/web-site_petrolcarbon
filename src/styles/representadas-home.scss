@@ -1,0 +1,4 @@
+.cardWithImage-wrapper {
+    @apply grid grid-cols-2 gap-7;
+    @include cardWithImage();
+}

@@ -1,0 +1,4 @@
+.card-container {
+    @apply w-full grid grid-cols-3 gap-5;
+    @include card();
+}
