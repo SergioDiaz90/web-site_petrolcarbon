@@ -1,4 +1,7 @@
 import "./styles/index.scss";
-import brand from './assets/logo_petrolcarbon.png';
+import Slider from './js/slider';
 
+(function () {
+    new Slider ('.slider', false);
+})();
 console.log('funciono');

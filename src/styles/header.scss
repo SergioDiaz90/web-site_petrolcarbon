@@ -1,14 +1,16 @@
 .header-wrapper {
     @apply grid grid-cols-3 content-center bg-white;
     width: 90%;
-    height: 170px;
+    height: 100px;
     margin: 0 auto;
+    position: static;
 
     &--brand{
         @apply col-span-1;
         background-image: url('../assets/logo_petrolcarbon.png');
-        width: 305px;
-        height: 60px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 40px;
     }
 
     .navigation-bar {

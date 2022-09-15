@@ -5,5 +5,35 @@ mixin header (items)
                 li(class="navigation-bar--list-item")
                     a(href=val.link)=val.item
 
-mixin image(url, alt)
-    img(src=url alt=alt)
+mixin slider(slider)
+    div(class="slider-content")
+        each obj,index in slider
+            - let nameClass = `slider-content--${index}`;
+            - let namePhrase = `slider-content--phrase-${index}`;
+            div(class=nameClass)
+                div(class=namePhrase)
+                    each phrase in obj.phrases
+                        h1=phrase
+                div(class="slider-content--overlay")
+    ul(class="slider-content-controls")
+        -let cnt = slider.length;
+        -let idx = 0;
+        while idx < cnt 
+            li(class="slider-content-controls--list" idx=idx++)
+
+mixin card(servicios)
+    each obj, idx in servicios
+        - let nameClass = `card-${idx}`;
+        div(class=nameClass)
+            div(class="card-article")
+                h3=obj.title
+                article=obj.text
+            div(class="card--overlay")
+
+mixin cardWithImage(representadas)
+        each obj, idx in representadas
+            div(class="cardWithImage-card")
+                - let nameClass = `cardWithImage-card--image-${idx}`;
+                div(class=nameClass)
+                div(class="cardWithImage-card--text")
+                    h2=obj.title

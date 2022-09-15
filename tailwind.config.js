@@ -11,7 +11,8 @@ module.exports = {
             'green-principal': '#038C25',
             'green-quarter': '#02731E',
             'grenn-medium': '#4D8C68',
-            'green-light': '#B6F2CB'
+            'green-light': '#B6F2CB',
+            'green-card': '#4D8C68'
         },
         fontFamily: {
             sans: ["Segoe UI" , 'Graphik', 'sans-serif'],

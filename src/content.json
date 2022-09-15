@@ -1,7 +1,7 @@
 {
     "menu": [
         {
-            "item": "inicio",
+            "item": "Inicio",
             "link": "#"
         },
         {
@@ -34,15 +34,24 @@
         "slider": [
             {
                 "image": "",
-                "phrase": "Más de 40 años de compromiso con la integración en el país de tecnologías innovadoras para el sector energético"
+                "phrases": [
+                    "Más de 40 años de compromiso con la integración en el país de tecnologías",
+                    "innovadoras para el sector energético"
+                ]
             },
             {
                 "image": "",
-                "phrase": "Aportamos valor al sector petrolero, petroquímico, químico, gasífero, minero y energético en general"
+                "phrases": [
+                    "Aportamos valor al sector petrolero, petroquímico, químico, gasífero,",
+                    "minero y energético en general"
+                ]
             },
             {
                 "image": "",
-                "phrase": "Comprometidos con la calidad, protección ambiental, excelencia operacional y sostenibilidad"
+                "phrases": [
+                    "Comprometidos con la calidad, protección ambiental, excelencia operacional",
+                    "y sostenibilidad"
+                ]
             }
         ],
         "formulario": {
