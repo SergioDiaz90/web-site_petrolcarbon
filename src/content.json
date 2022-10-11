@@ -1,53 +1,69 @@
 {
     "menu": [
         {
-            "item": "Inicio",
-            "link": "#"
+            "item": "INICIO",
+            "link": "#",
+            "class": "inicio"
         },
         {
-            "item": "Quienes Somos",
-            "link": "#" 
+            "item": "QUIENES SOMOS",
+            "link": "#",
+            "class": "quienes-somos"
         },
         {
-            "item": "Representaciones y alianzas",
-            "link": "#"
+            "item": "REPRESENTACIONES Y ALIANZAS",
+            "link": "#",
+            "class": "representaciones"
         },
         {
-            "item": "Servicios",
-            "link": "#"
+            "item": "SERVICIOS",
+            "link": "#",
+            "class": "servicios"
         },
         {
-            "item": "Clientes",
-            "link": "#"
+            "item": "CLIENTES",
+            "link": "#",
+            "class": "clientes"
         },
         {
-            "item": "Proyectos",
-            "link": "#"
+            "item": "PROYECTOS",
+            "link": "#",
+            "class": "proyectos"
         },
         {
-            "item": "Contáctenos",
-            "link": "#"
+            "item": "CONTÁCTENOS",
+            "link": "#form",
+            "class": "contactenos"
         }
     ],
     "brand": "./src/assets/logo_petrolcarbon.png",
     "home": {
         "slider": [
             {
-                "image": "",
+                "id": "img",
+                "selected": "slider",
+                "depth": false,
+                "image": "./src/assets/slider/slider_1.jpg",
                 "phrases": [
                     "Más de 40 años de compromiso con la integración en el país de tecnologías",
                     "innovadoras para el sector energético"
                 ]
             },
             {
-                "image": "",
+                "id": "img",
+                "selected": "slider",
+                "depth": false,
+                "image": "./src/assets/slider/slider_2.jpg",
                 "phrases": [
                     "Aportamos valor al sector petrolero, petroquímico, químico, gasífero,",
                     "minero y energético en general"
                 ]
             },
             {
-                "image": "",
+                "id": "img",
+                "selected": "slider",
+                "depth": false,
+                "image": "./src/assets/slider/slider_3.jpg",
                 "phrases": [
                     "Comprometidos con la calidad, protección ambiental, excelencia operacional",
                     "y sostenibilidad"
@@ -58,39 +74,39 @@
             "title": "contactenos",
             "fields": [
                 {
-                    "name": "Nombre",
+                    "name": "Nombre:",
                     "type": "text"
                 },
                 {
-                    "name": "Empresa",
+                    "name": "Empresa:",
                     "type": "text"
                 },
                 {
-                    "name": "Dirección",
+                    "name": "Dirección:",
                     "type": "text"
                 },
                 {
-                    "name": "Ciudad",
+                    "name": "Ciudad:",
                     "type": "text"
                 },
                 {
-                    "name": "País",
+                    "name": "País:",
                     "type": "text"
                 },
                 {
-                    "name": "Correo",
+                    "name": "Correo:",
                     "type": "text"
                 },
                 {
-                    "name": "Teléfono",
+                    "name": "Teléfono:",
                     "type": "text"
                 },
                 {
-                    "name": "Celular",
+                    "name": "Celular:",
                     "type": "text"
                 },
                 {
-                    "name": "Clase de solicitud",
+                    "name": "Clase de solicitud:",
                     "type": "option",
                     "options": [
                         "Petición",
@@ -102,13 +118,17 @@
                     ]
                 },
                 {
-                    "name": "Comentarios",
+                    "name": "Comentarios:",
                     "type": "text"
                 },
                 {
                     "name": "Autorización para tratamiento de datos personales.",
                     "type": "checkbox",
                     "link": ""
+                },
+                {
+                    "name": "Enviar",
+                    "type": "submit"
                 }
             ]
         }
@@ -117,93 +137,150 @@
         {
             "title": "Quienes Somos",
             "text": "PETROLCARBON es una empresa colombiana con certificaciones ISO 9001:2015, ISO 14001:2015 e ISO 45001:2018 que trabaja por la integración en la región de los últimos logros técnico-científicos que aparecen a nivel mundial en la industria petrolera, petroquímica, química, gasífera, eléctrica, minera y energética en general. Desde la constitución de la organización en 1980, PETROLCARBON ha buscado la integración de estos conocimientos a la industria a través de representaciones exclusivas de empresas reconocidas y alianzas estratégicas para ofrecer tecnologías, productos y servicios con un respaldo técnico – económico que garantice óptimo desempeño y el éxito de los proyectos.",
-            "image": "",
+            "id": "img",
+            "selected": "nosotros",
+            "depth": false,
             "active-read-more": false
         },
         {
             "title": "Visión",
             "text": "PETROLCARBON se proyecta para el 2025 como una organización destacada dentro de las compañías del sector energético en general; direccionando permanentemente sus políticas y metas hacia la innovación técnico-científica. A través de alianzas estratégicas con empresas generadoras de estas tecnologías, continuaremos garantizando la confiabilidad y vigencia futura en los procesos donde sean aplicadas, impulsando la capacidad de cambio en nuestros clientes y siendo reconocidos por nuestro compromiso, excelencia operacional y sostenibilidad.",
-            "image": "",
+            "id": "img",
+            "selected": "nosotros",
+            "depth": false,
             "active-read-more": false
         },
         {
             "title": "Misión",
             "text": "Somos una empresa que participa activamente en el desarrollo económico y técnico del país a través de la introducción de tecnologías e innovación técnico-científica, realizamos proyectos con recurso humano calificado, caracterizado por su sentido de responsabilidad social, pertenencia, espíritu cívico de convivencia; respeto por el medio ambiente y altos estándares de satisfacción a los grupos de interés.",
-            "image": "",
+            "id": "img",
+            "selected": "nosotros",
+            "depth": false,
             "active-read-more": false
         },
         {
             "title": "Política de gestión integral",
             "text": "PETROLCARBON LTDA., empresa dedicada a la venta de equipos de alta tecnología, consultoría, diseño, ingeniería, asistencia técnica con personal altamente especializado para el acompañamiento, preservación, comisionamiento, pre-comisionamiento, instalación, puesta en marcha, operación, mantenimiento y capacitación sobre las tecnologías suministradas a la industria petrolera, petroquímica, química, gasífera, minera, eléctrica y energética en general, expresa su compromiso en el desempeño de todos nuestros procesos.",
-            "image": "",
+            "id": "img",
+            "selected": "nosotros",
+            "depth": false,
             "active-read-more": true
         }
     ],
     "representadas_y_alianzas": [
         {
-            "image": "",
+            "id": "img",
+            "selected": "representadas",
             "title": "Soluciones tecnológicas de alto desempeño para turbomaquinaria, compresores reciprocantes y equipos rotativos",
             "aliados": [
                 {
                     "image": "",
+                    "id": "img",
+                    "selected": "representadas",
+                    "depth": false,
+                    "line": "tecnológicas",
                     "text": "Sistemas de protección, monitoreo y diagnóstico en línea  para equipos rotativos"
                 },
                 {
                     "image": "",
+                    "id": "img",
+                    "selected": "representadas",
+                    "depth": false,
+                    "line": "tecnológicas",
                     "text": "Componentes de diseño especial y servicios para compresores reciprocantes"
                 },
                 {
                     "image": "",
+                    "id": "img",
+                    "selected": "representadas",
+                    "depth": false,
+                    "line": "tecnológicas",
                     "text": "Compresores  y accesorios para GNC, secadores y almacenamiento de gas"
                 },
                 {
                     "image": "",
+                    "id": "img",
+                    "selected": "representadas",
+                    "depth": false,
+                    "line": "tecnológicas",
                     "text": "Paquetes de compresión para pozos. Unidades de recuperación de vapores, sistemas de control de emisiones BTEX"
                 }
             ]
         },
         {
-            "image": "",
+            "id": "img",
+            "selected": "representadas",
             "title": "Productos y servicios para procesos de refinación y petroquímica",
             "aliados": [
                 {
                     "image": "",
+                    "id": "img",
+                    "selected": "representadas",
+                    "depth": false,
+                    "line": "servicios",
                     "text": "Tuberías y componentes en aleaciones especiales y patentadas Manaurites® para hornos de reformado y cracking para refinación y petroquímica. Tubos de catalizador y soporte, tubos aleteados, serpentines de radiación y convección, colectores, líneas de transferencia, módulos y cajas de convección, return bends, cabezales."
                 }
             ]
         },
         {
-            "image": "",
+            "id": "img",
+            "selected": "representadas",
             "title": "Soluciones en generación eléctrica y energías alternativas",
             "aliados": [
                 {
                     "image": "",
+                    "id": "img",
+                    "selected": "representadas",
+                    "depth": false,
+                    "line": "generacion",
                     "text": "Turbine Inlet Air Cooling (TIAC), refrigeración urbana, plantas modulares para servicios públicos centrales y cogeneración"
                 },
                 {
                     "image": "",
+                    "id": "img",
+                    "selected": "representadas",
+                    "depth": false,
+                    "line": "generacion",
                     "text": "Productos para modernización de turbinas a gas y vapor; diseños acústicos, fabricación e instalación de casa de filtros, kits de modificación"
                 },
                 {
                     "image": "",
+                    "id": "img",
+                    "selected": "representadas",
+                    "depth": false,
+                    "line": "generacion",
                     "text": "Estructuración y ejecución de  proyectos  de  producción  de  energía limpia y renovable, cogeneración para producción de electricidad, energía térmica"
                 }
             ]
         },
         {
-            "image": "",
+            "id": "img",
+            "selected": "representadas",
+            "depth": false,
             "title": "Válvulas e instrumentación, tuberia y accesorios",
             "aliados": [
                 {
                     "image": "",
+                    "id": "img",
+                    "selected": "representadas",
+                    "depth": false,
+                    "line": "instrumentación",
                     "text": "Válvulas de control, retención, mariposa, cheque, compuerta, esféricas, seguridad PSV, reguladoras de presión y caudal para la industria del petróleo y gas"
                 },
                 {
                     "image": "",
+                    "id": "img",
+                    "selected": "representadas",
+                    "depth": false,
+                    "line": "instrumentación",
                     "text": "Sistemas de automatización, instrumentación, control y sensores"
                 },
                 {
                     "image": "",
+                    "id": "img",
+                    "selected": "representadas",
+                    "depth": false,
+                    "line": "instrumentación",
                     "text": "Estructuración y ejecución de  proyectos  de  producción  de  energía limpia y renovable, cogeneración para producción de electricidad, energía térmica"
                 }
             ]
@@ -211,17 +288,23 @@
     ],
     "productos_y_servicios": [
         {
-            "image": "",
+            "id": "img",
+            "selected": "service",
+            "depth": false,
             "title": "Venta de equipos",
             "text": "Alta tecnología, partes y accesorios mediante la representación exclusiva y alianzas estratégicas con empresas reconocidas a nivel mundial"
         },
         {
-            "image": "",
+            "id": "img",
+            "selected": "service",
+            "depth": false,
             "title": "Asistencia técnica",
             "text": "Personal especializado para el acompañamiento en la recepción, preservación,precomisionamiento,comisionamiento, instalación, puesta en marcha, reparación, operación y mantenimiento de equipos"
         },
         {
-            "image": "",
+            "id": "img",
+            "selected": "service",
+            "depth": false,
             "title": "Capacitación teórico-práctica",
             "text": "Seminarios dirigidos a operarios, técnicos, ingenieros realizados en instalaciones del cliente o en las fábricas sobre las tecnologías ofrecidas"
         }
@@ -229,134 +312,525 @@
     "clientes": [
         {
             "title": "Sector Petroleo y Gas",
-            "clients": []
+            "clients": [
+                {
+                    "image": "",
+                    "id": "img",
+                    "selected": "clientes",
+                    "depth": false,
+                    "line": "petroleo",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "line": "petroleo",
+                    "depth": false,
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "line": "petroleo",
+                    "depth": false,
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "line": "petroleo",
+                    "depth": false,
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "line": "petroleo",
+                    "depth": false,
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "line": "petroleo",
+                    "depth": false,
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "line": "petroleo",
+                    "depth": false,
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "line": "petroleo",
+                    "depth": false,
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "line": "petroleo",
+                    "depth": false,
+                    "selected": "clientes",
+                    "catalogo": ""
+                }
+            ]
         },
         {
             "title": "Sector Químico y Petroquímico",
-            "clients": []
+            "clients": [
+                {
+                    "image": "",
+                    "id": "img",
+                    "line": "quimico",
+                    "depth": false,
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "line": "quimico",
+                    "depth": false,
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "line": "quimico",
+                    "depth": false,
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "line": "quimico",
+                    "depth": false,
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "line": "quimico",
+                    "depth": false,
+                    "selected": "clientes",
+                    "catalogo": ""
+                }
+            ]
         },
         {
             "title": "Sector Gasífero",
-            "clients": []
+            "clients": [
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "gas",
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "gas",
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "gas",
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "gas",
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "gas",
+                    "selected": "clientes",
+                    "catalogo": ""
+                }
+            ]
         },
         {
             "title": "Sector Energético",
-            "clients": []
+            "clients": [
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "energia",
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "energia",
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "energia",
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "energia",
+                    "selected": "clientes",
+                    "catalogo": ""
+                }
+            ]
         },
         {
             "title": "Otros Clientes",
-            "clients": []
+            "clients": [
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "otros",
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "otros",
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "otros",
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "otros",
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "otros",
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "otros",
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "otros",
+                    "selected": "clientes",
+                    "catalogo": ""
+                }
+            ]
         },
         {
             "title": "Clientes Venezuela",
-            "clients": []
+            "clients": [
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "venezuela",
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "venezuela",
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "depth": false,
+                    "line": "venezuela",
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "line": "venezuela",
+                    "depth": false,
+                    "selected": "clientes",
+                    "catalogo": ""
+                },
+                {
+                    "image": "",
+                    "id": "img",
+                    "line": "venezuela",
+                    "depth": false,
+                    "selected": "clientes",
+                    "catalogo": ""
+                }
+            ]
         }
     ],
     "proyectos": [
         {
+            "id": "img",
+            "selected": "proyectos",
+            "depth": false,
             "name": "Sistema de monitoreo Prognost para compresores",
             "cliente": "Esenttia",
             "ubicacion": "Cartagena, Colombia",
             "texto": "Suministro de sistemas de protección PROGNOST®-SILver integrado con un sistema de monitoreo y diagnóstico PROGNOST®-NT para compresores Laby marca BURCKHARDT para Esenttia en Cartagena, con el objetivo de optimizar la confiabilidad y disponibilidad de los equipos e incrementar su eficiencia. El proyecto incluyó supervisión del comisionamiento, pruebas de lazos con el dispositivo PROGNOST®-SenSim, instalación de sensores de presión y vibración en cilindros y crucetas, conexión remota vía VPN para verificación del estado de los equipos, análisis de tendencias desde Alemania y Colombia. Igualmente se ha proporcionado el entrenamiento sobre la operación y mantenimiento de los sistemas, suministro de repuestos y servicio de asistencia técnica remota.",
-            "images": {
-                "principal": "",
-                "cliente": "",
-                "aliado":""
-            }
+            "images": [
+                {
+                    "id": "img",
+                    "selected": "proyecto_one",
+                    "depth": true
+                },
+                {
+                    "id": "img",
+                    "selected": "proyecto_one",
+                    "depth": true
+                }
+            ]
         },
         {
+            "id": "img",
+            "selected": "proyectos",
+            "depth": false,
             "name": "Sistema de monitoreo prognost para compresores",
             "cliente": "Refinería de Ecopetrol en Barrancabermeja",
             "ubicacion": "Barrancabermeja, Santander - Colombia",
             "texto": "Suministro de sistemas de monitoreo y diagnóstico inteligente en línea PROGNOST-NT y sistemas de lubricación forzada para cinco compresores Hyper, Booster/ Primary para el proyecto de recuperación del factor de servicio de la planta de Polietileno I y II e incremento de la capacidad en Poly II. El proyecto incluyó ingeniería, diseño, suministro de equipos, pruebas en fábrica, asistencia técnica para alistamiento, instalación, puesta en marcha y capacitación. Actualmente continuamos dando soporte técnico para la actualización del software y hardware, al igual que suministro de repuestos.",
-            "images": {
-                "principal": "",
-                "cliente": "",
-                "aliado":""
-            }
+            "images": [
+                {
+                    "id": "img",
+                    "selected": "proyecto_two",
+                    "depth": true
+                },
+                {
+                    "id": "img",
+                    "selected": "proyecto_two",
+                    "depth": true
+                }
+            ]
         },
         {
+            "id": "img",
+            "selected": "proyectos",
+            "depth": false,
             "name": "Acuerdo de bases económicas para equipos y repuestos COOK",
             "cliente": "Ecopetrol y su Grupo Empresarial",
             "ubicacion": "Territorio colombiano",
             "texto": "Suministro de productos Cook incluyendo válvulas, sistemas de sellado, anillos, pistones, descargadores, puerto indicador, para ser instalados en compresores ubicados a lo largo del territorio colombiano, esto a través de un Acuerdo de Bases Económicas. Los productos Cook se diseñan específicamente para cada compresor, con materiales especiales según las condiciones operativas de cada equipo, teniendo en cuenta igualmente la cromatografía del gas e históricos de fallas con otros materiales, todo esto con el objetivo de optimizar la operación y confiabilidad de los compresores al igual que reducir costos de mantenimiento.",
-            "images": {
-                "principal": "",
-                "cliente": "",
-                "aliado":""
-            }
+            "images": [
+                {
+                    "id": "img",
+                    "selected": "proyecto_three",
+                    "depth": true
+                },
+                {
+                    "id": "img",
+                    "selected": "proyecto_three",
+                    "depth": true
+                }
+            ]
         },
         {
+            "id": "img",
+            "selected": "proyectos",
+            "depth": false,
             "name": "Sistemas de enfriamiento de aire de entrada de turbinas",
             "cliente": "Ecopetrol S.A. – Termosuria y Termocoa",
             "ubicacion": "Meta, Colombia",
             "texto": "Diseñamos y suministramos tres sistemas modulares de enfriamiento de aire de entrada de las turbinas LM6000 de las termoeléctricas Termocoa y Termosuria con el objetivo de aumentar la capacidad de la planta cuando las condiciones ambientales cálidas y húmedas disminuyan el rendimiento y la confiabilidad de las turbinas. Además del aumento de la potencia a la salida, la planta enfriadora de agua refrigerada por 1.950 TR permitió una tasa de calor mejorada para la turbina de combustión LM6000, así como una mayor eficiencia y una reducción de emisiones. El proyecto presentó un diseño de serpentín único que simplificó la modificación de las casas de filtro, al igual que incluyó el acompañamiento para la recepción de los equipos en puerto y campo, preservación, supervisión de la instalación, precomisionamiento, comisionamiento, puesta en marcha y entrenamiento. Como resultado, las plantas obtuvieron una potencia adicional de 18MW.",
-            "images": {
-                "principal": "",
-                "cliente": "",
-                "aliado":""
-            }
+            "images": [
+                {
+                    "id": "img",
+                    "selected": "proyecto_forth",
+                    "depth": true
+                },
+                {
+                    "id": "img",
+                    "selected": "proyecto_forth",
+                    "depth": true
+                }
+            ]
         },
         {
+            "id": "img",
+            "selected": "proyectos",
+            "depth": false,
             "name": "Compresor Cubogas – Nuovo Pignone para estación de GNC",
             "cliente": "Metrogas de Colombia S.A. ESP",
             "ubicacion": "Santana, Boyacá",
             "texto": "Diseño y suministro de compresor Nuovo Pignone para estación de GNC, nuestro compresor Cubogas modelo S99B con 33 bar de presión de succión otorga un caudal de 2950 m3/hora, permitiendo una eficiencia energética, robustez y confiabilidad en la operación. El proyecto incluyó instalación, pre-comisionamiento, comisionamiento, arranque, puesta en marcha y entrenamiento sobre la operación y mantenimiento del compresor CUBOGAS, actualmente continuamos proporcionando soporte técnico y repuestos.",
-            "images": {
-                "principal": "",
-                "cliente": "",
-                "aliado":""
-            }
+            "images": [
+                {
+                    "id": "img",
+                    "selected": "proyecto_fifth",
+                    "depth": true
+                },
+                {
+                    "id": "img",
+                    "selected": "proyecto_fifth",
+                    "depth": true
+                }
+            ]
         },
         {
+            "id": "img",
+            "selected": "proyectos",
+            "depth": false,
             "name": "Proyecto: Reparación de rotores para turbogeneradores",
             "cliente": "Ecopetrol, Refinería de Barrancabermeja",
             "ubicacion": "Barrancabermeja, Santander - Colombia",
             "texto": "Suministro y reparación de rotores para tres turbogeneradores TG 2951, TG 2952 y TG 2953 de 25000 KVA, 13800 V, 1045 A, 0.8 PF, 2000 KW de la unidad de balance U2950 de la Refinería de Barrancabermeja. La reparación del rotor incluyó una inspección técnica en sitio con especialistas del fabricante, rebobinado, nuevos anillos de retención, balanceo a alta velocidad, actualización tecnológica, pruebas eléctricas, actividades realizadas en la planta de Electric Machinery en Minneapolis, Estados Unidos.",
-            "images": {
-                "principal": "",
-                "cliente": "",
-                "aliado":""
-            }
+            "images": [
+                {
+                    "id": "img",
+                    "selected": "proyecto_sixth",
+                    "depth": true
+                },
+                {
+                    "id": "img",
+                    "selected": "proyecto_sixth",
+                    "depth": true
+                }
+            ]
         },
         {
+            "id": "img",
+            "selected": "proyectos",
+            "depth": false,
             "name": "Cruces de rio con perforación horizontal dirigida con tubería de 30”",
             "cliente": "Plantas Petroquímicas",
             "ubicacion": "Ríos San Jorge, San Bartolomé, Nechí, Magdalena y Cauca, Colombia",
             "texto": "Ejecución de cinco cruces en los ríos San Jorge, San Bartolomé, Nechí, Magdalena y Cauca con tubería de 30”, mediante perforación horizontal dirigida, correspondiente al proyecto 'Cusiana - Cupiagua Full Field Development Project -Pipelay North'",
-            "images": {
-                "principal": "",
-                "cliente": "",
-                "aliado":""
-            }
+            "images": [
+                {
+                    "id": "img",
+                    "selected": "proyecto_seventh",
+                    "depth": true
+                },
+                {
+                    "id": "img",
+                    "selected": "proyecto_seventh",
+                    "depth": true
+                },
+                {
+                    "id": "img",
+                    "selected": "proyecto_seventh",
+                    "depth": true
+                }
+            ]
         },
         {
+            "id": "img",
+            "selected": "proyectos",
+            "depth": false,
             "name": "Tuberías y productos en aleaciones especiales para hornos de reformado y cracking”",
             "cliente": "Plantas Petroquímicas",
             "ubicacion": "Colombia y Venezuela",
             "texto": "Asistencia técnica y suministro de productos en aleaciones especiales como tuberías, serpentines, pigtails, manifolds, colectores, líneas de transferencia, módulos de convección, return bends, cabezales y otros componentes para hornos de reformado y cracking utilizados en la industria petrolera, petroquímica y siderúrgica a través de nuestra representada Manoir Industries para refinerías de Ecopetrol en Colombia, Yara y algunas de las principales plantas petroquímicas de Venezuela como Metor, Supermetanol, Fertinitro y otras empresas de PDVSA.",
-            "images": {
-                "principal": "",
-                "cliente": "",
-                "aliado":""
-            }
+            "images": [
+                {
+                    "id": "img",
+                    "selected": "proyecto_eight",
+                    "depth": true
+                },
+                {
+                    "id": "img",
+                    "selected": "proyecto_eight",
+                    "depth": true
+                },
+                {
+                    "id": "img",
+                    "selected": "proyecto_eight",
+                    "depth": true
+                },
+                {
+                    "id": "img",
+                    "selected": "proyecto_eight",
+                    "depth": true
+                }
+            ]
         },
         {
+            "id": "img",
+            "selected": "proyectos",
+            "depth": false,
             "name": "Inspección técnica, análisis de vibración y ruido para compresores Cubogas",
             "cliente": "Alcanos de Colombia S.A. ESP",
             "ubicacion": "Neiva, Colombia",
             "texto": "Diagnóstico preliminar para definir solución a problemas de ruido y vibraciones mecánicas en compresores CUBOGAS P-70 de la planta de Hobo-Huila. Inspección técnica especializada para el diagnóstico del estado mecánico de los compresores CUBOGAS P-70 mediante la toma de datos de vibraciones mecánica y análisis del espectro, medición de ruido e inspección visual del estado de la placa base, fundación, grouting y anclajes.",
-            "images": {
-                "principal": "",
-                "cliente": "",
-                "aliado":""
-            }
+            "images": [
+                {
+                    "id": "img",
+                    "selected": "proyecto_nine",
+                    "depth": true
+                },
+                {
+                    "id": "img",
+                    "selected": "proyecto_nine",
+                    "depth": true
+                }
+            ]
         }
 
     ],
     "footer": {
         "brand": "./src/assets/logo_petrolcarbon.png",
-        "información": {
+        "information": {
             "title": "información",
             "items": [
                 {
@@ -381,7 +855,14 @@
         },
         "certificaciones": {
             "title": "Certificaciones",
-            "certificaciones": []
+            "list": [
+                {
+                    "id": "img",
+                    "selected": "certificaciones",
+                    "depth": false,
+                    "link" : "certificaciones_pdf"
+                }
+            ]
         },
         "copy": "Petrolcarbon LTDA @2022 Todos los derechos registrados"
     }

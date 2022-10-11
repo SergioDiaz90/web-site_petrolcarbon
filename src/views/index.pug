@@ -1,14 +1,23 @@
 doctype html
 html(lang="en")
     head
+        link(rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.png")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        title Petrolcarbon
     body
         include components/header.pug
-        include components/slider.pug
-        section(class="container-section")
-            include components/servicios-home.pug
-        section(class="container-section")
-            include components/representadas-home.pug
+        section(class="inicio")
+            include home.pug
+        section(class="quienes-somos container-section" style="display: none")
+            include quienes-somos.pug
+        section(class="representaciones" style="display: none")
+            include representadas.pug
+        section(class="servicios" style="display: none")
+            include servicios.pug
+        section(class="clientes" style="display: none")
+            include clientes.pug
+        section(class="proyectos" style="display: none")
+            include proyectos.pug
+        include components/footer.pug

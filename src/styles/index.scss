@@ -1,26 +1,53 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'fonts.scss';
 @import 'mixins.scss';
 @import 'header.scss';
 @import 'slider.scss';
 @import 'servicios-home.scss';
 @import 'representadas-home.scss';
+@import 'clientes-home.scss';
+@import 'quienes-somos.scss';
+@import 'representadas.scss';
+@import 'clientes.scss';
+@import 'proyectos.scss';
+@import 'formulario.scss';
+@import 'footer.scss';
+
 
 /*General*/
 body {
     width: 100%;
     height: 100vh;
     margin: 0 auto;
-
+    // background-image: url('../assets/background.png');
+    background-repeat: round;
+    font-family: 'Montserrat', sans-serif;
+        
     .container-section {
         margin-bottom: 213px!important;
         width: 90%;
-        margin: 0 auto;
+        margin: 10% auto;
+
+        &--exception {
+            width: 100%;
+            margin: 10% auto;
+        }
     }
 
     .subtitle {
-        @apply text-xl text-gray font-semibold text-center;
-        margin-bottom: 100px;
+        @apply text-2xl text-gray font-semibold text-center;
+        margin: 100px 0 100px 0;
     }
+
+    // .active {
+    //     display: block!important;
+    // }
+
+    .representaciones, .servicios, .clientes, .proyectos {
+        width: 90%;
+        margin: 10% auto;
+    }
+
 }

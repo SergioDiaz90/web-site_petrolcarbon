@@ -10,12 +10,14 @@ module.exports = {
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
+        assetModuleFilename: 'src/assets/images/[name].[ext]'
     },
     plugins: [
         new HtmlWebpackPlugin({
+            favicon: './src/assets/favicon.png',
             template: './src/views/index.pug',
             filename: 'index.html',
-            minify: false
+            minify: true
         }),
         new HtmlWebpackPugPlugin()
     ],
@@ -40,11 +42,11 @@ module.exports = {
                 use: ['style-loader','css-loader', 'postcss-loader', 'sass-loader']
             },
             {
-                test: /\.(png|jpg|jpeg|ico)$/i,
+                test: /\.(png|jpg|jpeg|ico|pdf)$/i,
                 type: 'asset/resource',
-                generator: {
-                    filename: 'assets/img/[name][ext]'
-                }
+                // generator: {
+                //     filename: 'assets/img/[name][ext]'
+                // }
             },
             {
                 // To use fonts on pug files:

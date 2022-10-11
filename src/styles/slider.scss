@@ -10,25 +10,30 @@
         transition: all 0.3s;
         font-size:0px;
 
-        .slider-content--overlay {
+        &--overlay {
             @apply w-full h-full bg-black absolute;
             top:0;
             opacity: 0.3;
         }
 
-        &--0, &--1, &--2 {
-            @apply w-full h-full inline-block;
+        &--img {
+            @apply w-full h-full relative inline-block;
             white-space: nowrap;
-            aspect-ratio: 16/9;
-            .slider-content--phrase-0, .slider-content--phrase-1, .slider-content--phrase-2{
-                @apply h-1/4 text-right relative;
-                width: 90%;
-                margin: 0 auto;
-                margin-top: 23%;
-                z-index: 5;
-    
+            
+            img {
+                @apply w-full h-full relative;
+            }
+            
+            .slider-content--phrase {
+                @apply relative;
+                width: 25%;
+                height: 25%;
+                bottom: 30%;
+                left: 40%;
+                z-index: 2;
+
                 h1 {
-                    @apply text-2xl font-bold text-white;
+                    @apply text-3xl font-bold text-white;
                 }
             }
         }
@@ -55,6 +60,20 @@
 
         &--list.active {
             background-color: whitesmoke;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .slider {
+        &-content {
+            &--img {
+                .slider-content--phrase {
+                    h1 {
+                        font-size: 16px!important;
+                    }
+                }
+            }
         }
     }
 }

@@ -8,32 +8,111 @@ mixin header (items)
 mixin slider(slider)
     div(class="slider-content")
         each obj,index in slider
-            - let nameClass = `slider-content--${index}`;
-            - let namePhrase = `slider-content--phrase-${index}`;
-            div(class=nameClass)
-                div(class=namePhrase)
+            figure(class=`slider-content--img` id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
+                img
+                figcaption(class='slider-content--phrase')
                     each phrase in obj.phrases
                         h1=phrase
-                div(class="slider-content--overlay")
+    div(class="slider-content--overlay")
     ul(class="slider-content-controls")
-        -let cnt = slider.length;
-        -let idx = 0;
-        while idx < cnt 
-            li(class="slider-content-controls--list" idx=idx++)
+            -let cnt = slider.length;
+            -let idx = 0;
+            while idx < cnt 
+                li(class="slider-content-controls--list" idx=idx++)
 
 mixin card(servicios)
     each obj, idx in servicios
-        - let nameClass = `card-${idx}`;
-        div(class=nameClass)
+        div(class="card")
             div(class="card-article")
                 h3=obj.title
                 article=obj.text
+            figure(class="card-img" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
+                img
             div(class="card--overlay")
 
 mixin cardWithImage(representadas)
         each obj, idx in representadas
             div(class="cardWithImage-card")
-                - let nameClass = `cardWithImage-card--image-${idx}`;
-                div(class=nameClass)
+                figure(class="cardWithImage-card--image" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
+                    img
                 div(class="cardWithImage-card--text")
                     h2=obj.title
+
+mixin sliderVariousImage(clientes)
+    ul(class="sliderVariousImage-content")
+            each obj,index in clientes
+                - let nameClass = `sliderVariousImage-item--${index}`;
+                li(class=nameClass)
+                
+mixin textAndImage( items )
+    div(class="textAndImage-wrapper")
+        each obj, idx in items
+            - let condition = idx % 2 === 0; 
+            if condition
+                div(class="textAndImage-wrapper--content--left")
+                    figure(class="textAndImage-wrapper--image" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
+                        img
+                    div(class="textAndImage-wrapper--article")
+                        h2=obj.title
+                        article
+                            p=obj.text
+            else
+                div(class="textAndImage-wrapper--content--right")
+                    figure(class="textAndImage-wrapper--image" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
+                        img
+                    div(class="textAndImage-wrapper--article")
+                        h2=obj.title
+                        article
+                            p=obj.text
+
+mixin hexagonCard ( hexagon )
+    div(class="hexagon-wrapper")
+        each obj, idx in hexagon
+            h2(class="hexagon-wrapper--title")=obj.title
+            div(class="hexagon-line")
+                each item, index in obj.aliados
+                    div(class="hexagon-card")
+                        +hexagon(item, 'representadas')
+                        article
+                            p=item.text
+
+mixin hexagonClient ( hexagon )
+    div(class="client-wrapper")
+            each obj, idx in hexagon
+                h2(class="client-wrapper--title")=obj.title
+                div(class="client-line")
+                    each items, index  in obj.clients
+                        div(class="client-line-hexagon")
+                            +hexagon(items, 'clientes')
+
+
+mixin hexagon ( obj, section )
+    if (section == 'representadas')
+        figure(class="hexagon--image" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
+            img(class="representadas-img")
+            svg
+                clipPath(id="hexagon-element" stroke="black" stroke-width="3px")
+                    <path d="M 217.0742645263672 250.5435638427734 L 72.74303436279297 250.5435638427734 L 0.5773241519927979 125.5217819213867 L 72.74303436279297 0.4999962151050568 L 217.0742645263672 0.4999962151050568 L 289.2399597167969 125.5217819213867 L 217.0742645263672 250.5435638427734 Z" stroke="none"/>
+    else
+        figure(class="hexagon--image" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
+            img(class="clientes-img")
+            svg
+                clipPath(id="client-element" stroke="black" stroke-width="3px")
+                    <path d="M 217.0742645263672 250.5435638427734 L 72.74303436279297 250.5435638427734 L 0.5773241519927979 125.5217819213867 L 72.74303436279297 0.4999962151050568 L 217.0742645263672 0.4999962151050568 L 289.2399597167969 125.5217819213867 L 217.0742645263672 250.5435638427734 Z" stroke="none"/>
+
+mixin viewProjects ( params )
+    each obj, idx in params
+        div(class="project")
+            figure(class="project--image" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
+                img
+            section(class="project--section")
+                h2 Proyecto: #{obj.name}
+                h4 Cliente: #{obj.cliente}
+                h5 Ubicación #{obj.ubicacion}
+
+                article(class="project--section-article")
+                    p=obj.texto
+                    div(class="project--section-article--colaborator")
+                        each item, idx in obj.images
+                            figure(class="project--image" id=`${item.id}` section=`${item.selected}` value=`${item.depth}`)
+                                img

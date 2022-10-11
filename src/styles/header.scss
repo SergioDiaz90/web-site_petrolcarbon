@@ -1,9 +1,12 @@
 .header-wrapper {
-    @apply grid grid-cols-3 content-center bg-white;
-    width: 90%;
+    @apply grid grid-cols-3 content-center bg-white shadow-md shadow-gray;
+    width: 100%;
     height: 100px;
-    margin: 0 auto;
-    position: static;
+    position: fixed;
+    top: 0;
+    padding: 0 5% 0 5%;
+    z-index: 9;
+
 
     &--brand{
         @apply col-span-1;
@@ -19,12 +22,24 @@
             @apply flex justify-between;
 
             &-item {
-                @apply text-gray;
+                @apply text-black;
 
                 &:hover{
                     @apply text-green-quarter cursor-pointer;
                 }
             }
+        }
+    }
+
+}
+
+@media (max-width: 992px) {
+    .header-wrapper {
+        grid-template-columns: 150px repeat(2, minmax(0, 1fr));
+        grid-gap: 100px;
+
+        .navigation-bar {
+            font-size: 14px;
         }
     }
 }
