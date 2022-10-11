@@ -1,8 +1,9 @@
 .slider {
-    @apply w-full relative overflow-hidden;
+    @apply w-full relative overflow-hidden shadow-lg;
     @include slider(2);
     height: 600px;
     margin: 0 0 213px 0;
+    box-shadow: 0px 5px 6px black;
 
     .slider-content {
         @apply w-full h-full relative;
@@ -29,11 +30,12 @@
                 width: 25%;
                 height: 25%;
                 bottom: 30%;
-                left: 40%;
+                left: 45%;
                 z-index: 2;
 
                 h1 {
-                    @apply text-3xl font-bold text-white;
+                    @apply text-2xl font-bold text-white;
+                    text-shadow: 2px 2px 2px #8C8987;
                 }
             }
         }

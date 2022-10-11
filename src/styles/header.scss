@@ -1,6 +1,6 @@
 .header-wrapper {
     @apply grid content-center bg-white shadow-md shadow-gray;
-    grid-template-columns: 13vw repeat(2, minmax(0, 1fr));
+    grid-template-columns: 170px repeat(2, minmax(0, 1fr));
     width: 100%;
     height: 100px;
     position: fixed;
@@ -16,7 +16,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        height: 3vw;
+        height: 70px;
     }
 
     .navigation-bar {
@@ -41,7 +41,7 @@
         }
 
         .active {
-            right: 0vw;
+            right: 0;
             transition: 0.3s all linear;
         }
     }
@@ -63,8 +63,8 @@
                 @apply absolute  bg-green-principal flex flex-col items-center justify-between;
                 grid-template-columns: none;
                 top: 100px;
-                right: -25vw;
-                width: 25vw;
+                right: -200px;
+                width: 200px;
                 transition: 0.3s all linear;
 
                 &-item {
