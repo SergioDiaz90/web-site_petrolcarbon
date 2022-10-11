@@ -1,0 +1,18 @@
+div(class="footer-wrapper")
+    div(class="footer")
+        div(class="footer--brand")
+        div(class="footer-items")
+            h4=footer.information.title
+            ul(class="footer-items--list")
+                each items in footer.information.items
+                    li=items.item
+        div(class="footer-certifications")
+            h4=footer.certificaciones.title
+            ul(class="footer-certifications--list")
+                each items in footer.certificaciones.list
+                    li(class="footer-certifications--list-item")
+                        a(href=`${items.link}`, target="_blank", rel="noopener noreferrer") 
+                            figure(id=`${items.id}` section=`${items.selected}` value=`${items.depth}`)
+                                img
+    div(class="footer-copy")
+        p=footer.copy

@@ -1,0 +1,51 @@
+.project {
+    @apply grid gap-9 grid-cols-2 mb-10;
+
+    &--image {
+        height: 400px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &--section {
+        h2, h4, h5, p {
+            @apply text-gray;
+        }
+
+        h2 {
+            @apply font-bold text-xl;
+        }
+
+        h4 {
+            @apply font-semibold text-lg;
+        }
+
+        h5 {
+            @apply font-medium text-base;
+        }
+
+        &-article {
+            @apply mt-7;
+
+            &--colaborator {
+                @apply flex justify-end mt-8;
+                width: 100%;
+                height: 10%;
+
+                .project--image {
+                    @apply ml-8;
+                    width: 100px;
+                    height: 60px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

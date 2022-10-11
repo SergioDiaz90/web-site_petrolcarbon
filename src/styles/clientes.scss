@@ -1,0 +1,14 @@
+.client-wrapper {
+
+    &--title {
+        @apply text-xl text-gray font-semibold mb-20;
+    }
+    .client-line {
+        @apply flex flex-wrap justify-center;
+        .client-line-hexagon {
+            width: 500px;
+            height: 300px;
+            @include hexagon;
+        }
+    }
+}

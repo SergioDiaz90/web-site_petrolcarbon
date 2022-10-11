@@ -1,0 +1,23 @@
+.hexagon-wrapper {
+    &--title {
+        @apply font-semibold text-gray text-xl mb-20;
+    }
+    .hexagon-line {
+        @apply flex justify-around my-10;
+        .hexagon-card {
+            width: 500px;
+            height: 500px;
+            @include hexagon;
+
+            article {
+                width: 90%;
+                margin: 0 auto;
+
+                p {
+                    @apply text-gray;
+                }
+            }
+        }
+    }
+
+}

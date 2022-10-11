@@ -1,0 +1,28 @@
+h2(class="subtitle") Contáctenos
+div(class="form--wrapper")
+    form(class="form")
+        each item, idx in contactenos.fields
+            div(class="form-field")
+                //- p=item.name
+                //- p=item.typ
+                if item.type != 'option' && item.type != 'checkbox' && item.type != 'submit' && item.name != 'Comentarios:'
+                    label(for=item.name)=item.name
+                    input(id=item.name type=item.type)
+
+                else if item.name == 'Comentarios:'
+                    label(for=item.name)=item.name
+                    textarea(class="comments" id=item.name type=item.type)
+
+                else if item.type == 'checkbox'
+                    input(id=item.name type=item.type)
+                    label(for=item.name)
+                        a(href="http://", target="_blank", rel="noopener noreferrer")=item.name 
+
+                else if item.type == 'submit'
+                    button(type=item.type)=item.name
+
+                else
+                    label(for=item.name)=item.name
+                    select(id=item.name type=item.type)
+                        each option in item.options
+                            option=option
