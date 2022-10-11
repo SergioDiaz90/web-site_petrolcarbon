@@ -1,11 +1,13 @@
 .header-wrapper {
-    @apply grid grid-cols-3 content-center bg-white shadow-md shadow-gray;
+    @apply grid content-center bg-white shadow-md shadow-gray;
+    grid-template-columns: 10vw repeat(2, minmax(0, 1fr));
     width: 100%;
     height: 100px;
     position: fixed;
     top: 0;
     padding: 0 5% 0 5%;
     z-index: 9;
+    grid-gap: 10vw;
 
 
     &--brand{
@@ -13,19 +15,23 @@
         background-image: url('../assets/logo_petrolcarbon.png');
         background-size: contain;
         background-repeat: no-repeat;
-        height: 40px;
+        background-position: center;
+        height: 3vw;
     }
 
     .navigation-bar {
         @apply grid content-center h-full col-start-2 col-end-4 gap-3;
         &--list {
-            @apply flex justify-between;
+            @apply grid justify-between;
+            grid-template-columns: 4vw 8.9vw 15vw 6vw 6vw 6vw 7vw;
+            grid-gap: 2vw;
 
             &-item {
-                @apply text-black;
+                @apply text-gray text-center p-2 rounded;
 
                 &:hover{
-                    @apply text-green-quarter cursor-pointer;
+                    @apply bg-green-quarter text-white cursor-pointer;
+                    transition: 0.4s all linear;
                 }
             }
         }
@@ -35,11 +41,6 @@
 
 @media (max-width: 992px) {
     .header-wrapper {
-        grid-template-columns: 150px repeat(2, minmax(0, 1fr));
-        grid-gap: 100px;
-
-        .navigation-bar {
-            font-size: 14px;
-        }
+        // grid-template-columns: 150px repeat(2, minmax(0, 1fr));
     }
 }

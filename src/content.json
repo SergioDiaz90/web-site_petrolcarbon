@@ -1,37 +1,37 @@
 {
     "menu": [
         {
-            "item": "INICIO",
+            "item": "Inicio",
             "link": "#",
             "class": "inicio"
         },
         {
-            "item": "QUIENES SOMOS",
+            "item": "Quienes somos",
             "link": "#",
             "class": "quienes-somos"
         },
         {
-            "item": "REPRESENTACIONES Y ALIANZAS",
+            "item": "Representaciones y alianzas",
             "link": "#",
             "class": "representaciones"
         },
         {
-            "item": "SERVICIOS",
+            "item": "Servicios",
             "link": "#",
             "class": "servicios"
         },
         {
-            "item": "CLIENTES",
+            "item": "Clientes",
             "link": "#",
             "class": "clientes"
         },
         {
-            "item": "PROYECTOS",
+            "item": "Proyectos",
             "link": "#",
             "class": "proyectos"
         },
         {
-            "item": "CONTÁCTENOS",
+            "item": "Contáctenos",
             "link": "#form",
             "class": "contactenos"
         }
