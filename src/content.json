@@ -37,6 +37,12 @@
         }
     ],
     "brand": "./src/assets/logo_petrolcarbon.png",
+    "button": {
+        "image": "",
+        "id": "img",
+        "selected": "menu",
+        "depth": false
+    },
     "home": {
         "slider": [
             {

@@ -71,6 +71,7 @@ import proyecto_8_3 from '../assets/empresas/proyecto_8_3.png'
 import proyecto_9_1 from '../assets/empresas/proyecto_9_1.png'
 import certificaciones from '../assets/certificaciones/certificaciones.png';
 import certificaciones_pdf from '../documents/certificaciones.pdf';
+import hamburger from '../assets/icon-hamburger.png'
 
 let allImage = undefined;
 
@@ -127,6 +128,10 @@ class AllImageSystem {
 
         this.certificaciones = [
             certificaciones
+        ]
+
+        this.menu = [
+            hamburger
         ]
     }
 

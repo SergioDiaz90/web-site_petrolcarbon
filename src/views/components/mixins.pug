@@ -1,5 +1,8 @@
 mixin header (items)
     nav(class="navigation-bar")
+        button(class=`navigation-bar--menu-btn`)
+            figure(id=`${button.id}` section=`${button.selected}` value=`${button.depth}`)
+                    img
         ul(class="navigation-bar--list")
             each val in items
                 li(class="navigation-bar--list-item")

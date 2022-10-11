@@ -27,6 +27,14 @@ function handlerViewsInIndex () {
 
 }
 
+function handlerMenuInResponsive () {
+    const hamburgerMenu = document.querySelector('.navigation-bar--menu-btn');
+    const listMenu = document.querySelector('.navigation-bar--list');
+    hamburgerMenu.addEventListener('click', () => {
+        listMenu.classList.toggle('active');
+    })
+}
+
 function addImage () {
     if ( !allImageSystem ) return;
     const imgItems = document.querySelectorAll('#img');
@@ -82,6 +90,7 @@ function addImage () {
 (function () {
     new Slider ('.slider', false);
     handlerViewsInIndex();
+    handlerMenuInResponsive();
     allImageSystem = allImageSystemInstance();
     addImage()
 })();
