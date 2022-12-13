@@ -850,10 +850,13 @@
     "footer": {
         "brand": "./src/assets/logo_petrolcarbon.png",
         "information": {
-            "title": "información",
+            "title": "Información",
             "items": [
                 {
                     "item": "Petrolcarbon LTDA" 
+                },
+                {
+                    "item": "Catálogo" 
                 },
                 {
                     "item": "Bogotá - Colombia." 
@@ -863,9 +866,6 @@
                 },
                 {
                     "item": "Télefono:  +57 310 304 7932" 
-                },
-                {
-                    "item": "Correo: petrolcarbon@petrolcarbon.com" 
                 },
                 {
                     "item": "Correo: petrolcarbon@petrolcarbon.com" 
