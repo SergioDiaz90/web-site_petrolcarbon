@@ -3,7 +3,7 @@
         @apply font-semibold text-gray text-xl mb-20;
     }
     .hexagon-line {
-        @apply flex justify-around my-10;
+        @apply flex justify-around mb-10;
         .hexagon-card {
             width: 500px;
             height: 500px;
@@ -12,6 +12,7 @@
             article {
                 width: 90%;
                 margin: 0 auto;
+                text-shadow: none;
 
                 p {
                     @apply text-gray text-justify;

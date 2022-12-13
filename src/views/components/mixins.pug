@@ -82,7 +82,7 @@ mixin hexagonCard ( hexagon )
                 each item, index in obj.aliados
                     div(class="hexagon-card")
                         +hexagon(item, 'representadas')
-                        article
+                        article(class="text-card")
                             p=item.text
 
 mixin hexagonClient ( hexagon )
@@ -97,14 +97,16 @@ mixin hexagonClient ( hexagon )
 
 mixin hexagon ( obj, section )
     if (section == 'representadas')
-        figure(class="hexagon--image" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
-            img(class="representadas-img")
-            svg
-                clipPath(id="hexagon-element" stroke="black" stroke-width="3px")
-                    <path d="M 217.0742645263672 250.5435638427734 L 72.74303436279297 250.5435638427734 L 0.5773241519927979 125.5217819213867 L 72.74303436279297 0.4999962151050568 L 217.0742645263672 0.4999962151050568 L 289.2399597167969 125.5217819213867 L 217.0742645263672 250.5435638427734 Z" stroke="none"/>
+        div(class="hexagon--form")
+            figure(class="hexagon--image" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
+                img(class="representadas-img")
+            //- svg
+            //-     clipPath(id="hexagon-element" stroke="black" stroke-width="3px")
+            //-         <path d="M 217.0742645263672 250.5435638427734 L 72.74303436279297 250.5435638427734 L 0.5773241519927979 125.5217819213867 L 72.74303436279297 0.4999962151050568 L 217.0742645263672 0.4999962151050568 L 289.2399597167969 125.5217819213867 L 217.0742645263672 250.5435638427734 Z" stroke="none"/>
     else
-        figure(class="hexagon--image" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
-            img(class="clientes-img")
+        div(class="hexagon--form")
+            figure(class="hexagon--image" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
+                img(class="clientes-img")
             svg
                 clipPath(id="client-element" stroke="black" stroke-width="3px")
                     <path d="M 217.0742645263672 250.5435638427734 L 72.74303436279297 250.5435638427734 L 0.5773241519927979 125.5217819213867 L 72.74303436279297 0.4999962151050568 L 217.0742645263672 0.4999962151050568 L 289.2399597167969 125.5217819213867 L 217.0742645263672 250.5435638427734 Z" stroke="none"/>

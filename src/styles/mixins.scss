@@ -199,22 +199,28 @@
 
 @mixin hexagon () {
     
-    .hexagon--image {
+    .hexagon--form {
         width: 300px;
         height: 300px;
         margin: 0 auto;
-        filter: drop-shadow( 2px 2px 5px black);
+        background-color: white;
+        clip-path: url(#client-element);
 
-        .clientes-img {
+        .hexagon--image {
             width: 100%;
             height: 100%;
-            clip-path: url(#client-element);
-        }
+            @apply flex justify-center items-center;
 
-        .representadas-img {
-            width: 100%;
-            height: 100%;
-            clip-path: url(#hexagon-element);
+            // .clientes-img {
+            //     width: 100%;
+            //     height: 100%;
+            //     clip-path: url(#client-element);
+            // }
+            // .representadas-img {
+            //     width: 100%;
+            //     height: 100%;
+            //     clip-path: url(#hexagon-element);
+            // }
         }
     }
     
