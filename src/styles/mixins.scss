@@ -162,7 +162,8 @@
         }
 
         &--image {
-            @apply w-1/2 text-center;
+            @apply text-center;
+            width: 45%;
 
             img {
                 width: 100%;
