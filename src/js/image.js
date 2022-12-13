@@ -16,10 +16,12 @@ import soluciones_8 from '../assets/representadas/soluciones_8.jpg';
 import soluciones_9 from '../assets/representadas/soluciones_9.png';
 import soluciones_10 from '../assets/representadas/soluciones_10.jpg';
 import soluciones_11 from '../assets/representadas/soluciones_11.jpg';
+
 import mision from '../assets/quienes-somos/mision.jpg';
-import politica_calidad from '../assets/quienes-somos/politica_calidad.jpg';
+import politica_calidad from '../assets/quienes-somos/politica_calidad.png';
 import vision from '../assets/quienes-somos/vision.jpg';
-import objetivo_calidad from '../assets/quienes-somos/objetivo_calidad.jpg';
+import quienes_somos from '../assets/quienes-somos/quienes_somos.jpg';
+
 import gas_1 from '../assets/clientes/gas_1.jpg';
 import gas_2 from '../assets/clientes/gas_2.jpg';
 import gas_3 from '../assets/clientes/gas_3.jpg';
@@ -84,7 +86,7 @@ class AllImageSystem {
         this.representadas = [ 
             soluciones_1 , soluciones_2, soluciones_3 , soluciones_4, soluciones_5 ,
             soluciones_6, soluciones_7 , soluciones_8 , soluciones_9, soluciones_10 , soluciones_11  ]
-        this.nosotros = [ mision, politica_calidad, vision, objetivo_calidad ];
+        this.nosotros = [ quienes_somos, vision, mision, politica_calidad ];
         this.clientes = [
             gas_1, gas_2, gas_3, gas_4,
             gas_5, gas_6, gas_9, gas_10,

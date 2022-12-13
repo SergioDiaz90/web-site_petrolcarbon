@@ -63,8 +63,8 @@
                 @apply absolute  bg-green-principal flex flex-col items-center justify-between;
                 grid-template-columns: none;
                 top: 100px;
-                right: -200px;
-                width: 200px;
+                right: -80%;
+                width: 80%;
                 transition: 0.3s all linear;
 
                 &-item {

@@ -28,7 +28,7 @@
         }
 
         &-article {
-            @apply mt-7;
+            @apply mt-7 text-justify;
 
             &--colaborator {
                 @apply flex justify-end mt-8;

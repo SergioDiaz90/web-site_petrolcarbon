@@ -21,21 +21,22 @@
     .card {
         @apply grid grid-cols-1 relative content-end;
         padding: 20px;
-        height: 596px;
+        height: 70vh;
         background-size: 100% 100%;
         background-repeat: no-repeat;
         transition: all 0.3s;
         .card-article {
-            height: 200px;
+            @apply flex justify-start flex-col;
+            height: 250px;
             z-index: 1;
             h3 {
                 @apply text-white my-5 font-medium;
-                font-size: 20px;
+                // font-size: 20px;
             }
 
             article {
                 @apply text-white font-normal;
-                font-size: 18px;
+                // font-size: 18px;
             }
 
         }
@@ -62,6 +63,24 @@
         }
     }
 
+    @media (max-width: 992px) {
+        .card {
+            .card-article {
+                height: 154px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        @apply grid-cols-2 grid-rows-2;
+
+        .card {
+            &:nth-child(3) {
+                @apply col-start-1 col-end-3;
+            }
+        }
+    }
+
 }
 
 @mixin cardWithImage {
@@ -79,11 +98,33 @@
 
             &--text {
                 @apply grid grid-cols-1 content-center w-full h-full bg-green-card px-4;
+                
                 h2 {
-                    @apply text-lg font-semibold text-white;
+                    @apply font-semibold text-white;
+                }
+
+            }
+
+            &:hover {
+                @extend .change;
+            }
+
+            .change {
+                &--image {
+                    @apply transition duration-150 ease-out opacity-75;
+                }
+
+                &--text {
+                    @apply transition duration-150 ease-out hover:bg-gradient-to-r from-green-principal to-grenn-medium;
+                    
+                    h2 {
+                        @apply text-lg font-semibold text-white;
+                    }
+    
                 }
             }
         }
+
     }
 }
 
@@ -130,14 +171,26 @@
         }
 
         &--article {
-            @apply w-1/2 flex justify-center flex-col p-10;
+            @apply w-1/2 flex justify-center flex-col p-10 relative;
 
             h2 {
                 @apply text-xl font-bold mb-5 text-gray text-left;
             }
 
             p {
-                @apply text-gray text-left;
+                @apply text-gray text-justify;
+            }
+
+            .see-more {
+                @apply bg-green-principal flex justify-center items-center absolute mt-5;
+                width: 200px;
+                height: 50px;
+                right: 40px;
+                cursor: pointer;
+
+                a {
+                    @apply text-white;
+                }
             }
         }
 

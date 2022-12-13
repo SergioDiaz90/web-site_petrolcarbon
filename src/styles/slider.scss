@@ -30,11 +30,12 @@
                 width: 25%;
                 height: 25%;
                 bottom: 30%;
-                left: 45%;
+                left: 10%;
                 z-index: 2;
 
                 h1 {
-                    @apply text-2xl font-bold text-white;
+                    @apply font-bold text-white;
+                    font-size: 2vw;
                     text-shadow: 2px 2px 2px #8C8987;
                 }
             }
@@ -66,16 +67,16 @@
     }
 }
 
-@media (max-width: 992px) {
-    .slider {
-        &-content {
-            &--img {
-                .slider-content--phrase {
-                    h1 {
-                        font-size: 16px!important;
-                    }
-                }
-            }
-        }
-    }
-}
+// @media (max-width: 992px) {
+//     .slider {
+//         &-content {
+//             &--img {
+//                 .slider-content--phrase {
+//                     h1 {
+//                         font-size: 16px!important;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

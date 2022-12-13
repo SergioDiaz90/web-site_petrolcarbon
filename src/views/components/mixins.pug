@@ -14,8 +14,9 @@ mixin slider(slider)
             figure(class=`slider-content--img` id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
                 img
                 figcaption(class='slider-content--phrase')
-                    each phrase in obj.phrases
-                        h1=phrase
+                    div
+                        each phrase in obj.phrases
+                            h1=phrase
     div(class="slider-content--overlay")
     ul(class="slider-content-controls")
             -let cnt = slider.length;
@@ -58,7 +59,8 @@ mixin textAndImage( items )
                     div(class="textAndImage-wrapper--article")
                         h2=obj.title
                         article
-                            p=obj.text
+                            p=obj.text.one
+                            p=obj.text.two
             else
                 div(class="textAndImage-wrapper--content--right")
                     figure(class="textAndImage-wrapper--image" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
@@ -66,7 +68,11 @@ mixin textAndImage( items )
                     div(class="textAndImage-wrapper--article")
                         h2=obj.title
                         article
-                            p=obj.text
+                            p=obj.text.one
+                            p=obj.text.two
+                            if obj.title == "Política de gestión integral"
+                                div(class="see-more")
+                                    a(href="#")=obj.link
 
 mixin hexagonCard ( hexagon )
     div(class="hexagon-wrapper")

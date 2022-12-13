@@ -142,7 +142,10 @@
     "quienes_somos": [
         {
             "title": "Quienes Somos",
-            "text": "PETROLCARBON es una empresa colombiana con certificaciones ISO 9001:2015, ISO 14001:2015 e ISO 45001:2018 que trabaja por la integración en la región de los últimos logros técnico-científicos que aparecen a nivel mundial en la industria petrolera, petroquímica, química, gasífera, eléctrica, minera y energética en general. Desde la constitución de la organización en 1980, PETROLCARBON ha buscado la integración de estos conocimientos a la industria a través de representaciones exclusivas de empresas reconocidas y alianzas estratégicas para ofrecer tecnologías, productos y servicios con un respaldo técnico – económico que garantice óptimo desempeño y el éxito de los proyectos.",
+            "text": {
+                "one": "PETROLCARBON es una empresa colombiana con certificaciones ISO 9001:2015, ISO 14001:2015 e ISO 45001:2018 que trabaja por la integración en la región de los últimos logros técnico-científicos que aparecen a nivel mundial en la industria petrolera, petroquímica, química, gasífera, eléctrica, minera y energética en general.",
+                "two": "Desde la constitución de la organización en 1980, PETROLCARBON ha buscado la integración de estos conocimientos a la industria a través de representaciones exclusivas de empresas reconocidas y alianzas estratégicas para ofrecer tecnologías, productos y servicios con un respaldo técnico – económico que garantice óptimo desempeño y el éxito de los proyectos."
+            },
             "id": "img",
             "selected": "nosotros",
             "depth": false,
@@ -150,7 +153,10 @@
         },
         {
             "title": "Visión",
-            "text": "PETROLCARBON se proyecta para el 2025 como una organización destacada dentro de las compañías del sector energético en general; direccionando permanentemente sus políticas y metas hacia la innovación técnico-científica. A través de alianzas estratégicas con empresas generadoras de estas tecnologías, continuaremos garantizando la confiabilidad y vigencia futura en los procesos donde sean aplicadas, impulsando la capacidad de cambio en nuestros clientes y siendo reconocidos por nuestro compromiso, excelencia operacional y sostenibilidad.",
+            "text": {
+                "one": "PETROLCARBON se proyecta para el 2025 como una organización destacada dentro de las compañías del sector energético en general; direccionando permanentemente sus políticas y metas hacia la innovación técnico-científica. A través de alianzas estratégicas con empresas generadoras de estas tecnologías, continuaremos garantizando la confiabilidad y vigencia futura en los procesos donde sean aplicadas, impulsando la capacidad de cambio en nuestros clientes y siendo reconocidos por nuestro compromiso, excelencia operacional y sostenibilidad.",
+                "two": ""
+            },
             "id": "img",
             "selected": "nosotros",
             "depth": false,
@@ -158,7 +164,10 @@
         },
         {
             "title": "Misión",
-            "text": "Somos una empresa que participa activamente en el desarrollo económico y técnico del país a través de la introducción de tecnologías e innovación técnico-científica, realizamos proyectos con recurso humano calificado, caracterizado por su sentido de responsabilidad social, pertenencia, espíritu cívico de convivencia; respeto por el medio ambiente y altos estándares de satisfacción a los grupos de interés.",
+            "text": {
+                "one":"Somos una empresa que participa activamente en el desarrollo económico y técnico del país a través de la introducción de tecnologías e innovación técnico-científica, realizamos proyectos con recurso humano calificado, caracterizado por su sentido de responsabilidad social, pertenencia, espíritu cívico de convivencia; respeto por el medio ambiente y altos estándares de satisfacción a los grupos de interés.",
+                "two": ""
+            },
             "id": "img",
             "selected": "nosotros",
             "depth": false,
@@ -166,7 +175,11 @@
         },
         {
             "title": "Política de gestión integral",
-            "text": "PETROLCARBON LTDA., empresa dedicada a la venta de equipos de alta tecnología, consultoría, diseño, ingeniería, asistencia técnica con personal altamente especializado para el acompañamiento, preservación, comisionamiento, pre-comisionamiento, instalación, puesta en marcha, operación, mantenimiento y capacitación sobre las tecnologías suministradas a la industria petrolera, petroquímica, química, gasífera, minera, eléctrica y energética en general, expresa su compromiso en el desempeño de todos nuestros procesos.",
+            "text": {
+                "one": "PETROLCARBON LTDA, empresa dedicada a la venta de equipos de alta tecnología, consultoría, diseño, ingeniería, asistencia técnica con personal altamente especializado para el acompañamiento, preservación, comisionamiento, pre-comisionamiento, instalación, puesta en marcha, operación, mantenimiento y capacitación sobre las tecnologías suministradas a la industria petrolera, petroquímica, química, gasífera, minera, eléctrica y energética en general, expresa su compromiso en el desempeño de todos nuestros procesos.",
+                "two": ""
+            },
+            "link": "Leer más",
             "id": "img",
             "selected": "nosotros",
             "depth": false,
