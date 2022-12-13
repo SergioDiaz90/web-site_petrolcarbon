@@ -22,30 +22,42 @@ import politica_calidad from '../assets/quienes-somos/politica_calidad.png';
 import vision from '../assets/quienes-somos/vision.jpg';
 import quienes_somos from '../assets/quienes-somos/quienes_somos.jpg';
 
-import gas_1 from '../assets/clientes/gas_1.jpg';
-import gas_2 from '../assets/clientes/gas_2.jpg';
-import gas_3 from '../assets/clientes/gas_3.jpg';
-import gas_4 from '../assets/clientes/gas_4.jpg';
-import gas_5 from '../assets/clientes/gas_5.jpg';
-import gas_6 from '../assets/clientes/gas_6.jpg';
-import gas_9 from '../assets/clientes/gas_9.jpg';
-import gas_10 from '../assets/clientes/gas_10.jpg';
-import gas_11 from '../assets/clientes/gas_11.jpg';
-import gas_12 from '../assets/clientes/gas_12.jpg';
-import gas_13 from '../assets/clientes/gas_13.jpg';
-import gas_14 from '../assets/clientes/gas_14.jpg';
-import gas_15 from '../assets/clientes/gas_15.jpg';
-import gas_16 from '../assets/clientes/gas_16.jpg';
-import gas_17 from '../assets/clientes/gas_17.jpg';
-import gas_18 from '../assets/clientes/gas_18.jpg';
-import gas_19 from '../assets/clientes/gas_19.jpg';
-import gas_20 from '../assets/clientes/gas_20.jpg';
-import gas_21 from '../assets/clientes/gas_21.jpg';
-import gas_22 from '../assets/clientes/gas_22.jpg';
-import gas_23 from '../assets/clientes/gas_23.jpg';
-import gas_24 from '../assets/clientes/gas_24.jpg';
-import gas_25 from '../assets/clientes/gas_25.jpg';
-import gas_26 from '../assets/clientes/gas_26.jpg';
+import gas_1 from '../assets/clientes/gas_1.png';
+import gas_2 from '../assets/clientes/gas_2.png';
+import gas_3 from '../assets/clientes/gas_3.png';
+import gas_4 from '../assets/clientes/gas_4.png';
+import gas_5 from '../assets/clientes/gas_5.png';
+import gas_6 from '../assets/clientes/gas_6.png';
+import gas_7 from '../assets/clientes/gas_7.png';
+import gas_8 from '../assets/clientes/gas_8.png';
+import gas_9 from '../assets/clientes/gas_9.png';
+import gas_10 from '../assets/clientes/gas_1.png';
+import gas_11 from '../assets/clientes/gas_11.png';
+import gas_12 from '../assets/clientes/gas_12.png';
+import gas_13 from '../assets/clientes/gas_13.png';
+import gas_14 from '../assets/clientes/gas_14.png';
+import gas_15 from '../assets/clientes/gas_15.png';
+import gas_16 from '../assets/clientes/gas_16.png';
+import gas_17 from '../assets/clientes/gas_17.png';
+import gas_18 from '../assets/clientes/gas_18.png';
+import gas_19 from '../assets/clientes/gas_19.png';
+import gas_20 from '../assets/clientes/gas_1.png';
+import gas_21 from '../assets/clientes/gas_21.png';
+import gas_22 from '../assets/clientes/gas_22.png';
+import gas_23 from '../assets/clientes/gas_23.png';
+import gas_24 from '../assets/clientes/gas_24.png';
+import gas_25 from '../assets/clientes/gas_25.png';
+import gas_26 from '../assets/clientes/gas_26.png';
+import gas_27 from '../assets/clientes/gas_27.png';
+import gas_28 from '../assets/clientes/gas_28.png';
+import gas_29 from '../assets/clientes/gas_29.png';
+import gas_30 from '../assets/clientes/gas_30.png';
+import gas_31 from '../assets/clientes/gas_31.png';
+import gas_32 from '../assets/clientes/gas_32.png';
+import gas_33 from '../assets/clientes/gas_33.png';
+import gas_34 from '../assets/clientes/gas_34.jpg';
+import gas_35 from '../assets/clientes/gas_35.png';
+
 import proyecto_1 from '../assets/proyectos/proyecto_1.jpg';
 import proyecto_2 from '../assets/proyectos/proyecto_2.png';
 import proyecto_3 from '../assets/proyectos/proyecto_3.png';
@@ -89,11 +101,14 @@ class AllImageSystem {
         this.nosotros = [ quienes_somos, vision, mision, politica_calidad ];
         this.clientes = [
             gas_1, gas_2, gas_3, gas_4,
-            gas_5, gas_6, gas_9, gas_10,
+            gas_5, gas_6, gas_7, gas_8, gas_9, gas_10,
             gas_11, gas_12, gas_13, gas_14,
             gas_15, gas_16, gas_17, gas_18,
             gas_19, gas_20, gas_21, gas_22,
             gas_23, gas_24, gas_25, gas_26,
+            gas_27, gas_28, gas_29, gas_30,
+            gas_31, gas_32, gas_33, gas_34,
+            gas_35
         ];
         this.proyectos = [
             proyecto_1, proyecto_2, proyecto_3,

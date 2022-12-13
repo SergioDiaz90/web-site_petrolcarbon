@@ -211,11 +211,9 @@
             height: 100%;
             @apply flex justify-center items-center;
 
-            // .clientes-img {
-            //     width: 100%;
-            //     height: 100%;
-            //     clip-path: url(#client-element);
-            // }
+            .clientes-img {
+                width: 70%;
+            }
             // .representadas-img {
             //     width: 100%;
             //     height: 100%;
