@@ -8,7 +8,7 @@ const content = require('./src/content.json');
 module.exports = {
     entry: './src/index.js',
     output: {
-        filename: 'main.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'public'),
         assetModuleFilename: 'src/assets/images/[name].[ext]'
     },
@@ -77,5 +77,5 @@ module.exports = {
             }
         }
     },
-    stats: 'errors-only'
+    stats: 'errors-only',
 };

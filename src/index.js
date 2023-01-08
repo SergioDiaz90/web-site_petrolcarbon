@@ -2,6 +2,7 @@ import "./styles/index.scss";
 import Slider from './js/slider';
 import { allImageSystemInstance } from './js/image';
 import content  from './content.json';
+import onSubmit from "./js/form";
 
 let allImageSystem = undefined;
 function handlerViewsInIndex () {
@@ -11,9 +12,9 @@ function handlerViewsInIndex () {
         event.preventDefault();
         itemsJson.map( items => {
             if ( items.item && items.item === event.target.text ) {
-                if ( items.class === 'contactenos') {
-                    return document.querySelector(`.inicio`).style.display = 'block';
-                }
+                // if ( items.class === 'contactenos') {
+                //     return document.querySelector(`.inicio`).style.display = 'block';
+                // }
 
                 document.querySelector(`.${items.class}`).style.display = 'block';
             }
@@ -59,7 +60,7 @@ function addImage () {
         if ( beforeSection !== section && depth === 'false') {            
             beforeSection = section;
             propertyIdx = 0;
-            console.log( 'certificaciones', { section, propertyIdx, obj });
+            // console.log( 'certificaciones', { section, propertyIdx, obj });
 
         }
         
@@ -80,11 +81,27 @@ function addImage () {
         }
         
         img = obj.children;
-        console.log( 'certificaciones', { section, propertyIdx, result: allImageSystem[section][propertyIdx] });
+        // console.log( 'certificaciones', { section, propertyIdx, result: allImageSystem[section][propertyIdx] });
         img[0].setAttribute( 'src', allImageSystem[section][propertyIdx] );
         propertyIdx = propertyIdx + 1;
 
     }
+}
+
+
+function formData () {
+    const btnSubmit = document.querySelector('#btn-submit');
+    btnSubmit.addEventListener('click', (e) => {
+        e.preventDefault();
+        let formData = document.querySelector('.form').childNodes;
+        let formFields = [];
+
+        formData.forEach( item => {
+            formFields.push(item.childNodes);
+        });
+
+        onSubmit(formFields);
+    });
 }
 
 (function () {
@@ -92,5 +109,6 @@ function addImage () {
     handlerViewsInIndex();
     handlerMenuInResponsive();
     allImageSystem = allImageSystemInstance();
-    addImage()
+    addImage();
+    formData();
 })();

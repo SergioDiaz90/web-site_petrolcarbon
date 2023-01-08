@@ -1,6 +1,6 @@
 h2(class="subtitle") Contáctenos
 div(class="form--wrapper")
-    form(class="form")
+    div(class="form")
         each item, idx in contactenos.fields
             div(class="form-field")
                 //- p=item.name
@@ -14,12 +14,12 @@ div(class="form--wrapper")
                     textarea(class="comments" id=item.name type=item.type)
 
                 else if item.type == 'checkbox'
-                    input(id=item.name type=item.type)
                     label(for=item.name)
                         a(href="http://", target="_blank", rel="noopener noreferrer")=item.name 
+                    input(id=item.name type=item.type)
 
                 else if item.type == 'submit'
-                    button(type=item.type)=item.name
+                    button(id="btn-submit")=item.name
 
                 else
                     label(for=item.name)=item.name
