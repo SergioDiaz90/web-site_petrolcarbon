@@ -85,6 +85,7 @@ function addImage () {
     let img = undefined;
     let currentIterator = 0;
     let changeDepth = undefined;
+    let memoryCurrentIterator = 0;
 
     for ( let [idx, obj] of imgItems.entries() ) {
         section = obj.getAttribute('section');
@@ -98,8 +99,6 @@ function addImage () {
         if ( beforeSection !== section && depth === 'false') {            
             beforeSection = section;
             propertyIdx = 0;
-            // console.log( 'certificaciones', { section, propertyIdx, obj });
-
         }
         
         if ( depth === 'true') {
@@ -109,17 +108,19 @@ function addImage () {
             if ( beforeSection !== section ) {
                 beforeSectionDepth = beforeSection;
                 beforeSection = section;
+                memoryCurrentIterator = currentIterator;
                 propertyIdx = 0;
             }
         }
         
-        if ( depth !== changeDepth && section === 'proyecto') {
-            propertyIdx = currentIterator;
+        if ( depth !== changeDepth && section === 'proyectos') {
+            propertyIdx = memoryCurrentIterator;
             changeDepth = depth;
+            console.log({ propertyIdx, changeDepth , currentIterator });
         }
+        // console.log( 'certificaciones', { section, propertyIdx, result: allImageSystem[section][propertyIdx] });
         
         img = obj.children;
-        // console.log( 'certificaciones', { section, propertyIdx, result: allImageSystem[section][propertyIdx] });
         img[0].setAttribute( 'src', allImageSystem[section][propertyIdx] );
         propertyIdx = propertyIdx + 1;
 
