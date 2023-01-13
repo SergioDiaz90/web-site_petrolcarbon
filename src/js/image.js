@@ -84,8 +84,21 @@ import proyecto_8_2 from '../assets/empresas/proyecto_8_2.png'
 import proyecto_8_3 from '../assets/empresas/proyecto_8_3.png'
 import proyecto_9_1 from '../assets/empresas/proyecto_9_1.png'
 import certificaciones from '../assets/certificaciones/certificaciones.png';
-import certificaciones_pdf from '../documents/certificaciones.pdf';
 import hamburger from '../assets/icon-hamburger.png'
+
+// imports PDF //
+import certificaciones_pdf from '../documents/certificaciones.pdf';
+import twojcp from '../documents/twojcp.pdf';
+import COOK from '../documents/COOK.pdf';
+import CUBOGAS from '../documents/CUBOGAS.pdf';
+import GASPRO from '../documents/GASPRO.pdf';
+import MANOIR from '../documents/MANOIR.pdf';
+import MASENERGY from '../documents/MASENERGY.pdf';
+import PROGNOST from '../documents/PROGNOST.pdf';
+import STELLARENERGY from '../documents/STELLARENERGY.pdf';
+import VALVULASTUBERIASEINSTRUMENTACION from '../documents/VALVULASTUBERIASEINSTRUMENTACION.pdf';
+
+
 
 let allImage = undefined;
 
@@ -100,6 +113,10 @@ class AllImageSystem {
         this.representadas = [ 
             soluciones_1 , soluciones_2, soluciones_3 , soluciones_4, soluciones_5 ,
             soluciones_6, soluciones_7 , soluciones_8 , soluciones_9, soluciones_10 , soluciones_11  ]
+        this.representadas_doc = [
+            PROGNOST, COOK, CUBOGAS, GASPRO, MANOIR, STELLARENERGY, twojcp, MASENERGY,
+            VALVULASTUBERIASEINSTRUMENTACION, VALVULASTUBERIASEINSTRUMENTACION, VALVULASTUBERIASEINSTRUMENTACION
+        ]
         this.nosotros = [ quienes_somos, vision, mision, politica_calidad ];
         this.clientes = [
             gas_1, gas_2, gas_3, gas_4,
@@ -146,7 +163,11 @@ class AllImageSystem {
         ]
 
         this.certificaciones = [
-            certificaciones, certificaciones_pdf
+            certificaciones
+        ]
+
+        this.certificaciones_doc = [
+            certificaciones_pdf
         ]
 
         this.menu = [

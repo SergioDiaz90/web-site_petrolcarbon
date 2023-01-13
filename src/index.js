@@ -130,12 +130,19 @@ function addImage () {
 
         img = obj.children;
         img[0].setAttribute( 'src', allImageSystem[section][propertyIdx] );
-        propertyIdx = propertyIdx + 1;
 
         if ( section === 'certificaciones' ) {
             let link = obj.parentNode;
-            link.setAttribute('href', allImageSystem[section][propertyIdx] );
+            link.setAttribute('href', allImageSystem[`${section}_doc`][propertyIdx] );
         }
+
+        
+        if ( section === 'representadas' ) {
+            let link = obj.parentNode.parentNode.parentNode;
+            link.setAttribute('href', allImageSystem[`${section}_doc`][propertyIdx] );
+        }
+
+        propertyIdx = propertyIdx + 1;
     }
 }
 

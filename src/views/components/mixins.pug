@@ -84,10 +84,11 @@ mixin hexagonCard ( hexagon )
                 div(class="hexagon-wrapper--line-cards")
                     each item, index in obj.aliados
                         div(class="hexagon-card")
-                            div(class="hexagon-card-img")
-                                +hexagon(item, 'representadas')
-                            article(class="text-card")
-                                p=item.text
+                            a(href="http://" section=`${obj.selected}` target="_blank")
+                                div(class="hexagon-card-img")
+                                    +hexagon(item, 'representadas')
+                                article(class="text-card")
+                                    p=item.text
 
 mixin hexagonClient ( hexagon )
     div(class="client-wrapper")
