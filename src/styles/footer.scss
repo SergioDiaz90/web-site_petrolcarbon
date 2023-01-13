@@ -7,14 +7,24 @@
         @apply grid grid-cols-3 gap-3 mt-6 content-center;
         width: 90%;
         margin: 0 auto;
-        padding: 30px 10px 0 40px;
+        padding: 30px 10px 0 10px;
         align-items: center;
 
-        &--brand{
-            background-image: url('../assets/logo_petrolcarbon.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            height: 40px;
+        &--brand {
+            @apply flex items-center;
+            &-img {
+                width: 60px;
+                height: 60px;
+                background-image: url('../assets/catalogo.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            &-text {
+                h4 {
+                    @apply font-bold text-white;
+                }
+            }
         }
 
         &-items {
@@ -40,11 +50,54 @@
                 }
             }
         }
+
+        @media (max-width: 425px) {
+            @apply grid-cols-1 gap-16;
+            justify-items: center;
+
+            &-items {
+                @apply w-full h-full grid;
+                h4 {
+                    @apply font-bold mb-6;
+                }
+                &--list, h4 {
+                    @apply text-white text-center;
+                }
+            }
+
+            &-certifications {
+                @apply w-full h-full grid;
+                justify-items: center;
+
+                h4 {
+                    @apply font-bold mb-6 text-white;
+                }
+    
+                &--list-item {
+                    figure {
+                        width: 200px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 425px) {
+        @apply grid-cols-1;
+        height: 600px;
     }
 
     .footer-copy {
         @apply w-full flex justify-center relative bg-black text-white;
         height: 36px;
         align-items: center;
+        top: 4%;
+
+        @media (max-width: 425px) {
+            p {
+                font-size: 3vw;
+            }
+        }
     }
 }
