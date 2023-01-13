@@ -8,23 +8,27 @@ const itemsJson = content.menu;
 let allImageSystem = undefined;
 
 function handlerViewsInIndex () {
-    const itemMenu = document.querySelector('.navigation-bar--list');
-    itemMenu.addEventListener('click', (event) => {
-        event.preventDefault();
-        itemsJson.map( items => {
-            if ( items.item && items.item === event.target.text ) {
-                // if ( items.class === 'contactenos') {
-                //     return document.querySelector(`.inicio`).style.display = 'block';
-                // }
-
-                document.querySelector(`.${items.class}`).style.display = 'block';
-            }
-            
-            if ( items.item && items.item !== event.target.text ) {
-                // console.log( 'handlerViewsInIndex', items.class, false , items.item, event.target.text);
-                document.querySelector(`.${items.class}`).style.display = 'none';
-            }
-        })
+    const itemMenu = document.querySelectorAll('.navigation-bar--list-item');
+    
+    itemMenu.forEach( obj => {
+        obj.addEventListener('click', (event) => {
+            event.preventDefault();
+            itemsJson.map( items => {
+                if ( items.item && items.item === event.target.firstChild.data ) {
+                    console.log('listener', items.class, event.target.firstChild.data );
+                    // if ( items.class === 'contactenos') {
+                    //     return document.querySelector(`.inicio`).style.display = 'block';
+                    // }
+    
+                    document.querySelector(`.${items.class}`).style.display = 'block';
+                }
+                
+                if ( items.item && items.item !== event.target.firstChild.data ) {
+                    // console.log( 'handlerViewsInIndex', items.class, false , items.item, event.target.text);
+                    document.querySelector(`.${items.class}`).style.display = 'none';
+                }
+            })
+        });
     });
 
 }

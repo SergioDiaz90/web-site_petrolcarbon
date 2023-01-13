@@ -6,8 +6,7 @@ mixin header (items)
         div(class="navigation-bar--blocked")
         ul(class="navigation-bar--list")
             each val in items
-                li(class="navigation-bar--list-item")
-                    a(href=val.link)=val.item
+                li(class="navigation-bar--list-item")=val.item
 
 mixin slider(slider)
     div(class="slider-content")
