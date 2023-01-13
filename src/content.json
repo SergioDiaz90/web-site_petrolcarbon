@@ -16,7 +16,7 @@
             "class": "representaciones"
         },
         {
-            "item": "Servicios",
+            "item": "Actividades",
             "link": "#",
             "class": "servicios"
         },
@@ -36,7 +36,10 @@
             "class": "contactenos"
         }
     ],
-    "brand": "./src/assets/logo_petrolcarbon.png",
+    "brand": {
+        "image": "./src/assets/logo_petrolcarbon.png",
+        "class": "inicio"
+    },
     "button": {
         "image": "",
         "id": "img",
@@ -312,7 +315,10 @@
             "class": "servicios",
             "depth": false,
             "title": "Venta de equipos",
-            "text": "Alta tecnología, partes y accesorios mediante la representación exclusiva y alianzas estratégicas con empresas reconocidas a nivel mundial"
+            "text": {
+                "one": "Ofrecemos equipos de alta tecnología, partes y accesorios mediante la representación exclusiva y alianzas estratégicas con empresas reconocidas a nivel mundial para la industria petrolera, petroquímica, química, gasífera, eléctrica y energética en general.",
+                "two": ""
+            }
         },
         {
             "id": "img",
@@ -320,7 +326,10 @@
             "class": "servicios",
             "depth": false,
             "title": "Asistencia técnica",
-            "text": "Personal especializado para el acompañamiento en la recepción, preservación,precomisionamiento,comisionamiento, instalación, puesta en marcha, reparación, operación y mantenimiento de equipos"
+            "text": {
+                "one": "Contamos con personal especializado para el acompañamiento, preservación, pre-comisionamiento, comisionamiento, instalación, puesta en marcha, reparación, operación y mantenimiento de equipos",
+                "two": ""
+            }
         },
         {
             "id": "img",
@@ -328,7 +337,10 @@
             "class": "servicios",
             "depth": false,
             "title": "Capacitación teórico-práctica",
-            "text": "Seminarios dirigidos a operarios, técnicos, ingenieros realizados en instalaciones del cliente o en las fábricas sobre las tecnologías ofrecidas"
+            "text": {
+                "one": "Actividades de capacitación o seminarios dirigidos a operarios, técnicos, ingenieros realizados en instalaciones del cliente o en las fábricas sobre las tecnologías ofrecidas.",
+                "two": ""
+            }
         }
     ],
     "clientes": [

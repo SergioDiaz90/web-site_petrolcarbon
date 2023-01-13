@@ -29,7 +29,7 @@ mixin card(servicios)
         div(class="card" id=` ${obj.class}`)
             div(class="card-article")
                 h3=obj.title
-                article=obj.text
+                article=obj.text.one
             figure(class="card-img" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
                 img
             div(class="card--overlay")

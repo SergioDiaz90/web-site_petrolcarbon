@@ -1,7 +1,8 @@
 include variables.pug
 include mixins.pug
 
-header(class="header-wrapper")
+-let attribute =`${ brand.class }`;
+header(class="header-wrapper" attribute=attribute)
     a(href="#form") 
         div(class="header-wrapper--brand")
     +header (menu)

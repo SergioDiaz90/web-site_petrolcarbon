@@ -3,6 +3,7 @@ const json5 = require('json5');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const PugPlugin = require('pug-plugin');
+const FileLoader = require('file-loader');
 const content = require('./src/content.json');
 
 module.exports = {
@@ -10,7 +11,7 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'public'),
-        assetModuleFilename: 'src/assets/images/[name].[ext]'
+        assetModuleFilename: 'src/[path]/[name].[ext]'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -44,9 +45,9 @@ module.exports = {
             {
                 test: /\.(png|jpg|jpeg|ico|pdf)$/i,
                 type: 'asset/resource',
-                // generator: {
-                //     filename: 'assets/img/[name][ext]'
-                // }
+                generator: {
+                    filename: 'assets/[path]/[name][ext]'
+                }
             },
             {
                 // To use fonts on pug files:
@@ -56,6 +57,18 @@ module.exports = {
                     filename: 'assets/fonts/[name][ext][query]'
                 }
             },
+            // {
+            //     test: /\.pdf$/,
+            //     use: [
+            //         {
+            //         loader: 'file-loader',
+            //             options: {
+            //                 name: '[name].[ext]',
+            //                 outputPath: 'assets/documents/'
+            //             }
+            //         }
+            //     ]
+            // },
             {
                 test: /\.json5$/i,
                 type: 'json',

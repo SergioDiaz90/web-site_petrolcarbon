@@ -146,7 +146,7 @@ class AllImageSystem {
         ]
 
         this.certificaciones = [
-            certificaciones
+            certificaciones, certificaciones_pdf
         ]
 
         this.menu = [

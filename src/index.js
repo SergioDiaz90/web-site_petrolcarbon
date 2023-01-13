@@ -9,17 +9,19 @@ let allImageSystem = undefined;
 
 function handlerViewsInIndex () {
     const itemMenu = document.querySelectorAll('.navigation-bar--list-item');
-    
-    itemMenu.forEach( obj => {
+    const headerImg = document.querySelector('.header-wrapper');
+    console.log('handlerViewsInIndex', itemMenu );
+    systemNavigation( itemMenu );
+
+}
+
+function systemNavigation ( itemOrMenu ) {
+    itemOrMenu.forEach( obj => {
         obj.addEventListener('click', (event) => {
             event.preventDefault();
             itemsJson.map( items => {
                 if ( items.item && items.item === event.target.firstChild.data ) {
-                    console.log('listener', items.class, event.target.firstChild.data );
-                    // if ( items.class === 'contactenos') {
-                    //     return document.querySelector(`.inicio`).style.display = 'block';
-                    // }
-    
+                    // console.log('listener', items.class, event.target.firstChild.data );
                     document.querySelector(`.${items.class}`).style.display = 'block';
                 }
                 
@@ -30,7 +32,6 @@ function handlerViewsInIndex () {
             })
         });
     });
-
 }
 
 function handlerNavigationWithLinks () {
