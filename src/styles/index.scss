@@ -63,4 +63,10 @@ body {
             font-size: 1.5vw;
         }
     }
+
+    @media (max-width: 425px) {
+        article {
+            font-size: 2.5vw;
+        }
+    }
 }

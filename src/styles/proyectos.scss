@@ -2,7 +2,7 @@
     @apply grid gap-9 grid-cols-2 mb-10;
 
     &--image {
-        height: 100%;
+        height: 400px;
 
         img {
             width: 100%;
@@ -47,5 +47,13 @@
                 }
             }
         }
+    }
+
+    @media (max-width: 800px) {
+        @apply mb-12;
+    }
+
+    @media (max-width: 425px) {
+        @apply grid-cols-1;
     }
 }

@@ -116,7 +116,7 @@ function addImage () {
         if ( depth !== changeDepth && section === 'proyectos') {
             propertyIdx = memoryCurrentIterator;
             changeDepth = depth;
-            console.log({ propertyIdx, changeDepth , currentIterator });
+            // console.log({ propertyIdx, changeDepth , currentIterator });
         }
         // console.log( 'certificaciones', { section, propertyIdx, result: allImageSystem[section][propertyIdx] });
         
