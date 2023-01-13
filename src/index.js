@@ -43,7 +43,6 @@ function handlerNavigationWithLinks () {
 
 
 function systemNavigationWithCards ( array ) {
-    console.log('systemNavigationWithCards', array );
     array.forEach( item => {
         item.addEventListener('click' , (card) => {
             let path = card.path.find( item => item.getAttribute('id') === 'actividades' || item.getAttribute('id') === 'representaciones' );
@@ -128,12 +127,15 @@ function addImage () {
             changeDepth = depth;
             // console.log({ propertyIdx, changeDepth , currentIterator });
         }
-        // console.log( 'certificaciones', { section, propertyIdx, result: allImageSystem[section][propertyIdx] });
-        
+
         img = obj.children;
         img[0].setAttribute( 'src', allImageSystem[section][propertyIdx] );
         propertyIdx = propertyIdx + 1;
 
+        if ( section === 'certificaciones' ) {
+            let link = obj.parentNode;
+            link.setAttribute('href', allImageSystem[section][propertyIdx] );
+        }
     }
 }
 
