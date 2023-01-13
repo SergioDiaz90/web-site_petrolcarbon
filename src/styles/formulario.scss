@@ -5,11 +5,6 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
-        
-        .comments {
-            width: 90%;
-            height: 100px;
-        }
 
         &:nth-child(11),  &:nth-child(12){
             display: flex;
@@ -17,16 +12,22 @@
 
             input {
                 @apply mr-3;
+                width: 10%;
             }
         }
 
         label {
             @apply text-gray font-semibold text-base mr-10;
+            width: 10%;
         }
 
-        input, select {
+        label[id="checkbox"] {
+            width: auto;
+        }
+
+        input, select, .comments {
             @apply rounded;
-            width: 90%;
+            width: 80%;
             height: 100%;
             border: 1px solid gray;
 
@@ -45,6 +46,22 @@
             @apply text-white bg-green-principal;
             width: 200px;
             height: 50px;
+        }
+
+        .comments {
+            height: 200px;
+        }
+
+        @media (max-width: 425px) {
+            flex-direction: column;
+            label {
+                @apply text-gray font-semibold text-base mr-10;
+                width: 100%;
+            }
+
+            input, select, .comments {
+                width: 100%;
+            }
         }
     }
 }
