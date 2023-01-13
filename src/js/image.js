@@ -1,7 +1,7 @@
 import logo_petrolcarbon from '../assets/logo_petrolcarbon.png';
 import slider_1 from '../assets/slider/slider_1.jpg';
 import slider_2 from '../assets/slider/slider_2.jpg';
-import slider_3 from '../assets/slider/slider_3.jpg';
+import slider_3 from '../assets/slider/slider_3.png';
 import capacitacion from '../assets/productos-servicios/capacitacion.jpg';
 import venta_de_equipos from '../assets/productos-servicios/venta_de_equipos.jpg';
 import asistencia_tecnica from '../assets/productos-servicios/asistencia_tecnica.jpg';
@@ -9,7 +9,7 @@ import soluciones_1 from '../assets/representadas/soluciones_1.png';
 import soluciones_2 from '../assets/representadas/soluciones_2.png';
 import soluciones_3 from '../assets/representadas/soluciones_3.png';
 import soluciones_4 from '../assets/representadas/soluciones_4.png';
-import soluciones_5 from '../assets/representadas/soluciones_5.jpg';
+import soluciones_5 from '../assets/representadas/soluciones_5.png';
 import soluciones_6 from '../assets/representadas/soluciones_6.jpg';
 import soluciones_7 from '../assets/representadas/soluciones_7.png';
 import soluciones_8 from '../assets/representadas/soluciones_8.jpg';
@@ -94,7 +94,9 @@ class AllImageSystem {
 
     constructor () {
         this.slider = [ slider_1, slider_2, slider_3 ]
-        this.service = [ asistencia_tecnica , capacitacion , venta_de_equipos ]
+        this.service = [ venta_de_equipos, asistencia_tecnica , capacitacion ]
+        this.representadas_home = [ 
+            soluciones_1 , soluciones_2, soluciones_3 , soluciones_4 ]
         this.representadas = [ 
             soluciones_1 , soluciones_2, soluciones_3 , soluciones_4, soluciones_5 ,
             soluciones_6, soluciones_7 , soluciones_8 , soluciones_9, soluciones_10 , soluciones_11  ]

@@ -141,7 +141,7 @@
     },
     "quienes_somos": [
         {
-            "title": "Quienes Somos",
+            "title": "Nosotros",
             "text": {
                 "one": "PETROLCARBON es una empresa colombiana con certificaciones ISO 9001:2015, ISO 14001:2015 e ISO 45001:2018 que trabaja por la integración en la región de los últimos logros técnico-científicos que aparecen a nivel mundial en la industria petrolera, petroquímica, química, gasífera, eléctrica, minera y energética en general.",
                 "two": "Desde la constitución de la organización en 1980, PETROLCARBON ha buscado la integración de estos conocimientos a la industria a través de representaciones exclusivas de empresas reconocidas y alianzas estratégicas para ofrecer tecnologías, productos y servicios con un respaldo técnico – económico que garantice óptimo desempeño y el éxito de los proyectos."
@@ -189,7 +189,7 @@
     "representadas_y_alianzas": [
         {
             "id": "img",
-            "selected": "representadas",
+            "selected": "representadas_home",
             "title": "Soluciones tecnológicas de alto desempeño para turbomaquinaria, compresores reciprocantes y equipos rotativos",
             "aliados": [
                 {
@@ -228,7 +228,7 @@
         },
         {
             "id": "img",
-            "selected": "representadas",
+            "selected": "representadas_home",
             "title": "Productos y servicios para procesos de refinación y petroquímica",
             "aliados": [
                 {
@@ -243,7 +243,7 @@
         },
         {
             "id": "img",
-            "selected": "representadas",
+            "selected": "representadas_home",
             "title": "Soluciones en generación eléctrica y energías alternativas",
             "aliados": [
                 {
@@ -274,7 +274,7 @@
         },
         {
             "id": "img",
-            "selected": "representadas",
+            "selected": "representadas_home",
             "depth": false,
             "title": "Válvulas e instrumentación, tuberia y accesorios",
             "aliados": [
@@ -309,6 +309,7 @@
         {
             "id": "img",
             "selected": "service",
+            "class": "servicios",
             "depth": false,
             "title": "Venta de equipos",
             "text": "Alta tecnología, partes y accesorios mediante la representación exclusiva y alianzas estratégicas con empresas reconocidas a nivel mundial"
@@ -316,6 +317,7 @@
         {
             "id": "img",
             "selected": "service",
+            "class": "servicios",
             "depth": false,
             "title": "Asistencia técnica",
             "text": "Personal especializado para el acompañamiento en la recepción, preservación,precomisionamiento,comisionamiento, instalación, puesta en marcha, reparación, operación y mantenimiento de equipos"
@@ -323,6 +325,7 @@
         {
             "id": "img",
             "selected": "service",
+            "class": "servicios",
             "depth": false,
             "title": "Capacitación teórico-práctica",
             "text": "Seminarios dirigidos a operarios, técnicos, ingenieros realizados en instalaciones del cliente o en las fábricas sobre las tecnologías ofrecidas"

@@ -1,24 +1,56 @@
 .hexagon-wrapper {
-    &--title {
-        @apply font-semibold text-gray text-xl mb-20;
-    }
-    .hexagon-line {
-        @apply flex justify-around mb-10;
-        .hexagon-card {
-            width: 500px;
-            height: 500px;
-            @include hexagon;
 
-            article {
-                width: 90%;
-                margin: 0 auto;
-                text-shadow: none;
+    &--line {
+        height: 600px;
+        @apply my-20;
 
-                p {
-                    @apply text-gray text-justify;
+        &-title {
+            @apply font-semibold text-gray text-xl mb-20;
+        }
+
+        &-cards {
+            @apply flex justify-around;
+            flex-wrap: wrap;
+
+            .hexagon-card {
+                @include hexagon;
+                max-width: 500px;
+                width: 25%;
+                height: 350px;
+    
+                &-img {
+                    height: 70%;
+                }
+
+                article {
+                    width: 90%;
+                    height: 30%;
+                    margin: 0 auto;
+                    text-shadow: none;
+    
+                    p {
+                        @apply text-gray text-justify;
+
+                        @media ( max-width: 768px ){
+                            font-size: 2vh;
+                        }
+                    }
+                }
+
+                @media ( max-width: 768px ){
+                    width: 50%;
+                }
+
+                @media ( max-width: 476px ){
+                    width: 100%;
                 }
             }
         }
+
+        @media ( max-width: 768px ){
+            height: fit-content;
+        }
     }
+
 
 }

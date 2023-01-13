@@ -24,7 +24,6 @@ body {
     // background-image: url('../assets/background.png');
     background-repeat: round;
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.9vw;
         
     .container-section {
         margin-bottom: 213px!important;
@@ -38,7 +37,7 @@ body {
     }
 
     .subtitle {
-        @apply text-2xl text-gray font-semibold text-center;
+        @apply text-gray font-semibold text-center;
         margin: 100px 0 100px 0;
     }
 
@@ -52,11 +51,16 @@ body {
     }
 
     h2, h3, h4, h5, h6 {
-        font-size: 1.5vw;
+        font-size: 2vw;
     }
 
     article {
         font-size: 1vw;
     }
 
+    @media (max-width: 800px) {
+        article {
+            font-size: 1.5vw;
+        }
+    }
 }

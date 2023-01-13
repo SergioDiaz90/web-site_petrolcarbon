@@ -8,6 +8,7 @@
     padding: 0 5% 0 5%;
     z-index: 9;
     grid-gap: 10vw;
+    font-size: 0.9vw;
 
 
     &--brand{
@@ -48,7 +49,7 @@
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .header-wrapper {
         .navigation-bar {
             @apply col-end-5;
@@ -63,14 +64,22 @@
                 @apply absolute  bg-green-principal flex flex-col items-center justify-between;
                 grid-template-columns: none;
                 top: 100px;
-                right: -80%;
-                width: 80%;
+                right: -100%;
+                width: 100%;
                 transition: 0.3s all linear;
 
                 &-item {
                     @apply w-full text-white text-end;
                 }
 
+            }
+
+            &--blocked{
+                @apply absolute w-full bg-black bg-opacity-30;
+                height: 300vh;
+                z-index: -1;
+                top: -170px;
+                right: -100%;
             }
         }
     }

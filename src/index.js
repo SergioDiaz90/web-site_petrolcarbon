@@ -4,10 +4,11 @@ import { allImageSystemInstance } from './js/image';
 import content  from './content.json';
 import onSubmit from "./js/form";
 
+const itemsJson = content.menu;
 let allImageSystem = undefined;
+
 function handlerViewsInIndex () {
     const itemMenu = document.querySelector('.navigation-bar--list');
-    const itemsJson = content.menu;
     itemMenu.addEventListener('click', (event) => {
         event.preventDefault();
         itemsJson.map( items => {
@@ -28,11 +29,48 @@ function handlerViewsInIndex () {
 
 }
 
+function handlerNavigationWithLinks () {
+    const cardHome = document.querySelectorAll('.card');
+
+    cardHome.forEach( item => {
+        item.addEventListener('click' , card => {
+            let path = card.path.find( item => item.getAttribute('id') === 'servicios').getAttribute('id');
+            // console.log('item', path.getAttribute('id'));
+            // let navigateTo = path.className.replace('card', "").replace(" ", "" );
+            itemsJson.map( items => {
+                if ( items.item === 'Servicios' ) {
+                    console.log('navigateTo', items.item, path)
+                    document.querySelector(`.${path}`).style.display = 'block';
+                }
+                
+                if ( items.item !== 'Servicios' ) {
+                    document.querySelector(`.${items.class}`).style.display = 'none';
+                }
+            })
+        })
+    })
+
+    console.log( 'handlerNavigationWithLinks', cardHome );
+}
+
 function handlerMenuInResponsive () {
     const hamburgerMenu = document.querySelector('.navigation-bar--menu-btn');
     const listMenu = document.querySelector('.navigation-bar--list');
+    const blocked = document.querySelector('.navigation-bar--blocked');
+
     hamburgerMenu.addEventListener('click', () => {
         listMenu.classList.toggle('active');
+        blocked.classList.toggle('active');
+    })
+
+    listMenu.addEventListener('click', () => {
+        listMenu.classList.toggle('active');
+        blocked.classList.toggle('active');
+    })
+
+    blocked.addEventListener('click', () => {
+        listMenu.classList.toggle('active');
+        blocked.classList.toggle('active');
     })
 }
 
@@ -111,4 +149,5 @@ function formData () {
     allImageSystem = allImageSystemInstance();
     addImage();
     formData();
+    handlerNavigationWithLinks();
 })();

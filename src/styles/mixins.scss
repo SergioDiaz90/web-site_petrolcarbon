@@ -2,7 +2,7 @@
     .slider-content {
         @apply w-full h-full inline-block;
         &--img {
-            @apply w-full h-full;
+            @apply w-screen h-full;
 
             img {
                 object-fit: fill;
@@ -21,14 +21,15 @@
     .card {
         @apply grid grid-cols-1 relative content-end;
         padding: 20px;
-        height: 70vh;
+        height: 50vh;
         background-size: 100% 100%;
         background-repeat: no-repeat;
         transition: all 0.3s;
         .card-article {
             @apply flex justify-start flex-col;
-            height: 250px;
+            height: 25vh;
             z-index: 1;
+            
             h3 {
                 @apply text-white my-5 font-medium;
                 // font-size: 20px;
@@ -64,11 +65,7 @@
     }
 
     @media (max-width: 992px) {
-        .card {
-            .card-article {
-                height: 154px;
-            }
-        }
+        
     }
 
     @media (max-width: 768px) {
@@ -81,6 +78,43 @@
         }
     }
 
+    @media (max-width: 425px) {
+        @apply flex flex-col;
+        width: 105%;
+
+        .card-article {
+            
+            h3 {
+                @apply text-white my-5 font-medium;
+                font-size: 15px;
+            }
+
+            article {
+                @apply text-white font-normal;
+                font-size: 13px;
+            }
+
+        }
+    }
+
+    @media (max-width: 375px) {
+        @apply flex flex-col;
+        width: 105%;
+
+        .card-article {
+            
+            h3 {
+                @apply text-white my-5 font-medium;
+                font-size: 13px;
+            }
+
+            article {
+                @apply text-white font-normal;
+                font-size: 11px;
+            }
+
+        }
+    }
 }
 
 @mixin cardWithImage {
@@ -110,6 +144,8 @@
             }
 
             .change {
+                @apply bg-black;
+
                 &--image {
                     @apply transition duration-150 ease-out opacity-75;
                 }
@@ -195,17 +231,34 @@
             }
         }
 
+        @media (max-width: 425px) {
+            &--content {
+                &--left, &--right{
+                    @apply flex-col;
+                    height: auto;
+                }
+            }
+
+            &--image, &--article {
+                @apply w-full;
+            }
+
+            &--article {
+                @apply py-10 px-0;
+            }
+
+        }
     }
 }
 
 @mixin hexagon () {
     
     .hexagon--form {
-        width: 300px;
-        height: 300px;
+        width: 100%;
+        height: 100%;
         margin: 0 auto;
-        background-color: white;
-        clip-path: url(#client-element);
+        // background-color: white;
+        // clip-path: url(#client-element);
 
         .hexagon--image {
             width: 100%;
@@ -215,7 +268,9 @@
             .clientes-img {
                 width: 70%;
             }
+
             .representadas-img {
+                // width: 100%;
                 // height: 100%;
             }
         }

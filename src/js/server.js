@@ -13,13 +13,12 @@ const devServerOptions = { ...webpackConfig.devServer, open: true };
 const server = new WebpackDevServer(devServerOptions, compiler);
 
 const runServer = async () => {
-    console.log('Starting server...');
     await server.start();
 };
 
 runServer();
 
-app.use( bodyParser.json() );
+app.use( express.json() );
 app.use(express.urlencoded());
 const cors = require('cors');
 app.use(cors({
@@ -65,7 +64,6 @@ app.post("/send-email", (req, res) => {
         if ( error ) {
             res.status(500).send( error.message );
         } else {
-            console.log("email enviado.");
             res.status(200).jsonp(req.body);
         }
     });

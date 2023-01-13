@@ -3,6 +3,7 @@ mixin header (items)
         button(class=`navigation-bar--menu-btn`)
             figure(id=`${button.id}` section=`${button.selected}` value=`${button.depth}`)
                     img
+        div(class="navigation-bar--blocked")
         ul(class="navigation-bar--list")
             each val in items
                 li(class="navigation-bar--list-item")
@@ -26,7 +27,7 @@ mixin slider(slider)
 
 mixin card(servicios)
     each obj, idx in servicios
-        div(class="card")
+        div(class="card" id=` ${obj.class}`)
             div(class="card-article")
                 h3=obj.title
                 article=obj.text
@@ -47,7 +48,9 @@ mixin sliderVariousImage(clientes)
             each obj,index in clientes
                 - let nameClass = `sliderVariousImage-item--${index}`;
                 li(class=nameClass)
-                
+                    figure(id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
+                        img
+
 mixin textAndImage( items )
     div(class="textAndImage-wrapper")
         each obj, idx in items
@@ -77,13 +80,15 @@ mixin textAndImage( items )
 mixin hexagonCard ( hexagon )
     div(class="hexagon-wrapper")
         each obj, idx in hexagon
-            h2(class="hexagon-wrapper--title")=obj.title
-            div(class="hexagon-line")
-                each item, index in obj.aliados
-                    div(class="hexagon-card")
-                        +hexagon(item, 'representadas')
-                        article(class="text-card")
-                            p=item.text
+            div(class="hexagon-wrapper--line")
+                h2(class="hexagon-wrapper--line-title")=obj.title
+                div(class="hexagon-wrapper--line-cards")
+                    each item, index in obj.aliados
+                        div(class="hexagon-card")
+                            div(class="hexagon-card-img")
+                                +hexagon(item, 'representadas')
+                            article(class="text-card")
+                                p=item.text
 
 mixin hexagonClient ( hexagon )
     div(class="client-wrapper")
