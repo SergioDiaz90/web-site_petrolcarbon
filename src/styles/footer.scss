@@ -12,6 +12,8 @@
 
         &--brand {
             @apply flex items-center;
+            column-gap: 4%;
+            
             &-img {
                 width: 60px;
                 height: 60px;

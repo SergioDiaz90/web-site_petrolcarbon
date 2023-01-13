@@ -18,7 +18,7 @@
         {
             "item": "Actividades",
             "link": "#",
-            "class": "servicios"
+            "class": "actividades"
         },
         {
             "item": "Clientes",
@@ -193,6 +193,7 @@
         {
             "id": "img",
             "selected": "representadas_home",
+            "class": "representaciones",
             "title": "Soluciones tecnológicas de alto desempeño para turbomaquinaria, compresores reciprocantes y equipos rotativos",
             "aliados": [
                 {
@@ -232,6 +233,7 @@
         {
             "id": "img",
             "selected": "representadas_home",
+            "class": "representaciones",
             "title": "Productos y servicios para procesos de refinación y petroquímica",
             "aliados": [
                 {
@@ -247,6 +249,7 @@
         {
             "id": "img",
             "selected": "representadas_home",
+            "class": "representaciones",
             "title": "Soluciones en generación eléctrica y energías alternativas",
             "aliados": [
                 {
@@ -278,6 +281,7 @@
         {
             "id": "img",
             "selected": "representadas_home",
+            "class": "representaciones",
             "depth": false,
             "title": "Válvulas e instrumentación, tuberia y accesorios",
             "aliados": [
@@ -312,7 +316,7 @@
         {
             "id": "img",
             "selected": "service",
-            "class": "servicios",
+            "class": "actividades",
             "depth": false,
             "title": "Venta de equipos",
             "text": {
@@ -323,7 +327,7 @@
         {
             "id": "img",
             "selected": "service",
-            "class": "servicios",
+            "class": "actividades",
             "depth": false,
             "title": "Asistencia técnica",
             "text": {
@@ -334,7 +338,7 @@
         {
             "id": "img",
             "selected": "service",
-            "class": "servicios",
+            "class": "actividades",
             "depth": false,
             "title": "Capacitación teórico-práctica",
             "text": {

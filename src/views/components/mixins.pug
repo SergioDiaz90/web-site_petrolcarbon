@@ -26,17 +26,17 @@ mixin slider(slider)
 
 mixin card(servicios)
     each obj, idx in servicios
-        div(class="card" id=` ${obj.class}`)
+        div(class="card" id=`${obj.class}` pointer="Actividades")
             div(class="card-article")
                 h3=obj.title
-                article=obj.text.one
+                //- article=obj.text.one
             figure(class="card-img" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
                 img
             div(class="card--overlay")
 
 mixin cardWithImage(representadas)
         each obj, idx in representadas
-            div(class="cardWithImage-card")
+            div(id=`${obj.class}` class="cardWithImage-card" pointer="Representaciones y alianzas")
                 figure(class="cardWithImage-card--image" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
                     img
                 div(class="cardWithImage-card--text")

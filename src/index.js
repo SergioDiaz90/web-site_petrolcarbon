@@ -36,26 +36,31 @@ function systemNavigation ( itemOrMenu ) {
 
 function handlerNavigationWithLinks () {
     const cardHome = document.querySelectorAll('.card');
+    const cardWithImage = document.querySelectorAll('.cardWithImage-card');
 
-    cardHome.forEach( item => {
-        item.addEventListener('click' , card => {
-            let path = card.path.find( item => item.getAttribute('id') === 'servicios').getAttribute('id');
-            // console.log('item', path.getAttribute('id'));
-            // let navigateTo = path.className.replace('card', "").replace(" ", "" );
+    systemNavigationWithCards( [...cardHome, ...cardWithImage] );
+}
+
+
+function systemNavigationWithCards ( array ) {
+    console.log('systemNavigationWithCards', array );
+    array.forEach( item => {
+        item.addEventListener('click' , (card) => {
+            let path = card.path.find( item => item.getAttribute('id') === 'actividades' || item.getAttribute('id') === 'representaciones' );
+            let classItem = path.getAttribute('id');
+            let pointer = path.getAttribute('pointer');
+            console.log('item', path.getAttribute('pointer') );
             itemsJson.map( items => {
-                if ( items.item === 'Servicios' ) {
-                    console.log('navigateTo', items.item, path)
-                    document.querySelector(`.${path}`).style.display = 'block';
+                if ( items.item === pointer ) {
+                    document.querySelector(`.${classItem}`).style.display = 'block';
                 }
                 
-                if ( items.item !== 'Servicios' ) {
+                if ( items.item !== pointer ) {
                     document.querySelector(`.${items.class}`).style.display = 'none';
                 }
             })
         })
     })
-
-    console.log( 'handlerNavigationWithLinks', cardHome );
 }
 
 function handlerMenuInResponsive () {

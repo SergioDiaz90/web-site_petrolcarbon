@@ -37,13 +37,20 @@ app.post("/send-email", (req, res) => {
         secure: true,
         auth: {
             user: 'petrolcarbonenviocorreo@gmail.com',
-            pass: 'ctubrcjnyayrrrlv'
-        }    
+            pass: 'wnkncruaesgldwau'
+        }  
     })
+
+    let emailForSend = undefined;
+    if ( req.body.clase_de_solicitud === 'Queja' || req.body.clase_de_solicitud === 'Petición' || req.body.clase_de_solicitud === 'Reclamo') {
+        emailForSend = 'servicioalcliente@petrolcarbon.com'
+    } else {
+        emailForSend = 'info@petrolcarbon.com'
+    }
 
     let mailOptions = {
         from: `${req.body.correo}`,
-        to: ['se.diaz60@gmail.com', 'se320@hotmail.es'],
+        to: ['se320@hotmail.es', emailForSend ],
         subject: `${ req.body.clase_de_solicitud }`,
         text: `
             Nombre: ${ req.body.nombre }
@@ -56,7 +63,6 @@ app.post("/send-email", (req, res) => {
             Célular: ${ req.body.celular }
             Clase_de_solicitud: ${ req.body.clase_de_solicitud },
             Comentarios: ${ req.body.comentarios }
-
         `
     }
 
