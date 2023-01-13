@@ -2,7 +2,7 @@
 
     &--line {
         height: 600px;
-        @apply my-20;
+        @apply flex flex-col my-20;
 
         &-title {
             @apply font-semibold text-gray text-xl mb-20;
@@ -16,7 +16,7 @@
                 @include hexagon;
                 max-width: 500px;
                 width: 25%;
-                height: 350px;
+                height: 250px;
     
                 &-img {
                     height: 70%;
