@@ -29,6 +29,8 @@ function systemNavigation ( itemOrMenu ) {
                     // console.log( 'handlerViewsInIndex', items.class, false , items.item, event.target.text);
                     document.querySelector(`.${items.class}`).style.display = 'none';
                 }
+
+                startNavigationInTopPage();
             })
         });
     });
@@ -57,6 +59,8 @@ function systemNavigationWithCards ( array ) {
                 if ( items.item !== pointer ) {
                     document.querySelector(`.${items.class}`).style.display = 'none';
                 }
+
+                startNavigationInTopPage();
             })
         })
     })
@@ -167,6 +171,10 @@ function formData () {
 
         onSubmit(formFields);
     });
+}
+
+function startNavigationInTopPage () {
+    const body = document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 (function () {
