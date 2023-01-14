@@ -105,7 +105,7 @@ function addImage () {
             propertyIdx = idx;
         }
         
-        if ( beforeSection !== section && depth === 'false') {            
+        if ( beforeSection !== section && depth === 'false') {   
             beforeSection = section;
             propertyIdx = 0;
         }
@@ -119,14 +119,15 @@ function addImage () {
                 beforeSection = section;
                 memoryCurrentIterator = currentIterator;
                 propertyIdx = 0;
+
             }
         }
         
         if ( depth !== changeDepth && section === 'proyectos') {
             propertyIdx = memoryCurrentIterator;
             changeDepth = depth;
-            // console.log({ propertyIdx, changeDepth , currentIterator });
         }
+        
 
         img = obj.children;
         img[0].setAttribute( 'src', allImageSystem[section][propertyIdx] );

@@ -5,6 +5,10 @@ import slider_3 from '../assets/slider/slider_3.png';
 import capacitacion from '../assets/productos-servicios/capacitacion.jpg';
 import venta_de_equipos from '../assets/productos-servicios/venta_de_equipos.jpg';
 import asistencia_tecnica from '../assets/productos-servicios/asistencia_tecnica.jpg';
+import soluciones_home_1 from '../assets/representadas/soluciones_home_1.jpg';
+import soluciones_home_2 from '../assets/representadas/soluciones_home_2.jpg';
+import soluciones_home_3 from '../assets/representadas/soluciones_home_3.jpg';
+import soluciones_home_4 from '../assets/representadas/soluciones_home_4.jpg';
 import soluciones_1 from '../assets/representadas/soluciones_1.png';
 import soluciones_2 from '../assets/representadas/soluciones_2.png';
 import soluciones_3 from '../assets/representadas/soluciones_3.png';
@@ -109,7 +113,7 @@ class AllImageSystem {
         this.slider = [ slider_1, slider_2, slider_3 ]
         this.service = [ venta_de_equipos, asistencia_tecnica , capacitacion ]
         this.representadas_home = [ 
-            soluciones_1 , soluciones_2, soluciones_3 , soluciones_4 ]
+            soluciones_home_1 , soluciones_home_2, soluciones_home_3 , soluciones_home_4 ]
         this.representadas = [ 
             soluciones_1 , soluciones_2, soluciones_3 , soluciones_4, soluciones_5 ,
             soluciones_6, soluciones_7 , soluciones_8 , soluciones_9, soluciones_10 , soluciones_11  ]

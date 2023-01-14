@@ -193,6 +193,7 @@
         {
             "id": "img",
             "selected": "representadas_home",
+            "depth": true,
             "class": "representaciones",
             "title": "Soluciones tecnológicas de alto desempeño para turbomaquinaria, compresores reciprocantes y equipos rotativos",
             "aliados": [
@@ -233,6 +234,7 @@
         {
             "id": "img",
             "selected": "representadas_home",
+            "depth": true,
             "class": "representaciones",
             "title": "Productos y servicios para procesos de refinación y petroquímica",
             "aliados": [
@@ -249,6 +251,7 @@
         {
             "id": "img",
             "selected": "representadas_home",
+            "depth": true,
             "class": "representaciones",
             "title": "Soluciones en generación eléctrica y energías alternativas",
             "aliados": [
@@ -282,7 +285,7 @@
             "id": "img",
             "selected": "representadas_home",
             "class": "representaciones",
-            "depth": false,
+            "depth": true,
             "title": "Válvulas e instrumentación, tuberia y accesorios",
             "aliados": [
                 {
