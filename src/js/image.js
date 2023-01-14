@@ -5,6 +5,10 @@ import slider_3 from '../assets/slider/slider_3.png';
 import capacitacion from '../assets/productos-servicios/capacitacion.jpg';
 import venta_de_equipos from '../assets/productos-servicios/venta_de_equipos.jpg';
 import asistencia_tecnica from '../assets/productos-servicios/asistencia_tecnica.jpg';
+import capacitacion_view from '../assets/productos-servicios/capacitacion_view.jpg';
+import venta_de_equipos_view from '../assets/productos-servicios/venta_de_equipos_view.jpg';
+import asistencia_tecnica_view from '../assets/productos-servicios/asistencia_tecnica_view.jpg';
+
 import soluciones_home_1 from '../assets/representadas/soluciones_home_1.jpg';
 import soluciones_home_2 from '../assets/representadas/soluciones_home_2.jpg';
 import soluciones_home_3 from '../assets/representadas/soluciones_home_3.jpg';
@@ -111,7 +115,14 @@ class AllImageSystem {
 
     constructor () {
         this.slider = [ slider_1, slider_2, slider_3 ]
-        this.service = [ venta_de_equipos, asistencia_tecnica , capacitacion ]
+        this.service = [
+            venta_de_equipos, asistencia_tecnica , capacitacion,
+        ]
+
+        this.service_view = [
+            venta_de_equipos_view, asistencia_tecnica_view, capacitacion_view
+        ]
+
         this.representadas_home = [ 
             soluciones_home_1 , soluciones_home_2, soluciones_home_3 , soluciones_home_4 ]
         this.representadas = [ 

@@ -85,6 +85,7 @@ function handlerMenuInResponsive () {
 
 function addImage () {
     if ( !allImageSystem ) return;
+
     const imgItems = document.querySelectorAll('#img');
     let beforeSection = undefined;
     let section = undefined;
@@ -95,6 +96,7 @@ function addImage () {
     let currentIterator = 0;
     let changeDepth = undefined;
     let memoryCurrentIterator = 0;
+    let iteratorProject = 0;
 
     for ( let [idx, obj] of imgItems.entries() ) {
         section = obj.getAttribute('section');
@@ -105,7 +107,7 @@ function addImage () {
             propertyIdx = idx;
         }
         
-        if ( beforeSection !== section && depth === 'false') {   
+        if ( beforeSection !== section && depth === 'false') {
             beforeSection = section;
             propertyIdx = 0;
         }
@@ -119,18 +121,15 @@ function addImage () {
                 beforeSection = section;
                 memoryCurrentIterator = currentIterator;
                 propertyIdx = 0;
-
             }
         }
         
-        if ( depth !== changeDepth && section === 'proyectos') {
-            propertyIdx = memoryCurrentIterator;
+        if ( depth !== changeDepth ) {
+            let condition = section === 'proyectos';
+            propertyIdx = condition ? iteratorProject : memoryCurrentIterator;
+            iteratorProject = condition ? iteratorProject + 1 : 0;
             changeDepth = depth;
         }
-        
-
-        img = obj.children;
-        img[0].setAttribute( 'src', allImageSystem[section][propertyIdx] );
 
         if ( section === 'certificaciones' ) {
             let link = obj.parentNode;
@@ -143,7 +142,14 @@ function addImage () {
             link.setAttribute('href', allImageSystem[`${section}_doc`][propertyIdx] );
         }
 
+        console.log( 'servicios', { section })
+        if ( section === 'actividades' || section === 'services_view') {
+        }
+
+        img = obj.children;
+        img[0].setAttribute( 'src', allImageSystem[section][propertyIdx] );
         propertyIdx = propertyIdx + 1;
+        
     }
 }
 
