@@ -1,7 +1,7 @@
 .client-wrapper {
 
     &--title {
-        @apply text-xl text-gray font-semibold mb-20;
+        @apply text-gray font-semibold mb-20;
     }
     .client-line {
         @apply flex flex-wrap justify-center;

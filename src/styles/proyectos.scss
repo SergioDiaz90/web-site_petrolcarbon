@@ -16,15 +16,23 @@
         }
 
         h2 {
-            @apply font-bold text-xl;
+            @apply font-bold;
         }
 
         h4 {
-            @apply font-semibold text-lg;
+            @apply font-semibold;
+            font-size: 1.3vw;
+            @media (max-width: 425px ) {
+                font-size: inherit;
+            }
         }
 
         h5 {
-            @apply font-medium text-base;
+            @apply font-medium;
+            font-size: 1.3vw;
+            @media (max-width: 425px ) {
+                font-size: inherit;
+            }
         }
 
         &-article {

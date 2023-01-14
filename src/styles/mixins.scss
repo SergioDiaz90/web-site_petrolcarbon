@@ -86,12 +86,12 @@
             
             h3 {
                 @apply text-white my-5 font-medium;
-                font-size: 15px;
+                // font-size: 15px;
             }
 
             article {
                 @apply text-white font-normal;
-                font-size: 13px;
+                // font-size: 13px;
             }
 
         }
@@ -187,12 +187,12 @@
 
         &--content {
             &--left{
-                @apply w-full my-24 flex justify-between;
+                @apply w-full my-24 flex justify-around;
                 height: 400px;
             }
 
             &--right {
-                @apply w-full my-24 flex justify-between flex-row-reverse;
+                @apply w-full my-24 flex justify-around flex-row-reverse;
                 height: 400px;
             }
         }
@@ -211,7 +211,7 @@
             @apply w-1/2 flex justify-center flex-col p-10 relative;
 
             h2 {
-                @apply text-xl font-bold mb-5 text-gray text-left;
+                @apply font-bold mb-5 text-gray text-left;
             }
 
             p {
@@ -245,6 +245,11 @@
 
             &--article {
                 @apply py-10 px-0;
+                
+            }
+
+            .see-more {
+                right: 0;
             }
 
         }
