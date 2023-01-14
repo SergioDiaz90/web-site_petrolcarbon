@@ -174,7 +174,7 @@ function formData () {
 }
 
 function startNavigationInTopPage () {
-    const body = document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 (function () {
