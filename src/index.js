@@ -134,18 +134,28 @@ function addImage () {
             changeDepth = depth;
         }
 
+        if ( section === 'nosotros') {
+            let link = obj.parentNode;
+            handlerLinksPdf( link , section );
+        }
+
         if ( section === 'certificaciones' ) {
             let link = obj.parentNode;
             link.setAttribute('href', allImageSystem[`${section}_doc`][propertyIdx] );
         }
 
+        if ( section === 'catalogo' ) {
+            let link = obj.parentNode.parentNode.parentNode;
+            link.setAttribute('href', allImageSystem[`${section}_doc`][0] );
+            // console.log('catalogo', { section , link , img: allImageSystem[`${section}_doc`][propertyIdx], section, propertyIdx});
+        }
         
         if ( section === 'representadas' ) {
             let link = obj.parentNode.parentNode.parentNode;
             link.setAttribute('href', allImageSystem[`${section}_doc`][propertyIdx] );
         }
 
-        console.log( 'servicios', { section })
+        // console.log( 'servicios', { section })
         if ( section === 'actividades' || section === 'services_view') {
         }
 
@@ -155,7 +165,6 @@ function addImage () {
         
     }
 }
-
 
 function formData () {
     const btnSubmit = document.querySelector('#btn-submit');
@@ -207,6 +216,29 @@ function handlerModalForm ( key ) {
 function startNavigationInTopPage () {
     document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
+function handlerLinksPdf ( obj , section ) {
+    const linkInForm = document.querySelector('#formulario');
+    let title = undefined;
+    let link = undefined;
+
+    if ( linkInForm !== undefined ) {
+        linkInForm.setAttribute('href', allImageSystem[`formulario_doc`][0] )
+    }
+
+    if ( section === 'nosotros') {
+        title = obj.lastChild.childNodes[0].innerText === "Política de gestión integral";
+
+        if ( title ) {
+            link = obj.lastChild.childNodes[1].lastChild.childNodes;
+            link.forEach( item => {
+                item.setAttribute('href', allImageSystem[`${section}_doc`][0] );
+            })
+        }
+    }
+
+}
+
 
 (function () {
     new Slider ('.slider', false);

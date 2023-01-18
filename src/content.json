@@ -133,6 +133,7 @@
                 {
                     "name": "Autorización para tratamiento de datos personales",
                     "type": "checkbox",
+                    "id": "formulario",
                     "link": ""
                 },
                 {
@@ -905,7 +906,17 @@
 
     ],
     "footer": {
-        "brand": "./src/assets/logo_petrolcarbon.png",
+        "brand": {
+            "title": "Catálogo",
+            "list": [
+                {
+                    "id": "img",
+                    "selected": "catalogo",
+                    "depth": false,
+                    "link" : "certificaciones_pdf"
+                }
+            ]
+        },
         "information": {
             "title": "Información",
             "items": [

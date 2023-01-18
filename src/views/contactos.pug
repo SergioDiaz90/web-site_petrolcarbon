@@ -15,7 +15,7 @@ div(class="form--wrapper")
 
                 else if item.type == 'checkbox'
                     label(for=item.name id="checkbox")
-                        a(href="http://", target="_blank", rel="noopener noreferrer")=item.name 
+                        a(href="http://", target="_blank", rel="noopener noreferrer" id=`${item.id}`)=item.name 
                     input(id=item.name type=item.type)
 
                 else if item.type == 'submit'

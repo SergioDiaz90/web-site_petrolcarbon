@@ -1,10 +1,13 @@
 footer(class="footer-wrapper")
     div(class="footer")
-        a(class="catalogo" href="http://", target="_blank", rel="noopener noreferrer")
-            div(class="footer--brand")
-                div(class="footer--brand-img")
-                div(class="footer--brand-text")
-                    h4 Catálogo
+        each items in footer.brand.list
+            a(class="catalogo" href="http://", target="_blank")
+                div(class="footer--brand")
+                    div(class="footer--brand-img")
+                        figure(id=`${items.id}` section=`${items.selected}` value=`${items.depth}`)
+                            img(style="display: none")
+                    div(class="footer--brand-text")
+                        h4 Catálogo
         div(class="footer-items")
             h4=footer.information.title
             ul(class="footer-items--list")
