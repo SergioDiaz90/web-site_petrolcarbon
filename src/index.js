@@ -3,6 +3,7 @@ import Slider from './js/slider';
 import { allImageSystemInstance } from './js/image';
 import content  from './content.json';
 import onSubmit from "./js/form";
+import SliderClients from "./js/slider-clientes";
 
 const itemsJson = content.menu;
 let allImageSystem = undefined;
@@ -242,6 +243,7 @@ function handlerLinksPdf ( obj , section ) {
 
 (function () {
     new Slider ('.slider', true );
+    new SliderClients('.sliderVariousImage-content');
     handlerViewsInIndex();
     handlerMenuInResponsive();
     allImageSystem = allImageSystemInstance();

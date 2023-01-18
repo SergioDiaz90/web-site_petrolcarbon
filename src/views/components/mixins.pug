@@ -43,12 +43,12 @@ mixin cardWithImage(representadas)
                     h2=obj.title
 
 mixin sliderVariousImage(clientes)
-    ul(class="sliderVariousImage-content")
-            each obj,index in clientes
-                - let nameClass = `sliderVariousImage-item--${index}`;
-                li(class=nameClass)
-                    figure(id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
-                        img
+    div( class="sliderVariousImage-overflow" )
+        ul(class="sliderVariousImage-content")
+                each obj,index in clientes
+                    li(class="sliderVariousImage-item" idx=`${index}`)
+                        figure(id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
+                            img
 
 mixin textAndImage( items )
     div(class="textAndImage-wrapper")
