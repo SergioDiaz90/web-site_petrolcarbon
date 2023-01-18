@@ -241,7 +241,7 @@ function handlerLinksPdf ( obj , section ) {
 
 
 (function () {
-    new Slider ('.slider', false);
+    new Slider ('.slider', true );
     handlerViewsInIndex();
     handlerMenuInResponsive();
     allImageSystem = allImageSystemInstance();
