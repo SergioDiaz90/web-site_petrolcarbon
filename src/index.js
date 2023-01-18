@@ -50,7 +50,6 @@ function systemNavigationWithCards ( array ) {
             let path = card.path.find( item => item.getAttribute('id') === 'actividades' || item.getAttribute('id') === 'representaciones' );
             let classItem = path.getAttribute('id');
             let pointer = path.getAttribute('pointer');
-            console.log('item', path.getAttribute('pointer') );
             itemsJson.map( items => {
                 if ( items.item === pointer ) {
                     document.querySelector(`.${classItem}`).style.display = 'block';
@@ -160,7 +159,7 @@ function addImage () {
 
 function formData () {
     const btnSubmit = document.querySelector('#btn-submit');
-    btnSubmit.addEventListener('click', (e) => {
+    btnSubmit.addEventListener('click', async (e) => {
         e.preventDefault();
         let formData = document.querySelector('.form').childNodes;
         let formFields = [];
@@ -169,8 +168,40 @@ function formData () {
             formFields.push(item.childNodes);
         });
 
-        onSubmit(formFields);
+        let response = await onSubmit(formFields);
+
+        console.log( 'response', response );
+        if ( response.not_terms ) {
+            handlerModalForm('not-terms');
+        }
+
+        if ( response.successfull ) {
+            handlerModalForm('successfull');
+        }
+
+        if ( response.error ) {
+            handlerModalForm('error');
+        }
     });
+}
+
+function handlerModalForm ( key ) {
+    console.log('handlerModalForm', key );
+    const modal = document.querySelector(`#${key}`);
+    let button = undefined
+    if ( modal !== undefined ) {
+        button = modal?.lastChild?.lastChild?.childNodes;
+        modal.style.display = 'block';
+
+        if ( button !== undefined ) {
+            button.forEach( item => {
+                item.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+            })
+        }
+    }
+    return;    
 }
 
 function startNavigationInTopPage () {
@@ -185,4 +216,5 @@ function startNavigationInTopPage () {
     addImage();
     formData();
     handlerNavigationWithLinks();
+    handlerModalForm();
 })();

@@ -99,7 +99,6 @@ mixin hexagonClient ( hexagon )
                         div(class="client-line-hexagon")
                             +hexagon(items, 'clientes')
 
-
 mixin hexagon ( obj, section )
     if (section == 'representadas')
         div(class="hexagon--form")
@@ -132,3 +131,11 @@ mixin viewProjects ( params )
                         each item, idx in obj.images
                             figure(class="project--image" id=`${item.id}` section=`${item.selected}` value=`${item.depth}`)
                                 img
+
+mixin modals ( modals )
+    each obj, idx in modals
+        div(class="modal-container" id=`${ obj.case }`)
+            div(class="modal-container-data-modal")
+                p=obj.message
+                div(class="modal-container-btn")
+                    button(class="button" id="btn-modal")=obj.button

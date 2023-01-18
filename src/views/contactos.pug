@@ -19,7 +19,7 @@ div(class="form--wrapper")
                     input(id=item.name type=item.type)
 
                 else if item.type == 'submit'
-                    button(id="btn-submit")=item.name
+                    button(class="button" id="btn-submit")=item.name
 
                 else
                     label(for=item.name)=item.name

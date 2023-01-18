@@ -282,3 +282,27 @@
     }
     
 }
+
+@mixin modals () {
+    display: none;
+    @apply absolute w-full h-screen bg-black bg-opacity-40;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+
+    .modal-container-data-modal {
+        @apply flex flex-col justify-around bg-white rounded-lg p-3;
+        margin: calc(50% - 25%) auto;
+        width: 400px;
+        height: 250px;
+    }
+
+    .modal-container-btn {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            @apply rounded-lg;
+        }
+    }
+}

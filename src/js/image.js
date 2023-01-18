@@ -105,6 +105,10 @@ import MASENERGY from '../documents/MASENERGY.pdf';
 import PROGNOST from '../documents/PROGNOST.pdf';
 import STELLARENERGY from '../documents/STELLARENERGY.pdf';
 import VALVULASTUBERIASEINSTRUMENTACION from '../documents/VALVULASTUBERIASEINSTRUMENTACION.pdf';
+import catalogo_petrolcarbon from '../documents/catalogo_petrolcarbon.pdf';
+import politica_de_gestion_integral from '../documents/politica_de_gestion_integral.pdf'
+import politica_de_tratamiento_de_datos from '../documents/politica_de_tratamiento_de_datos.pdf'
+
 
 
 

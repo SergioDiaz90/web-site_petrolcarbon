@@ -3,7 +3,7 @@ async function onSubmit(data) {
    let { checked, objInfo } = handleDataForm( data );
 
    if ( !checked ) {
-      alert( 'falta tratamiento de datos.' );
+      return { not_terms: true };
    } else {
 
       const options = {
@@ -18,12 +18,15 @@ async function onSubmit(data) {
          cache: 'default',
       };
       
-      fetch( 'http://localhost:3000/send-email', options ).then( res => {
-         console.log( 'pass', res );
-      }).catch( e => {
-         console.error(e);
-      });
+      let response  = await fetch( 'http://localhost:3000/send-email', options )
+
+      if ( response.status === 200 ) {
+         return { successfull: true };
+      }
       
+      if ( response.status !== 200 ) {
+         return { error: true };
+      }
    }
 
 }

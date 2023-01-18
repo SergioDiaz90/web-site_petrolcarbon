@@ -938,5 +938,27 @@
             ]
         },
         "copy": "Petrolcarbon LTDA @2022 Todos los derechos registrados"
-    }
+    },
+    "modals": [
+        {
+            "message": "Su mensaje ha sido enviado correctamente, pronto lo contactaremos.",
+            "case": "successfull",
+            "button": "Aceptar"
+        },
+        {
+            "message": "Debes aceptar la autorización de tratamiento de datos para continuar.",
+            "case": "not-terms",
+            "button": "Aceptar"
+        },
+        {
+            "message": "Alguno de los campos no fue diligenciado o no esta correcto, intente de nuevo.",
+            "case": "not-field",
+            "button": "Aceptar"
+        },
+        {
+            "message": "Ups ha habido un error en el envio del formulario, comunicate con nosotros para resolverlo.",
+            "case": "error",
+            "button": "Aceptar"
+        }
+    ]
 }
