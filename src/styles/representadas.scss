@@ -17,22 +17,26 @@
                 max-width: 500px;
                 width: 25%;
                 height: 250px;
-    
                 &-img {
-                    height: 70%;
+                    height: 75%;
                 }
 
-                article {
-                    width: 90%;
-                    height: 30%;
-                    margin: 0 auto;
-                    text-shadow: none;
-    
-                    p {
-                        @apply text-gray text-justify;
+                &-display {
+                    @apply flex flex-col justify-between h-full;
 
-                        @media ( max-width: 768px ){
-                            font-size: 2vh;
+    
+                    article {
+                        width: 90%;
+                        height: 20%;
+                        margin: 0 auto;
+                        text-shadow: none;
+        
+                        p {
+                            @apply text-gray text-justify;
+    
+                            @media ( max-width: 768px ){
+                                font-size: 2vh;
+                            }
                         }
                     }
                 }
