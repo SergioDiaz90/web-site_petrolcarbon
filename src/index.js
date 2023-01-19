@@ -129,7 +129,7 @@ function addImage () {
         }
         
         if ( depth !== changeDepth ) {
-            let condition = section === 'proyectos';
+            let condition = section === 'proyectos' || section === 'clientes_slider' ? true : false;
             propertyIdx = condition ? iteratorProject : memoryCurrentIterator;
             iteratorProject = condition ? iteratorProject + 1 : 0;
             changeDepth = depth;

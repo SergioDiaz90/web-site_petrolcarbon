@@ -82,185 +82,198 @@
         "slider_clientes": [
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
+                "depth": false
+            },
+            {
+                "id": "img",
+                "selected": "clientes_slider",
+                "depth": false
+            },
+            {
+                "id": "img",
+                "selected": "clientes_slider",
+                "depth": false
+            },
+            {
+                "id": "img",
+                "selected": "clientes_slider",
                 "depth": false,
                 "image": "./src/assets/slider/slider_3.jpg"
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false,
                 "image": "./src/assets/slider/slider_3.jpg"
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false,
                 "image": "./src/assets/slider/slider_3.jpg"
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false
             },
             {
                 "id": "img",
-                "selected": "clientes",
-                "depth": false
-            },
-            {
-                "id": "img",
-                "selected": "clientes",
-                "depth": false,
-                "image": "./src/assets/slider/slider_3.jpg"
-            },
-            {
-                "id": "img",
-                "selected": "clientes",
-                "depth": false
-            },
-            {
-                "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false,
                 "image": "./src/assets/slider/slider_3.jpg"
             }
             ,
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false,
                 "image": "./src/assets/slider/slider_3.jpg"
             }
             ,
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false,
                 "image": "./src/assets/slider/slider_3.jpg"
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false,
                 "image": "./src/assets/slider/slider_3.jpg"
             }
             ,
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false,
                 "image": "./src/assets/slider/slider_3.jpg"
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false,
                 "image": "./src/assets/slider/slider_3.jpg"
             }
             ,
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false,
                 "image": "./src/assets/slider/slider_3.jpg"
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false,
                 "image": "./src/assets/slider/slider_3.jpg"
             }
             ,
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false,
                 "image": "./src/assets/slider/slider_3.jpg"
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false,
                 "image": "./src/assets/slider/slider_3.jpg"
             }
             ,
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false,
                 "image": "./src/assets/slider/slider_3.jpg"
             },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
                 "depth": false,
                 "image": "./src/assets/slider/slider_3.jpg"
-            }
-            ,
+            },
             {
                 "id": "img",
-                "selected": "clientes",
+                "selected": "clientes_slider",
+                "depth": false
+            },
+            {
+                "id": "img",
+                "selected": "clientes_slider",
+                "depth": false
+            },
+            {
+                "id": "img",
+                "selected": "clientes_slider",
+                "depth": false
+            },
+            {
+                "id": "img",
+                "selected": "clientes_slider",
                 "depth": false
             }
         ],

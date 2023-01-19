@@ -94,6 +94,20 @@ import proyecto_9_1 from '../assets/empresas/proyecto_9_1.png'
 import catalogo from '../assets/catalogo.png'
 import certificaciones from '../assets/certificaciones/certificaciones.png';
 import hamburger from '../assets/icon-hamburger.png'
+import clientes_1 from '../assets/slider-clientes/clientes_1.svg';
+import clientes_2 from '../assets/slider-clientes/clientes_2.svg';
+import clientes_3 from '../assets/slider-clientes/clientes_3.svg';
+import clientes_4 from '../assets/slider-clientes/clientes_4.svg';
+import clientes_5 from '../assets/slider-clientes/clientes_5.png';
+import clientes_6 from '../assets/slider-clientes/clientes_6.svg';
+import clientes_13 from '../assets/slider-clientes/clientes_13.svg';
+import clientes_14 from '../assets/slider-clientes/clientes_14.svg';
+import clientes_21 from '../assets/slider-clientes/clientes_21.svg';
+import clientes_22 from '../assets/slider-clientes/clientes_22.svg';
+import clientes_27 from '../assets/slider-clientes/clientes_27.svg';
+import clientes_35 from '../assets/slider-clientes/clientes_35.svg';
+
+
 
 // imports PDF //
 import certificaciones_pdf from '../documents/certificaciones.pdf';
@@ -148,6 +162,17 @@ class AllImageSystem {
             gas_27, gas_28, gas_29, gas_30,
             gas_31, gas_32, gas_33, gas_34,
             gas_35
+        ];
+        this.clientes_slider = [
+            clientes_1, clientes_2, clientes_3, clientes_4,
+            clientes_5, clientes_6, gas_7, gas_8, gas_9, clientes_1,
+            gas_11, gas_12, clientes_13, clientes_14, gas_15,
+            gas_16, gas_17, gas_18,
+            gas_19, clientes_1, clientes_21, clientes_22,
+            gas_23, gas_24, gas_25, gas_26,
+            clientes_27, gas_28, gas_29, gas_30,
+            gas_31, gas_32, gas_33, gas_34,
+            clientes_35
         ];
         this.proyectos = [
             proyecto_1, proyecto_2, proyecto_3,
