@@ -199,7 +199,7 @@ function handlerModalForm ( key ) {
     console.log('handlerModalForm', key );
     const modal = document.querySelector(`#${key}`);
     let button = undefined
-    if ( modal !== undefined ) {
+    if ( modal && modal !== undefined ) {
         button = modal?.lastChild?.lastChild?.childNodes;
         modal.style.display = 'block';
 
