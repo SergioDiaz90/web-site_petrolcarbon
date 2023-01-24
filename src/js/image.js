@@ -164,7 +164,7 @@ class AllImageSystem {
             gas_11, gas_12, gas_13, gas_14,
             gas_15, gas_16, gas_17, gas_18,
             gas_19, gas_20, gas_21, gas_22,
-            gas_23, gas_24, gas_25, gas_26,
+            gas_23, gas_24, gas_25,
             gas_27, gas_28, gas_29, gas_30,
             gas_31, gas_32, gas_33, gas_34,
             gas_35

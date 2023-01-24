@@ -839,14 +839,6 @@
                     "line": "otros",
                     "selected": "clientes",
                     "catalogo": ""
-                },
-                {
-                    "image": "",
-                    "id": "img",
-                    "depth": true,
-                    "line": "otros",
-                    "selected": "clientes",
-                    "catalogo": ""
                 }
             ]
         },
