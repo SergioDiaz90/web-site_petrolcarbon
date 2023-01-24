@@ -158,10 +158,15 @@ function addImage () {
         }
         
         if ( depth !== changeDepth ) {
-            let condition = section === 'proyectos' || section === 'clientes_slider' ? true : false;
-            propertyIdx = condition ? iteratorProject : memoryCurrentIterator;
-            iteratorProject = condition ? iteratorProject + 1 : 0;
+            let conditionProject = section === 'proyectos' ? true : false;
+            let conditionClientSlider = section === 'clientes_slider' ? true : false;
+            propertyIdx = conditionProject || conditionClientSlider ? iteratorProject : memoryCurrentIterator;
+            iteratorProject = conditionProject ? iteratorProject + 1 : 0;
             changeDepth = depth;
+        }
+
+        if (section === 'proyectos') {
+            console.log({ section, propertyIdx , iteratorProject });
         }
 
         if ( section === 'nosotros') {

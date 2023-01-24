@@ -68,15 +68,17 @@ import gas_35 from '../assets/clientes/gas_35.png';
 
 import proyecto_1 from '../assets/proyectos/proyecto_1.jpg';
 import proyecto_2 from '../assets/proyectos/proyecto_2.png';
-import proyecto_3 from '../assets/proyectos/proyecto_3.png';
+import proyecto_3 from '../assets/proyectos/proyecto_3.jpg';
 import proyecto_4 from '../assets/proyectos/proyecto_4.png';
 import proyecto_5 from '../assets/proyectos/proyecto_5.png';
 import proyecto_6 from '../assets/proyectos/proyecto_6.png';
 import proyecto_7 from '../assets/proyectos/proyecto_7.png';
 import proyecto_8 from '../assets/proyectos/proyecto_8.png';
 import proyecto_9 from '../assets/proyectos/proyecto_9.png';
+
 import empresa_1 from '../assets/empresas/empresa_1.png';
 import empresa_2 from '../assets/empresas/empresa_2.png';
+
 import proyecto_2_1 from '../assets/empresas/proyecto_2_1.png'
 import proyecto_3_1 from '../assets/empresas/proyecto_3_1.png'
 import proyecto_4_1 from '../assets/empresas/proyecto_4_1.png'
