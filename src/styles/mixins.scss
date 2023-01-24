@@ -119,12 +119,14 @@
 
 @mixin cardWithImage {
     .cardWithImage {
+        transition: all 0.5s ease-in-out;
         &-card {
             @apply grid grid-cols-1 grid-rows-3 cursor-pointer;
             height: 538px;
 
             &--image {
-                @apply w-full h-full row-span-2;
+                @apply w-full h-full row-span-2 opacity-70;
+                transition: all 0.5s ease-in-out;
                 img {
                     @apply w-full h-full;
                 }
@@ -132,7 +134,7 @@
 
             &--text {
                 @apply grid grid-cols-1 content-center w-full h-full bg-green-card px-4;
-                
+                transition: all 0.5s ease-in-out;
                 h2 {
                     @apply font-semibold text-white;
                 }
@@ -140,10 +142,27 @@
             }
 
             &:hover {
-                @extend .change;
+                @apply shadow-2xl ;
+                transition: all 0.5s ease-in-out;
+                .cardWithImage-card--image {
+                    @apply opacity-100;
+                    transition: all 0.5s ease-in-out;
+                    img {
+                        @apply w-full h-full;
+                    }
+                }
+
+                .cardWithImage-card--text {
+                    @apply bg-white;
+                    transition: all 0.5s ease-in-out;
+                    h2 {
+                        @apply text-green-principal;
+                    }
+                }
             }
 
             .change {
+                background-color: red;
                 @apply bg-black;
 
                 &--image {

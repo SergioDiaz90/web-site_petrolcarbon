@@ -41,6 +41,22 @@
                     }
                 }
 
+                &:hover {
+                    transition: all 0.3s ease-in-out;
+                    border-radius: 2%;
+                    padding: 10px;
+                    scale: 1.1;
+                    // overflow: hidden;
+
+                    .hexagon-card-display {
+                        article {
+                            p {
+                                @apply text-green-principal;
+                            }
+                        }
+                    }
+                }
+
                 @media ( max-width: 768px ){
                     width: 50%;
                 }
