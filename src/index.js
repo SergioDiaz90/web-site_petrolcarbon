@@ -47,16 +47,15 @@ function handlerNavigationWithLinks () {
 
 function systemNavigationWithCards ( array ) {
     array.forEach( item => {
-        item.addEventListener('click' , (card) => {
-            let path = card.path.find( item => item.getAttribute('id') === 'actividades' || item.getAttribute('id') === 'representaciones' );
-            let classItem = path.getAttribute('id');
-            let pointer = path.getAttribute('pointer');
+        item.addEventListener('click' , (e) => {
+            let { classItem, pointer } = searchParentNavigation( e.target.parentNode );
             itemsJson.map( items => {
                 if ( items.item === pointer ) {
                     document.querySelector(`.${classItem}`).style.display = 'block';
                 }
                 
                 if ( items.item !== pointer ) {
+                    console.log({ item: items.item, pointer });
                     document.querySelector(`.${items.class}`).style.display = 'none';
                 }
 
@@ -64,6 +63,36 @@ function systemNavigationWithCards ( array ) {
             })
         })
     })
+}
+
+function searchParentNavigation (elm) {
+    let items = {
+        classItem: undefined,
+        pointer: undefined
+    };
+
+    let objKeys = [
+        'actividades',
+        'representaciones',
+        'Actividades',
+        "Representaciones y alianzas"
+    ]
+
+    let search = elm;
+
+    while (  items.classItem === undefined || items.pointer === undefined ) {
+        if ( search.id && objKeys.find( key => key === search.id )) {
+            items.classItem = search.id;
+        }
+        
+        if ( search?.getAttribute('pointer') && objKeys.find( key => key === search?.getAttribute('pointer') )) {
+            items.pointer = search.getAttribute('pointer');
+        }
+
+        search = search.parentNode;
+    }
+
+    return items;
 }
 
 function handlerMenuInResponsive () {
