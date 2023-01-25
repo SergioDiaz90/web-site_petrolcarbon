@@ -10,11 +10,11 @@ import venta_de_equipos_view from '../assets/productos-servicios/venta_de_equipo
 import asistencia_tecnica_view from '../assets/productos-servicios/asistencia_tecnica_view.jpg';
 
 import soluciones_home_1 from '../assets/representadas/soluciones_home_1.jpg';
-import soluciones_home_2 from '../assets/representadas/soluciones_home_2.jpg';
+import soluciones_home_2 from '../assets/representadas/soluciones_home_2.png';
 import soluciones_home_3 from '../assets/representadas/soluciones_home_3.jpg';
 import soluciones_home_4 from '../assets/representadas/soluciones_home_4.jpg';
 import soluciones_1 from '../assets/representadas/soluciones_1.png';
-import soluciones_2 from '../assets/representadas/soluciones_2.png';
+import soluciones_2 from '../assets/representadas/soluciones_2.jpg';
 import soluciones_3 from '../assets/representadas/soluciones_3.png';
 import soluciones_4 from '../assets/representadas/soluciones_4.png';
 import soluciones_5 from '../assets/representadas/soluciones_5.png';
