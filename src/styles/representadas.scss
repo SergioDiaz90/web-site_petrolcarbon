@@ -34,9 +34,7 @@
                         p {
                             @apply text-gray text-justify;
     
-                            @media ( max-width: 768px ){
-                                font-size: 2vh;
-                            }
+                            
                         }
                     }
                 }

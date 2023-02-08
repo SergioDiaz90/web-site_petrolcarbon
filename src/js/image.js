@@ -175,7 +175,7 @@ class AllImageSystem {
             clientes_11, gas_12, clientes_13, clientes_14, gas_15,
             gas_16, gas_17, gas_18,
             clientes_19, clientes_1, clientes_21, clientes_22,
-            gas_23, gas_24, gas_25, gas_26,
+            gas_23, gas_24, gas_25,
             clientes_27, gas_28, gas_29, gas_30,
             clientes_31, gas_32, gas_33, gas_34,
             clientes_35
