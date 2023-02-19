@@ -265,11 +265,6 @@
                 "id": "img",
                 "selected": "clientes_slider",
                 "depth": false
-            },
-            {
-                "id": "img",
-                "selected": "clientes_slider",
-                "depth": false
             }
         ],
         "formulario": {
