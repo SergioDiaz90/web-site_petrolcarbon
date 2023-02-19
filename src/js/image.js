@@ -112,6 +112,7 @@ import clientes_14 from '../assets/slider-clientes/clientes_14.svg';
 import clientes_15 from '../assets/slider-clientes/clientes_15.png';
 import clientes_16 from '../assets/slider-clientes/clientes_16.png';
 import clientes_17 from '../assets/slider-clientes/clientes_17.png';
+import clientes_18 from '../assets/slider-clientes/clientes_18.png';
 import clientes_19 from '../assets/slider-clientes/clientes_19.svg';
 import clientes_21 from '../assets/slider-clientes/clientes_21.svg';
 import clientes_22 from '../assets/slider-clientes/clientes_22.svg';
@@ -186,7 +187,7 @@ class AllImageSystem {
             clientes_1, clientes_2, clientes_3, clientes_4,
             clientes_5, clientes_6, clientes_7, clientes_8, clientes_9, clientes_1,
             clientes_11, clientes_12, clientes_13, clientes_14, clientes_15,
-            clientes_16, clientes_17, gas_18,
+            clientes_16, clientes_17, clientes_18,
             clientes_19, clientes_1, clientes_21, clientes_22,
             clientes_23, clientes_24, gas_25,
             clientes_27, clientes_28, clientes_29, clientes_30,
