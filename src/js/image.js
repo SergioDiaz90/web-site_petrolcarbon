@@ -100,7 +100,7 @@ import clientes_1 from '../assets/slider-clientes/clientes_1.svg';
 import clientes_2 from '../assets/slider-clientes/clientes_2.svg';
 import clientes_3 from '../assets/slider-clientes/clientes_3.svg';
 import clientes_4 from '../assets/slider-clientes/clientes_4.svg';
-import clientes_5 from '../assets/slider-clientes/clientes_5.png';
+import clientes_5 from '../assets/slider-clientes/clientes_5.svg';
 import clientes_6 from '../assets/slider-clientes/clientes_6.svg';
 import clientes_7 from '../assets/slider-clientes/clientes_7.svg';
 import clientes_8 from '../assets/slider-clientes/clientes_8.png';
@@ -118,12 +118,14 @@ import clientes_21 from '../assets/slider-clientes/clientes_21.svg';
 import clientes_22 from '../assets/slider-clientes/clientes_22.svg';
 import clientes_23 from '../assets/slider-clientes/clientes_23.png';
 import clientes_24 from '../assets/slider-clientes/clientes_24.png';
+import clientes_25 from '../assets/slider-clientes/clientes_25.svg';
 import clientes_27 from '../assets/slider-clientes/clientes_27.svg';
 import clientes_28 from '../assets/slider-clientes/clientes_28.png';
 import clientes_29 from '../assets/slider-clientes/clientes_29.png';
 import clientes_30 from '../assets/slider-clientes/clientes_30.png';
 import clientes_31 from '../assets/slider-clientes/clientes_31.png';
 import clientes_32 from '../assets/slider-clientes/clientes_32.png';
+import clientes_33 from '../assets/slider-clientes/clientes_33.svg';
 import clientes_34 from '../assets/slider-clientes/clientes_34.png';
 import clientes_35 from '../assets/slider-clientes/clientes_35.svg';
 
@@ -189,9 +191,9 @@ class AllImageSystem {
             clientes_11, clientes_12, clientes_13, clientes_14, clientes_15,
             clientes_16, clientes_17, clientes_18,
             clientes_19, clientes_1, clientes_21, clientes_22,
-            clientes_23, clientes_24, gas_25,
+            clientes_23, clientes_24, clientes_25,
             clientes_27, clientes_28, clientes_29, clientes_30,
-            clientes_31, clientes_32, gas_33, clientes_34
+            clientes_31, clientes_32, clientes_33, clientes_34
         ];
         this.proyectos = [
             proyecto_1, proyecto_2, proyecto_3,
