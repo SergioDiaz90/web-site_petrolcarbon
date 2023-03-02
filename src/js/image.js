@@ -91,7 +91,7 @@ import proyecto_7_2 from '../assets/empresas/proyecto_7_2.png'
 import proyecto_7_3 from '../assets/empresas/proyecto_7_3.png'
 import proyecto_8_1 from '../assets/empresas/proyecto_8_1.png'
 import proyecto_8_2 from '../assets/empresas/proyecto_8_2.png'
-import proyecto_8_3 from '../assets/empresas/proyecto_8_3.png'
+import proyecto_8_3 from '../assets/empresas/proyecto_8_3.jpg'
 import proyecto_9_1 from '../assets/empresas/proyecto_9_1.png'
 import catalogo from '../assets/catalogo.png'
 import certificaciones from '../assets/certificaciones/certificaciones.png';
