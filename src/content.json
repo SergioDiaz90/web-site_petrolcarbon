@@ -37,6 +37,7 @@
         }
     ],
     "brand": {
+        "item": "Inicio",
         "image": "./src/assets/logo_petrolcarbon.png",
         "class": "inicio"
     },
@@ -265,6 +266,11 @@
                 "id": "img",
                 "selected": "clientes_slider",
                 "depth": false
+            },
+            {
+                "id": "img",
+                "selected": "clientes_slider",
+                "depth": false
             }
         ],
         "formulario": {
@@ -483,7 +489,7 @@
                     "selected": "representadas",
                     "depth": true,
                     "line": "instrumentación",
-                    "text": "Válvulas de control, retención, mariposa, cheque, compuerta, esféricas, seguridad PSV, reguladoras de presión y caudal para la industria del petróleo y gas"
+                    "text": "Válvulas de control, retención, mariposa, cheque, compuerta, esféricas.\n Válvulas esféricas seguridad PSV, reguladoras de presión y caudal para la industria del petróleo y gas."
                 },
                 {
                     "image": "",
@@ -491,7 +497,7 @@
                     "selected": "representadas",
                     "depth": true,
                     "line": "instrumentación",
-                    "text": "Sistemas de automatización, instrumentación, control y sensores"
+                    "text": "Sistemas de automatización, instrumentación, control y sensores."
                 },
                 {
                     "image": "",
@@ -499,7 +505,7 @@
                     "selected": "representadas",
                     "depth": true,
                     "line": "instrumentación",
-                    "text": "Estructuración y ejecución de  proyectos  de  producción  de  energía limpia y renovable, cogeneración para producción de electricidad, energía térmica"
+                    "text": "Tuberías y accesorios en acero al carbón, inoxidable, aleaciones especiales para diversas aplicaciones."
                 }
             ]
         }
@@ -904,7 +910,7 @@
             "id": "img",
             "selected": "proyectos",
             "depth": false,
-            "name": "Sistema de monitoreo prognost para compresores",
+            "name": "Sistema de monitoreo Prognost para compresores",
             "cliente": "Refinería de Ecopetrol en Barrancabermeja",
             "ubicacion": "Barrancabermeja, Santander - Colombia",
             "texto": "Suministro de sistemas de monitoreo y diagnóstico inteligente en línea PROGNOST-NT y sistemas de lubricación forzada para cinco compresores Hyper, Booster/ Primary para el proyecto de recuperación del factor de servicio de la planta de Polietileno I y II e incremento de la capacidad en Poly II. El proyecto incluyó ingeniería, diseño, suministro de equipos, pruebas en fábrica, asistencia técnica para alistamiento, instalación, puesta en marcha y capacitación. Actualmente continuamos dando soporte técnico para la actualización del software y hardware, al igual que suministro de repuestos.",
@@ -988,7 +994,7 @@
             "id": "img",
             "selected": "proyectos",
             "depth": false,
-            "name": "Proyecto: Reparación de rotores para turbogeneradores",
+            "name": "Reparación de rotores para turbogeneradores",
             "cliente": "Ecopetrol, Refinería de Barrancabermeja",
             "ubicacion": "Barrancabermeja, Santander - Colombia",
             "texto": "Suministro y reparación de rotores para tres turbogeneradores TG 2951, TG 2952 y TG 2953 de 25000 KVA, 13800 V, 1045 A, 0.8 PF, 2000 KW de la unidad de balance U2950 de la Refinería de Barrancabermeja. La reparación del rotor incluyó una inspección técnica en sitio con especialistas del fabricante, rebobinado, nuevos anillos de retención, balanceo a alta velocidad, actualización tecnológica, pruebas eléctricas, actividades realizadas en la planta de Electric Machinery en Minneapolis, Estados Unidos.",
@@ -1009,8 +1015,8 @@
             "id": "img",
             "selected": "proyectos",
             "depth": false,
-            "name": "Cruces de rio con perforación horizontal dirigida con tubería de 30”",
-            "cliente": "Plantas Petroquímicas",
+            "name": "Cruces de rio con perforación horizontal dirigida con tubería de 30",
+            "cliente": "Saipem - Ocensa",
             "ubicacion": "Ríos San Jorge, San Bartolomé, Nechí, Magdalena y Cauca, Colombia",
             "texto": "Ejecución de cinco cruces en los ríos San Jorge, San Bartolomé, Nechí, Magdalena y Cauca con tubería de 30”, mediante perforación horizontal dirigida, correspondiente al proyecto 'Cusiana - Cupiagua Full Field Development Project -Pipelay North'",
             "images": [
@@ -1035,7 +1041,7 @@
             "id": "img",
             "selected": "proyectos",
             "depth": false,
-            "name": "Tuberías y productos en aleaciones especiales para hornos de reformado y cracking”",
+            "name": "Tuberías y productos en aleaciones especiales para hornos de reformado y cracking",
             "cliente": "Plantas Petroquímicas",
             "ubicacion": "Colombia y Venezuela",
             "texto": "Asistencia técnica y suministro de productos en aleaciones especiales como tuberías, serpentines, pigtails, manifolds, colectores, líneas de transferencia, módulos de convección, return bends, cabezales y otros componentes para hornos de reformado y cracking utilizados en la industria petrolera, petroquímica y siderúrgica a través de nuestra representada Manoir Industries para refinerías de Ecopetrol en Colombia, Yara y algunas de las principales plantas petroquímicas de Venezuela como Metor, Supermetanol, Fertinitro y otras empresas de PDVSA.",
@@ -1110,7 +1116,7 @@
                     "item": "PBX:  +57 601 2351850" 
                 },
                 {
-                    "item": "Célular:  +57 310 304 7932" 
+                    "item": "Celular:  +57 310 304 7932" 
                 },
                 {
                     "item": "Correo: petrolcarbon@petrolcarbon.com" 

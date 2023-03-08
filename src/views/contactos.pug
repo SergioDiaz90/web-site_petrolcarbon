@@ -5,6 +5,8 @@ div(class="form--wrapper")
             div(class="form-field")
                 //- p=item.name
                 //- p=item.typ
+                input(type="hidden" name="recaptcha_token" id="recaptcha_token")
+
                 if item.type != 'option' && item.type != 'checkbox' && item.type != 'submit' && item.name != 'Comentarios:'
                     label(for=item.name)=item.name
                     input(id=item.name type=item.type)

@@ -97,7 +97,7 @@ import catalogo from '../assets/catalogo.png'
 import certificaciones from '../assets/certificaciones/certificaciones.png';
 import hamburger from '../assets/icon-hamburger.png'
 import clientes_1 from '../assets/slider-clientes/clientes_1.svg';
-import clientes_2 from '../assets/slider-clientes/clientes_2.svg';
+import clientes_2 from '../assets/slider-clientes/clientes_2.png';
 import clientes_3 from '../assets/slider-clientes/clientes_3.svg';
 import clientes_4 from '../assets/slider-clientes/clientes_4.png';
 import clientes_5 from '../assets/slider-clientes/clientes_5.svg';
@@ -127,7 +127,7 @@ import clientes_31 from '../assets/slider-clientes/clientes_31.png';
 import clientes_32 from '../assets/slider-clientes/clientes_32.png';
 import clientes_33 from '../assets/slider-clientes/clientes_33.svg';
 import clientes_34 from '../assets/slider-clientes/clientes_34.png';
-import clientes_35 from '../assets/slider-clientes/clientes_35.svg';
+import clientes_35 from '../assets/slider-clientes/clientes_35.png';
 
 
 
@@ -193,7 +193,7 @@ class AllImageSystem {
             clientes_19, clientes_1, clientes_21, clientes_22,
             clientes_23, clientes_24, clientes_25,
             clientes_27, clientes_28, clientes_29, clientes_30,
-            clientes_31, clientes_32, clientes_33, clientes_34
+            clientes_31, clientes_32, clientes_33, clientes_34, clientes_35
         ];
         this.proyectos = [
             proyecto_1, proyecto_2, proyecto_3,

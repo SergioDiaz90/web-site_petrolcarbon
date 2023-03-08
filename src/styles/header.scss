@@ -17,6 +17,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+        width: 200px;
         height: 70px;
     }
 
@@ -70,6 +71,7 @@
 
                 &-item {
                     @apply w-full text-white text-end;
+                    font-size: initial;
                 }
 
             }

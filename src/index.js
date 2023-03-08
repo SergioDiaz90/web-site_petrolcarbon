@@ -10,31 +10,52 @@ let allImageSystem = undefined;
 
 function handlerViewsInIndex () {
     const itemMenu = document.querySelectorAll('.navigation-bar--list-item');
-    const headerImg = document.querySelector('.header-wrapper');
-    console.log('handlerViewsInIndex', itemMenu );
-    systemNavigation( itemMenu );
+    const headerImg = document.querySelector('#header-wrapper');
+    systemNavigation( itemMenu , headerImg );
 
 }
 
-function systemNavigation ( itemOrMenu ) {
+function systemNavigation ( itemOrMenu , brand ) {
+    if ( !brand && !itemOrMenu ) return;
+
+    brand.addEventListener('click', (event) => {
+        event.preventDefault();
+        handlerNavigationHeader( event , 'brand');
+    });
+
     itemOrMenu.forEach( obj => {
         obj.addEventListener('click', (event) => {
             event.preventDefault();
-            itemsJson.map( items => {
-                if ( items.item && items.item === event.target.firstChild.data ) {
-                    // console.log('listener', items.class, event.target.firstChild.data );
-                    document.querySelector(`.${items.class}`).style.display = 'block';
-                }
-                
-                if ( items.item && items.item !== event.target.firstChild.data ) {
-                    // console.log( 'handlerViewsInIndex', items.class, false , items.item, event.target.text);
-                    document.querySelector(`.${items.class}`).style.display = 'none';
-                }
-
-                startNavigationInTopPage();
-            })
+            handlerNavigationHeader( event , 'itemOrMenu');
         });
     });
+}
+
+function handlerNavigationHeader ( event , idNavigation ) {
+    itemsJson.map( items => {
+        
+        let conditions = {
+            brand: {
+                first: items.item && items.item === "Inicio",
+                second: items.item && items.item !== "Inicio",
+            },
+            
+            itemOrMenu: {
+                first: items.item && items.item === event.target.firstChild?.data,
+                second: items.item && items.item !== event.target.firstChild?.data  
+            }
+        }
+
+        if ( conditions[idNavigation].first ) {
+            document.querySelector(`.${items.class}`).style.display = 'block';
+        }
+        
+        if ( conditions[idNavigation].second ) {
+            document.querySelector(`.${items.class}`).style.display = 'none';
+        }
+
+        startNavigationInTopPage();
+    })
 }
 
 function handlerNavigationWithLinks () {
@@ -43,7 +64,6 @@ function handlerNavigationWithLinks () {
 
     systemNavigationWithCards( [...cardHome, ...cardWithImage] );
 }
-
 
 function systemNavigationWithCards ( array ) {
     array.forEach( item => {
@@ -230,7 +250,6 @@ function formData () {
 }
 
 function handlerModalForm ( key ) {
-    console.log('handlerModalForm', key );
     const modal = document.querySelector(`#${key}`);
     let button = undefined
     if ( modal && modal !== undefined ) {

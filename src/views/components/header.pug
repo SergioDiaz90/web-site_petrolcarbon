@@ -3,6 +3,6 @@ include mixins.pug
 
 -let attribute =`${ brand.class }`;
 header(class="header-wrapper" attribute=attribute)
-    a(href="#form") 
+    a(id="header-wrapper" href="#form") 
         div(class="header-wrapper--brand")
     +header (menu)
