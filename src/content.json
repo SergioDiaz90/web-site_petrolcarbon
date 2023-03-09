@@ -390,6 +390,8 @@
             "selected": "representadas_home",
             "depth": true,
             "class": "representaciones",
+            "pointer": "Representaciones y alianzas",
+            "location": "soluciones-tecnológicas-de-alto-desempeño-para-turbomaquinaria",
             "title": "Soluciones tecnológicas de alto desempeño para turbomaquinaria, compresores reciprocantes y equipos rotativos",
             "aliados": [
                 {
@@ -431,7 +433,9 @@
             "selected": "representadas_home",
             "depth": true,
             "class": "representaciones",
+            "pointer": "Representaciones y alianzas",
             "title": "Productos y servicios para procesos de refinación y petroquímica",
+            "location": "productos-y-servicios-para-procesos-de-refinacion-y-petroquímica",
             "aliados": [
                 {
                     "image": "",
@@ -448,7 +452,9 @@
             "selected": "representadas_home",
             "depth": true,
             "class": "representaciones",
+            "pointer": "Representaciones y alianzas",
             "title": "Soluciones en generación eléctrica y energías alternativas",
+            "location": "soluciones-en-generacion-electrica-y-energías-alternativas",
             "aliados": [
                 {
                     "image": "",
@@ -481,7 +487,9 @@
             "selected": "representadas_home",
             "class": "representaciones",
             "depth": true,
+            "pointer": "Representaciones y alianzas",
             "title": "Válvulas e instrumentación, tubería y accesorios",
+            "location": "valvulas-e-instrumentacion-tuberia-y-accesorios",
             "aliados": [
                 {
                     "image": "",
@@ -515,6 +523,8 @@
             "id": "img",
             "selected": "service",
             "class": "actividades",
+            "pointer": "Actividades",
+            "location": "venta-de-equipos",
             "depth": true,
             "title": "Venta de equipos",
             "text": {
@@ -526,6 +536,8 @@
             "id": "img",
             "selected": "service",
             "class": "actividades",
+            "pointer": "Actividades",
+            "location": "asistencia-tecnica",
             "depth": true,
             "title": "Asistencia técnica",
             "text": {
@@ -537,6 +549,8 @@
             "id": "img",
             "selected": "service",
             "class": "actividades",
+            "pointer": "Actividades",
+            "location": "capacitacion-teorico-practica",
             "depth": true,
             "title": "Capacitación teórico-práctica",
             "text": {
@@ -550,6 +564,7 @@
             "id": "img",
             "selected": "service_view",
             "class": "actividades",
+            "location": "venta-de-equipos",
             "depth": true,
             "title": "Venta de equipos",
             "text": {
@@ -561,6 +576,7 @@
             "id": "img",
             "selected": "service_view",
             "class": "actividades",
+            "location": "asistencia-tecnica",
             "depth": true,
             "title": "Asistencia técnica",
             "text": {
@@ -572,6 +588,7 @@
             "id": "img",
             "selected": "service_view",
             "class": "actividades",
+            "location": "capacitacion-teorico-practica",
             "depth": true,
             "title": "Capacitación teórico-práctica",
             "text": {
@@ -1134,7 +1151,7 @@
                 }
             ]
         },
-        "copy": "Petrolcarbon LTDA @2022 Todos los derechos registrados"
+        "copy": "Petrolcarbon LTDA @2023 Todos los derechos registrados"
     },
     "modals": [
         {

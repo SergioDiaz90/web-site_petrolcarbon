@@ -128,6 +128,38 @@ import clientes_32 from '../assets/slider-clientes/clientes_32.png';
 import clientes_33 from '../assets/slider-clientes/clientes_33.svg';
 import clientes_34 from '../assets/slider-clientes/clientes_34.png';
 import clientes_35 from '../assets/slider-clientes/clientes_35.png';
+import clientes_36 from '../assets/slider-clientes/clientes_1.svg';
+import clientes_37 from '../assets/slider-clientes/clientes_2.png';
+import clientes_38 from '../assets/slider-clientes/clientes_3.svg';
+import clientes_39 from '../assets/slider-clientes/clientes_4.png';
+import clientes_40 from '../assets/slider-clientes/clientes_5.svg';
+import clientes_41 from '../assets/slider-clientes/clientes_6.png';
+import clientes_42 from '../assets/slider-clientes/clientes_7.svg';
+import clientes_43 from '../assets/slider-clientes/clientes_8.png';
+import clientes_44 from '../assets/slider-clientes/clientes_9.png';
+import clientes_45 from '../assets/slider-clientes/clientes_11.svg';
+import clientes_46 from '../assets/slider-clientes/clientes_12.png';
+import clientes_47 from '../assets/slider-clientes/clientes_13.svg';
+import clientes_48 from '../assets/slider-clientes/clientes_14.svg';
+import clientes_49 from '../assets/slider-clientes/clientes_15.png';
+import clientes_50 from '../assets/slider-clientes/clientes_16.png';
+import clientes_51 from '../assets/slider-clientes/clientes_17.png';
+import clientes_52 from '../assets/slider-clientes/clientes_18.png';
+import clientes_53 from '../assets/slider-clientes/clientes_19.png';
+import clientes_54 from '../assets/slider-clientes/clientes_21.png';
+import clientes_55 from '../assets/slider-clientes/clientes_22.png';
+import clientes_56 from '../assets/slider-clientes/clientes_23.png';
+import clientes_57 from '../assets/slider-clientes/clientes_24.png';
+import clientes_58 from '../assets/slider-clientes/clientes_25.svg';
+import clientes_59 from '../assets/slider-clientes/clientes_27.svg';
+import clientes_60 from '../assets/slider-clientes/clientes_28.png';
+import clientes_61 from '../assets/slider-clientes/clientes_29.png';
+import clientes_62 from '../assets/slider-clientes/clientes_30.png';
+import clientes_63 from '../assets/slider-clientes/clientes_31.png';
+import clientes_64 from '../assets/slider-clientes/clientes_32.png';
+import clientes_65 from '../assets/slider-clientes/clientes_33.svg';
+import clientes_66 from '../assets/slider-clientes/clientes_34.png';
+import clientes_67 from '../assets/slider-clientes/clientes_35.png';
 
 
 
@@ -193,7 +225,14 @@ class AllImageSystem {
             clientes_19, clientes_1, clientes_21, clientes_22,
             clientes_23, clientes_24, clientes_25,
             clientes_27, clientes_28, clientes_29, clientes_30,
-            clientes_31, clientes_32, clientes_33, clientes_34, clientes_35
+            clientes_31, clientes_32, clientes_33, clientes_34, clientes_35,
+            clientes_36, clientes_37, clientes_38, clientes_39, clientes_40,
+            clientes_41, clientes_42, clientes_43, clientes_44, clientes_45,
+            clientes_46, clientes_47, clientes_48, clientes_49, clientes_50,
+            clientes_51, clientes_52, clientes_53, clientes_54, clientes_55,
+            clientes_56, clientes_57, clientes_58, clientes_59, clientes_60,
+            clientes_61, clientes_62, clientes_63, clientes_64, clientes_65,
+            clientes_67, clientes_66 
         ];
         this.proyectos = [
             proyecto_1, proyecto_2, proyecto_3,

@@ -68,18 +68,18 @@ function handlerNavigationWithLinks () {
 function systemNavigationWithCards ( array ) {
     array.forEach( item => {
         item.addEventListener('click' , (e) => {
-            let { classItem, pointer } = searchParentNavigation( e.target.parentNode );
+            let { classItem, pointer, location } = searchParentNavigation( e.target.parentNode );
+            console.log({ classItem, pointer, location })
             itemsJson.map( items => {
                 if ( items.item === pointer ) {
                     document.querySelector(`.${classItem}`).style.display = 'block';
                 }
                 
                 if ( items.item !== pointer ) {
-                    console.log({ item: items.item, pointer });
                     document.querySelector(`.${items.class}`).style.display = 'none';
                 }
 
-                startNavigationInTopPage();
+                startNavigationInTopPage( location );
             })
         })
     })
@@ -88,7 +88,8 @@ function systemNavigationWithCards ( array ) {
 function searchParentNavigation (elm) {
     let items = {
         classItem: undefined,
-        pointer: undefined
+        pointer: undefined,
+        location: undefined
     };
 
     let objKeys = [
@@ -98,6 +99,16 @@ function searchParentNavigation (elm) {
         "Representaciones y alianzas"
     ]
 
+    let locations = [
+        "venta-de-equipos",
+        "asistencia-tecnica",
+        "capacitacion-teorico-practica",
+        "soluciones-tecnológicas-de-alto-desempeño-para-turbomaquinaria",
+        "productos-y-servicios-para-procesos-de-refinacion-y-petroquímica",
+        "soluciones-en-generacion-electrica-y-energías-alternativas",
+        "valvulas-e-instrumentacion-tuberia-y-accesorios"
+    ]
+
     let search = elm;
 
     while (  items.classItem === undefined || items.pointer === undefined ) {
@@ -105,11 +116,16 @@ function searchParentNavigation (elm) {
             items.classItem = search.id;
         }
         
-        if ( search?.getAttribute('pointer') && objKeys.find( key => key === search?.getAttribute('pointer') )) {
+        if ( search?.getAttribute('location') && locations.find( key => key === search?.getAttribute('location'))) {
+            items.location = search.getAttribute('location');
+        }
+
+        if ( search?.getAttribute('pointer') && objKeys.find( key => key === search?.getAttribute('pointer'))) {
             items.pointer = search.getAttribute('pointer');
         }
 
         search = search.parentNode;
+
     }
 
     return items;
@@ -267,8 +283,20 @@ function handlerModalForm ( key ) {
     return;    
 }
 
-function startNavigationInTopPage () {
-    document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
+function startNavigationInTopPage ( card = undefined ) {
+    if ( card !== undefined ) {
+        setTimeout(() => {
+            const section = document.querySelector(`#${card}`);
+            return window.scrollTo({
+                top: section.offsetTop - 300,
+                behavior: 'smooth'
+            });
+        }, 0 );
+    } else {
+
+        document.querySelector('body').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
 }
 
 function handlerLinksPdf ( obj , section ) {

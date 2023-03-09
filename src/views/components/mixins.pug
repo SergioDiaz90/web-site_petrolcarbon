@@ -26,7 +26,7 @@ mixin slider(slider)
 
 mixin card(servicios)
     each obj, idx in servicios
-        div(class="card" id=`${obj.class}` pointer="Actividades")
+        div(class="card" id=`${obj.class}` pointer=`${obj.pointer}` location=`${obj.location}`)
             div(class="card-article")
                 h3=obj.title
                 //- article=obj.text.one
@@ -36,7 +36,7 @@ mixin card(servicios)
 
 mixin cardWithImage(representadas)
         each obj, idx in representadas
-            div(id=`${obj.class}` class="cardWithImage-card" pointer="Representaciones y alianzas")
+            div(id=`${obj.class}` class="cardWithImage-card" pointer=`${obj.pointer}` location=`${obj.location}`)
                 figure(class="cardWithImage-card--image" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
                     img
                 div(class="cardWithImage-card--text")
@@ -55,7 +55,7 @@ mixin textAndImage( items )
         each obj, idx in items
             - let condition = idx % 2 === 0; 
             if condition
-                div(class="textAndImage-wrapper--content--left")
+                div(class="textAndImage-wrapper--content--left" id=`${obj.location}`)
                     figure(class="textAndImage-wrapper--image" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
                         img
                     div(class="textAndImage-wrapper--article")
@@ -64,7 +64,7 @@ mixin textAndImage( items )
                             p=obj.text.one
                             p=obj.text.two
             else
-                div(class="textAndImage-wrapper--content--right")
+                div(class="textAndImage-wrapper--content--right" id=`${obj.location}`)
                     figure(class="textAndImage-wrapper--image" id=`${obj.id}` section=`${obj.selected}` value=`${obj.depth}`)
                         img
                     div(class="textAndImage-wrapper--article")
@@ -79,7 +79,7 @@ mixin textAndImage( items )
 mixin hexagonCard ( hexagon )
     div(class="hexagon-wrapper")
         each obj, idx in hexagon
-            div(class="hexagon-wrapper--line")
+            div(class="hexagon-wrapper--line" id=`${obj.location}`)
                 h2(class="hexagon-wrapper--line-title")=obj.title
                 div(class="hexagon-wrapper--line-cards")
                     each item, index in obj.aliados
