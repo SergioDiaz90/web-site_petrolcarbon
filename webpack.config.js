@@ -10,7 +10,7 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, 'public'),
+        path: path.resolve(__dirname, 'dist'),
         assetModuleFilename: 'src/[path]/[name].[ext]'
     },
     plugins: [
@@ -57,18 +57,6 @@ module.exports = {
                     filename: 'assets/fonts/[name][ext][query]'
                 }
             },
-            // {
-            //     test: /\.pdf$/,
-            //     use: [
-            //         {
-            //         loader: 'file-loader',
-            //             options: {
-            //                 name: '[name].[ext]',
-            //                 outputPath: 'assets/documents/'
-            //             }
-            //         }
-            //     ]
-            // },
             {
                 test: /\.json5$/i,
                 type: 'json',
