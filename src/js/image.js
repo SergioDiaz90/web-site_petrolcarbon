@@ -64,7 +64,7 @@ import gas_31 from '../assets/clientes/gas_31.png';
 import gas_32 from '../assets/clientes/gas_32.png';
 import gas_33 from '../assets/clientes/gas_33.png';
 import gas_34 from '../assets/clientes/gas_34.jpg';
-import gas_35 from '../assets/clientes/gas_35.png';
+import gas_35 from '../assets/clientes/gas_35.jpg';
 
 import proyecto_1 from '../assets/proyectos/proyecto_1.jpg';
 import proyecto_2 from '../assets/proyectos/proyecto_2.png';
