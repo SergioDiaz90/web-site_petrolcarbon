@@ -17,7 +17,12 @@ class SliderClients {
         let items = this.slider.childNodes.length;
         console.log( 'move', items );
         this.cnt += 1;
-        if (this.cnt > items - 4) this.cnt = 0;
+        if (this.cnt > items - 4) {
+            this.slider.style.transition = 'none';
+            this.cnt = 0;
+        } else {
+            this.slider.style.transition = 'all 0.3s';
+        }
         this.moveTo(this.cnt);
     }
 

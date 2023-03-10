@@ -118,7 +118,7 @@ import clientes_21 from '../assets/slider-clientes/clientes_21.png';
 import clientes_22 from '../assets/slider-clientes/clientes_22.png';
 import clientes_23 from '../assets/slider-clientes/clientes_23.png';
 import clientes_24 from '../assets/slider-clientes/clientes_24.png';
-import clientes_25 from '../assets/slider-clientes/clientes_25.svg';
+import clientes_25 from '../assets/slider-clientes/clientes_25.png';
 import clientes_27 from '../assets/slider-clientes/clientes_27.svg';
 import clientes_28 from '../assets/slider-clientes/clientes_28.png';
 import clientes_29 from '../assets/slider-clientes/clientes_29.png';
