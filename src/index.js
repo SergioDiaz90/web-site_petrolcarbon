@@ -47,7 +47,9 @@ function handlerNavigationHeader ( event , idNavigation ) {
         }
 
         if ( conditions[idNavigation].first ) {
+            let addScriptRecapcha = `${items.class}` === 'contactenos' ? true : false;
             document.querySelector(`.${items.class}`).style.display = 'block';
+            handlerInsertOrDeleteJsRecapcha( addScriptRecapcha );
         }
         
         if ( conditions[idNavigation].second ) {
@@ -55,7 +57,31 @@ function handlerNavigationHeader ( event , idNavigation ) {
         }
 
         startNavigationInTopPage();
+
     })
+}
+
+function handlerInsertOrDeleteJsRecapcha ( shown ) {
+    let head = document.head;
+    let scriptRecapcha = document.querySelector('#scriptRecapcha');
+    let scriptValidator = scriptRecapcha === null ? false : true;
+    let divRecapcha = undefined;
+    let imgRecapcha = undefined;
+
+    if ( !scriptValidator && shown ) {
+        let scriptRecapcha = document.createElement('script');
+        scriptRecapcha.id = "scriptRecapcha";
+        scriptRecapcha.src = 'https://www.google.com/recaptcha/enterprise.js?render=6LcDes8kAAAAAO6p5XE2qSC8IJvJjPg56CwJgfEn';
+        head.appendChild( scriptRecapcha );
+    }
+
+    if ( scriptValidator && !shown ) {
+        imgRecapcha = document.querySelector('[crossorigin = "anonymous"]');
+        divRecapcha = document.querySelector('.grecaptcha-badge');
+        divRecapcha.remove();
+        scriptRecapcha.remove();
+        imgRecapcha.remove();
+    }
 }
 
 function handlerNavigationWithLinks () {
