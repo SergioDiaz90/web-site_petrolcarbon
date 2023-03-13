@@ -347,6 +347,7 @@
             "id": "img",
             "selected": "nosotros",
             "depth": true,
+            "location": "quienes-somos",
             "active-read-more": false
         },
         {
@@ -357,6 +358,7 @@
             },
             "id": "img",
             "selected": "nosotros",
+            "location": "quienes-somos",
             "depth": true,
             "active-read-more": false
         },
@@ -368,6 +370,7 @@
             },
             "id": "img",
             "selected": "nosotros",
+            "location": "quienes-somos",
             "depth": true,
             "active-read-more": false
         },
@@ -380,6 +383,7 @@
             "link": "Leer más",
             "id": "img",
             "selected": "nosotros",
+            "location": "quienes-somos",
             "depth": true,
             "active-read-more": true
         }
