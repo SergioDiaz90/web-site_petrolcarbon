@@ -73,8 +73,7 @@ mixin textAndImage( items )
                             p=obj.text.one
                             p=obj.text.two
                             if obj.title == "Política de gestión integral"
-                                div(class="see-more")
-                                    a(href="#" target="_blank")=obj.link
+                                a(class="see-more" href="#" target="_blank")=obj.link
 
 mixin hexagonCard ( hexagon )
     div(class="hexagon-wrapper")

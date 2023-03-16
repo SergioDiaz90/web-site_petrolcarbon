@@ -251,15 +251,11 @@
             }
 
             .see-more {
-                @apply bg-green-principal flex justify-center items-center absolute mt-5;
+                @apply bg-green-principal text-white flex justify-center items-center absolute mt-5;
                 width: 200px;
                 height: 50px;
                 right: 40px;
                 cursor: pointer;
-
-                a {
-                    @apply text-white;
-                }
             }
         }
 

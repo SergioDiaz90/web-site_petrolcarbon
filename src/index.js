@@ -326,6 +326,7 @@ function startNavigationInTopPage ( card = undefined ) {
 }
 
 function handlerLinksPdf ( obj , section ) {
+    console.log({ obj, section });
     const linkInForm = document.querySelector('#formulario');
     let title = undefined;
     let link = undefined;
@@ -338,10 +339,9 @@ function handlerLinksPdf ( obj , section ) {
         title = obj.lastChild.childNodes[0].innerText === "Política de gestión integral";
 
         if ( title ) {
-            link = obj.lastChild.childNodes[1].lastChild.childNodes;
-            link.forEach( item => {
-                item.setAttribute('href', allImageSystem[`${section}_doc`][0] );
-            })
+            link = obj.lastChild.childNodes[1].lastChild;
+            link.setAttribute('href', allImageSystem[`${section}_doc`][0] );
+            
         }
     }
 
