@@ -1,17 +1,31 @@
+import environment from "../environment.json";
+
+function executeRecapcha () {
+   return new Promise((resolve, reject) => {
+      grecaptcha.ready( async () => {
+         let token = await grecaptcha.execute(`${environment.production.recapcha.key_public}`, {action: 'submit'})
+         if ( token ) {
+            let verify = verifyRecaptcha(token)
+            console.log('Se ha generado el token exitosamente');
+            resolve( true );
+         } else {
+            reject( false );
+         }
+      })
+   })
+   
+}
 
 async function onSubmit(data) {
-   let { checked, objInfo } = handleDataForm( data );
-
-   let recapcha = executeRecapcha();
-
-   if ( !recapcha ) {
-      return;
-   }
+   let response = undefined;
+   let token = await executeRecapcha();
+   let { checked, objInfo } = await handleDataForm( data );
 
    if ( !checked ) {
       return { not_terms: true };
-   } else {
+   }
 
+   if ( checked ) {
       const options = {
          method: 'POST',
          headers: new Headers({
@@ -24,7 +38,12 @@ async function onSubmit(data) {
          cache: 'default',
       };
       
-      let response  = await fetch( 'http://localhost:3000/send-email', options )
+      
+      if ( token ) {
+         response  = await fetch( 'http://localhost:3000/send-email', options )
+      } else {
+         return { recapcha: true };
+      }
 
       if ( response.status === 200 ) {
          return { successfull: true };
@@ -37,7 +56,7 @@ async function onSubmit(data) {
 
 }
 
-function handleDataForm( data ) {
+async function handleDataForm( data ) {
    let namePropInForm = [
       'INPUT',
       'SELECT',
@@ -50,7 +69,7 @@ function handleDataForm( data ) {
 
    for ( let idx in data ) {
       arrayData.push( ...data[idx]);
-      arrayData.map( x => {
+      arrayData.map( async x => {
          if ( x.tagName === 'LABEL' ) {
             nameProp = x.textContent.replace(":", "").replaceAll(" ", "_").toLowerCase();
          }
@@ -59,47 +78,35 @@ function handleDataForm( data ) {
             if ( x.checked ) {
                objInfo[nameProp] = x.checked;
                checked = true;
-            } else {
+            }
+
+            if ( !x.checked && nameProp ) {
                objInfo[nameProp] = x.value;
             }
+
          }
       });
    }
+   
+   console.log({ checked, objInfo });
+   return { checked, objInfo  };
 
-   return { checked, objInfo };
-
-}
-
-function executeRecapcha () {
-   grecaptcha.enterprise.ready(function() {
-      grecaptcha.enterprise.execute('6LcDes8kAAAAAO6p5XE2qSC8IJvJjPg56CwJgfEn', {action: 'submit'})
-         .then(function(token) {
-            console.log('Se ha generado el token exitosamente');
-            document.querySelector('#recaptcha_token').value = token;
-            verifyRecaptcha().then( (success) => {
-               if ( success ) {
-                  return true
-               }
-
-               if ( !success ) {
-                  return false
-               }
-            })
-      });
-   });
 }
 
 function verifyRecaptcha(token) {
    return fetch('https://www.google.com/recaptcha/api/siteverify', {
+      mode: 'no-cors',
       method: 'POST',
       headers: {
-         'Content-Type': 'application/x-www-form-urlencoded'
+         'Content-Type': 'application/x-www-form-urlencoded',
+         'Access-Control-Allow-Origin': '*'
       },
-      body: `secret=6LcDes8kAAAAAO6p5XE2qSC8IJvJjPg56CwJgfEn&response=${token}`
-   })
-      .then(response => response.json())
-      .then(data => {
-         return data.success;
+      body: `secret=${environment.production.recapcha.key_secret}&response=${token}`
+   }).then( response => {
+         return true
+   }).catch( error => {
+         console.log({ error });
+         return false;
    });
 }
 

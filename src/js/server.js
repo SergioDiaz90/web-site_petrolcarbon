@@ -21,8 +21,9 @@ runServer();
 app.use( express.json() );
 app.use(express.urlencoded());
 const cors = require('cors');
+
 app.use(cors({
-    origin: ['http://localhost:8080', 'https://www.google.com/']
+    origin: ['http://localhost:8080', 'https://www.google.com/', 'https://petrolcarbon.com' ]
 }));
 
 app.post("/send-email", (req, res) => {

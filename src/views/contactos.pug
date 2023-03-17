@@ -1,11 +1,9 @@
 h2(class="subtitle") Contáctenos
 div(class="form--wrapper")
     div(class="form")
+        
         each item, idx in contactenos.fields
             div(class="form-field")
-                //- p=item.name
-                //- p=item.typ
-                input(type="hidden" name="recaptcha_token" id="recaptcha_token")
 
                 if item.type != 'option' && item.type != 'checkbox' && item.type != 'submit' && item.name != 'Comentarios:'
                     label(for=item.name)=item.name
@@ -23,8 +21,12 @@ div(class="form--wrapper")
                 else if item.type == 'submit'
                     button(class="button" id="btn-submit")=item.name
 
-                else
+                else if item.type == 'option'
                     label(for=item.name)=item.name
                     select(id=item.name type=item.type)
                         each option in item.options
                             option=option
+
+        div(class="form-field")
+            label(style="display: none" for="recaptcha_token") recaptcha_token
+            input(type="hidden" name="recaptcha_token" id="recaptcha_token")

@@ -312,15 +312,16 @@
 }
 
 @mixin modals () {
-    display: none;
     @apply absolute w-full h-screen bg-black bg-opacity-40;
+    display: none;
+    height: 177.8vh;
     left: 0;
     top: 0;
     z-index: 1000;
 
     .modal-container-data-modal {
         @apply flex flex-col justify-around bg-white rounded-lg p-3;
-        margin: calc(50% - 25%) auto;
+        margin: calc(50% - 30%) auto;
         width: 400px;
         height: 250px;
     }

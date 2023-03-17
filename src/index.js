@@ -4,6 +4,7 @@ import { allImageSystemInstance } from './js/image';
 import content  from './content.json';
 import onSubmit from "./js/form";
 import SliderClients from "./js/slider-clientes";
+import environment from "./environment.json";
 
 const itemsJson = content.menu;
 let allImageSystem = undefined;
@@ -63,25 +64,32 @@ function handlerNavigationHeader ( event , idNavigation ) {
 
 function handlerInsertOrDeleteJsRecapcha ( shown ) {
     let head = document.head;
-    let scriptRecapcha = document.querySelector('#scriptRecapcha');
-    let scriptValidator = scriptRecapcha === null ? false : true;
     let divRecapcha = undefined;
     let imgRecapcha = undefined;
-
-    if ( !scriptValidator && shown ) {
+    let token = undefined;
+    
+    if ( !validateElementRecapchaExist () && shown ) {
+        console.log('handlerInsertOrDeleteJsRecapcha');
         let scriptRecapcha = document.createElement('script');
         scriptRecapcha.id = "scriptRecapcha";
-        scriptRecapcha.src = 'https://www.google.com/recaptcha/enterprise.js?render=6LcDes8kAAAAAO6p5XE2qSC8IJvJjPg56CwJgfEn';
+        scriptRecapcha.src = `https://www.google.com/recaptcha/api.js?render=${environment.production.recapcha.key_public}`;
         head.appendChild( scriptRecapcha );
+
+        return true
     }
 
-    if ( scriptValidator && !shown ) {
+    if ( validateElementRecapchaExist () && !shown ) {
         imgRecapcha = document.querySelector('[crossorigin = "anonymous"]');
         divRecapcha = document.querySelector('.grecaptcha-badge');
         divRecapcha.remove();
         scriptRecapcha.remove();
         imgRecapcha.remove();
     }
+}
+
+function validateElementRecapchaExist () {
+    let scriptRecapcha = document.querySelector('#scriptRecapcha');
+    return scriptRecapcha === null ? false : true;
 }
 
 function handlerNavigationWithLinks () {
@@ -269,12 +277,13 @@ function formData () {
         e.preventDefault();
         let formData = document.querySelector('.form').childNodes;
         let formFields = [];
+        let response = undefined;
 
         formData.forEach( item => {
             formFields.push(item.childNodes);
         });
 
-        let response = await onSubmit(formFields);
+        response = await onSubmit(formFields);
 
         console.log( 'response', response );
         if ( response.not_terms ) {
@@ -287,6 +296,10 @@ function formData () {
 
         if ( response.error ) {
             handlerModalForm('error');
+        }
+
+        if ( response.recapcha ) {
+            handlerModalForm('recapcha');
         }
     });
 }
