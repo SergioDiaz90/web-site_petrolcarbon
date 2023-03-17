@@ -1,0 +1,8 @@
+{
+    "production" : {
+        "recapcha" : {
+            "key_public": "6Lda-_YkAAAAAGTm9Uhqb0OR3zeaXoT-TWAg3P73",
+            "key_secret": "6Lda-_YkAAAAAH7Ldoih2ExjZTie2HLfsSOyYYDX"
+        }
+    } 
+}
