@@ -4,6 +4,7 @@ import { allImageSystemInstance } from './js/image';
 import content  from './content.json';
 import onSubmit from "./js/form";
 import SliderClients from "./js/slider-clientes";
+import { HandlerNavigation } from "./js/handlerNavigation";
 import environment from "./environment.json";
 
 const itemsJson = content.menu;
@@ -364,11 +365,12 @@ function handlerLinksPdf ( obj , section ) {
 (function () {
     new Slider ('.slider', true );
     new SliderClients('.sliderVariousImage-content');
-    handlerViewsInIndex();
+    new HandlerNavigation();
+    // handlerViewsInIndex();
+    // handlerNavigationWithLinks();
     handlerMenuInResponsive();
     allImageSystem = allImageSystemInstance();
     addImage();
     formData();
-    handlerNavigationWithLinks();
     handlerModalForm();
 })();
