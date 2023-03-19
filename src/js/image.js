@@ -178,15 +178,18 @@ import catalogo_petrolcarbon from '../documents/catalogo_petrolcarbon.pdf';
 import politica_de_gestion_integral from '../documents/politica_de_gestion_integral.pdf'
 import politica_de_tratamiento_de_datos from '../documents/politica_de_tratamiento_de_datos.pdf'
 
-
-
-
-let allImage = undefined;
-
 class AllImageSystem {
-    #slider = undefined;
+
+    static allImageSystemInstance = undefined;
 
     constructor () {
+        if ( !!AllImageSystem.allImageSystemInstance ) {
+            return this.allImageSystemInstance;
+        }
+
+        this.allImageSystemInstance = this;
+
+
         this.slider = [ slider_1, slider_2, slider_3 ]
         this.service = [
             venta_de_equipos, asistencia_tecnica , capacitacion,
@@ -294,19 +297,14 @@ class AllImageSystem {
         this.menu = [
             hamburger
         ]
+
     }
 
     sectionImage ( value ) {
         if ( typeof value !== String ) return;
         return this[value];
     }
-    
+
 }
 
-export function allImageSystemInstance () {
-    if ( !allImage ) {
-        allImage = new AllImageSystem();
-    }
-
-    return allImage;
-}
+export let allImage = new AllImageSystem();
