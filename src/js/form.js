@@ -20,7 +20,7 @@ export class FormData {
 
             response = await this.#onSubmit(formFields);
 
-            console.log( 'response', response );
+            // console.log( 'response', response );
             if ( response.not_terms ) {
                this.#handlerModalForm('not-terms');
             }
@@ -45,7 +45,7 @@ export class FormData {
             let token = await grecaptcha.execute(`${environment.production.recapcha.key_public}`, {action: 'submit'})
             let verify = this.#verifyRecaptcha(token)
             if ( verify ) {
-               console.log('Se ha generado el token exitosamente');
+               // console.log('Se ha generado el token exitosamente');
                resolve( true );
             } else {
                reject( false );
@@ -67,7 +67,7 @@ export class FormData {
       }).then( response => {
             return true
       }).catch( error => {
-            console.log({ error });
+            // console.log({ error });
             return false;
       });
    }
@@ -100,6 +100,12 @@ export class FormData {
       let objInfo = {};
       let nameProp = undefined;
       let checked = false;
+      let typeValidation = {
+         text: /^[a-zA-Z0-9\s]+$/,
+         email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+         tel: /^[0-9]+$/,
+         textarea: /^[a-zA-Z0-9\s\.,;:_-]+$/ 
+      }
    
       for ( let idx in data ) {
          arrayData.push( ...data[idx]);
@@ -113,16 +119,22 @@ export class FormData {
                   objInfo[nameProp] = x.checked;
                   checked = true;
                }
-   
-               if ( !x.checked && nameProp ) {
+
+               if ( !x.checked && nameProp && nameProp === 'clase_de_solicitud') {
                   objInfo[nameProp] = x.value;
+               }
+
+               if ( !x.checked && nameProp ) {
+                  let allow = typeValidation[x.type].test( x.value )
+                  if ( allow ) {
+                     objInfo[nameProp] = x.value;
+                  }
                }
    
             }
          });
       }
       
-      console.log({ checked, objInfo });
       return { checked, objInfo  };
    
    }
@@ -151,8 +163,8 @@ export class FormData {
          
          
          if ( token ) {
-            response  = await fetch( 'http://localhost:3000/send-email', options )
-            console.log({response})
+            response  = await fetch( 'https://petrolcarbon.com:26637/send-email', options )
+            // console.log({response})
          } else {
             return { recapcha: true };
          }

@@ -2,16 +2,19 @@ const path = require('path');
 const json5 = require('json5');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const PugPlugin = require('pug-plugin');
-const FileLoader = require('file-loader');
 const content = require('./src/content.json');
 
 module.exports = {
     entry: './src/index.js',
+    mode: "production",
     output: {
-        filename: '[name].js',
+        filename: '[name][contenthash].js',
         path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: 'src/[path]/[name].[ext]'
+        assetModuleFilename: 'src/[path]/[name][contenthash].[ext]'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -20,7 +23,38 @@ module.exports = {
             filename: 'index.html',
             minify: true
         }),
-        new HtmlWebpackPugPlugin()
+        new HtmlWebpackPugPlugin(),
+        new MiniCssExtractPlugin(),
+        new ImageMinimizerPlugin({
+            minimizer: {
+              // Los siguientes optimizadores se utilizan según el tipo de archivo
+                implementation: ImageMinimizerPlugin.imageminMinify,
+                options: {
+                    plugins: [
+                        ['gifsicle', { interlaced: true }],
+                        ['mozjpeg', { quality: 30 }],
+                        ['pngquant', { quality: [0.2, 0.2] }],
+                        ['svgo', 
+                            {
+                                plugins: [{
+                                    name: "preset-default",
+                                    params: {
+                                        overrides: {
+                                            removeViewBox: false,
+                                            addAttributesToSVGElement: {
+                                                params: {
+                                                    attributes: [
+                                                        { xmlns: "http://www.w3.org/2000/svg" },
+                                                    ],
+                                                }
+                                            }
+                                        }
+                                    }
+                                }] }],
+                    ]
+                }
+            },
+        }),
     ],
     module:{
         rules: [
@@ -40,13 +74,13 @@ module.exports = {
             },
             {
                 test:/\.(css|sass|scss)$/i,
-                use: ['style-loader','css-loader', 'postcss-loader', 'sass-loader']
+                use: [ MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
             },
             {
                 test: /\.(png|jpg|jpeg|ico|pdf)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'assets/[path]/[name][ext]'
+                    filename: 'assets/[path]/[name][contenthash][ext]'
                 }
             },
             {
@@ -54,7 +88,7 @@ module.exports = {
                 test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'assets/fonts/[name][ext][query]'
+                    filename: 'assets/fonts/[name][contenthash][ext][query]'
                 }
             },
             {
@@ -77,6 +111,16 @@ module.exports = {
                 usePolling: true
             }
         }
+    },
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                terserOptions: {
+                    compress: true,
+                },
+            }),
+        ],
     },
     stats: 'errors-only',
 };

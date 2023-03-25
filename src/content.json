@@ -298,15 +298,15 @@
                 },
                 {
                     "name": "Correo:",
-                    "type": "text"
+                    "type": "email"
                 },
                 {
                     "name": "Teléfono:",
-                    "type": "text"
+                    "type": "tel"
                 },
                 {
                     "name": "Celular:",
-                    "type": "text"
+                    "type": "tel"
                 },
                 {
                     "name": "Clase de solicitud:",
@@ -322,7 +322,7 @@
                 },
                 {
                     "name": "Comentarios:",
-                    "type": "text"
+                    "type": "textarea"
                 },
                 {
                     "name": "Autorización para tratamiento de datos personales",

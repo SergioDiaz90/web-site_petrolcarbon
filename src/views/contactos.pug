@@ -7,23 +7,23 @@ div(class="form--wrapper")
 
                 if item.type != 'option' && item.type != 'checkbox' && item.type != 'submit' && item.name != 'Comentarios:'
                     label(for=item.name)=item.name
-                    input(id=item.name type=item.type)
+                    input(required id=item.name type=item.type)
 
                 else if item.name == 'Comentarios:'
                     label(for=item.name)=item.name
-                    textarea(class="comments" id=item.name type=item.type)
+                    textarea(required class="comments" id=item.name type=item.type )
 
                 else if item.type == 'checkbox'
                     label(for=item.name id="checkbox")
                         a(href="http://", target="_blank", rel="noopener noreferrer" id=`${item.id}`)=item.name 
-                    input(id=item.name type=item.type)
+                    input(required id=item.name type=item.type)
 
                 else if item.type == 'submit'
-                    button(class="button" id="btn-submit")=item.name
+                    button(required class="button" id="btn-submit")=item.name
 
                 else if item.type == 'option'
                     label(for=item.name)=item.name
-                    select(id=item.name type=item.type)
+                    select(required id=item.name type=item.type)
                         each option in item.options
                             option=option
 

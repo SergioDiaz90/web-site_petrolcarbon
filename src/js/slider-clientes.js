@@ -6,7 +6,7 @@ class SliderClients {
         this.cnt = 0
         this.cntPx = 0;
         this.start();
-        console.log('SliderClients', this.slider );
+        // console.log('SliderClients', this.slider );
     }
 
     start () {
@@ -15,7 +15,7 @@ class SliderClients {
 
     move () {
         let items = this.slider.childNodes.length;
-        console.log( 'move', items );
+        // console.log( 'move', items );
         this.cnt += 1;
         if (this.cnt > items - 4) {
             this.slider.style.transition = 'none';
@@ -29,7 +29,7 @@ class SliderClients {
     moveTo (idx) {
         if ( idx === 0 ) this.cntPx = 0;
         this.cntPx += 25.5;
-        console.log(this.slider.querySelector(".container > img"));
+        // console.log(this.slider.querySelector(".container > img"));
         this.slider.style.left = `-${ this.cntPx }%`;
     }
 }
