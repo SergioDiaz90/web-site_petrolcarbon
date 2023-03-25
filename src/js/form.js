@@ -125,7 +125,7 @@ export class FormData {
                }
 
                if ( !x.checked && nameProp ) {
-                  let allow = typeValidation[x.type].test( x.value )
+                  let allow = typeValidation[x.type]?.test( x.value )
                   if ( allow ) {
                      objInfo[nameProp] = x.value;
                   }
