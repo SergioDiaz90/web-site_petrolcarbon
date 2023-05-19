@@ -25,6 +25,10 @@ export class FormData {
                this.#handlerModalForm('not-terms');
             }
 
+            if ( response.not_field ) {
+               this.#handlerModalForm('not-field');
+            }
+
             if ( response.successfull ) {
                this.#handlerModalForm('successfull');
             }
@@ -91,41 +95,53 @@ export class FormData {
    }
 
    async #handleDataForm( data ) {
-      let namePropInForm = [
+      const nameLabelForm = "LABEL";
+      const formPropsExcluded = {
+         foribben: 'recaptcha_token',
+         skipped: 'clase_de_solicitud'
+      };
+      let nameProp = undefined;
+      let checked = false;
+      let nameInputsInForm = [
          'INPUT',
          'SELECT',
          'TEXTAREA',
       ]
       let arrayData = [];
-      let objInfo = {};
-      let nameProp = undefined;
-      let checked = false;
+      let objInfo = {
+         complete: undefined,
+      };
+      let missingFields = {}
       let typeValidation = {
          text: /^[a-zA-Z0-9\s]+$/,
          email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
          tel: /^[0-9]+$/,
          textarea: /^[a-zA-Z0-9\s\.,;:_-]+$/ 
       }
+
    
       for ( let idx in data ) {
          arrayData.push( ...data[idx]);
          arrayData.map( async x => {
-            if ( x.tagName === 'LABEL' ) {
+            if ( x.tagName === nameLabelForm ) {
                nameProp = x.textContent.replace(":", "").replaceAll(" ", "_").toLowerCase();
             }
             
-            if ( namePropInForm.find( prop => prop === x.tagName) ) {
+            if ( nameInputsInForm.find( prop => prop === x.tagName) && nameProp !== formPropsExcluded.foribben ) {
+               missingFields[nameProp] = !x.value || x.value === '' ? false : true;
+
                if ( x.checked ) {
                   objInfo[nameProp] = x.checked;
                   checked = true;
                }
 
-               if ( !x.checked && nameProp && nameProp === 'clase_de_solicitud') {
+               if ( !x.checked && nameProp && nameProp === formPropsExcluded.skipped ) {
                   objInfo[nameProp] = x.value;
                }
 
                if ( !x.checked && nameProp ) {
                   let allow = typeValidation[x.type]?.test( x.value )
+                  
                   if ( allow ) {
                      objInfo[nameProp] = x.value;
                   }
@@ -134,8 +150,9 @@ export class FormData {
             }
          });
       }
-      
-      return { checked, objInfo  };
+
+      objInfo.complete = Object.values( missingFields ).every( value => value === true );
+      return { checked, objInfo };
    
    }
 
@@ -148,6 +165,10 @@ export class FormData {
          return { not_terms: true };
       }
    
+      if ( !objInfo.complete ) {
+         return { not_field: true };
+      }
+
       if ( checked ) {
          const options = {
             method: 'POST',
